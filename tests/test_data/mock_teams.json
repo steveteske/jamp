@@ -1,0 +1,23 @@
+[
+  {
+    "title": "AV board Team",
+    "shareable": false,
+    "avatarUrl": "/secure/projectavatar?size\u003dmedium\u0026avatarId\u003d10324",
+    "id": 1
+  },
+  {
+    "title": "Blue Team",
+    "shareable": true,
+    "id": 2
+  },
+  {
+    "title": "White Team",
+    "shareable": true,
+    "id": 3
+  },
+  {
+    "title": "Black Team",
+    "shareable": true,
+    "id": 4
+  }
+]

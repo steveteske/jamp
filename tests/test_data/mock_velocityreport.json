@@ -1,0 +1,66 @@
+{
+  "sprints": [
+    {
+      "id": 1,
+      "sequence": 1,
+      "name": "Sample Sprint 2",
+      "state": "CLOSED",
+      "autoStartStop": false,
+      "startDate": "17/Feb/21 9:08 AM",
+      "endDate": "03/Mar/21 9:28 AM",
+      "activatedDate": "17/Feb/21 9:08 AM",
+      "completeDate": "02/Mar/21 4:42 PM",
+      "canUpdateSprint": true,
+      "canStartStopSprint": true,
+      "canUpdateDates": true,
+      "remoteLinks": [],
+      "daysRemaining": 0
+    },
+    {
+      "id": 2,
+      "sequence": 2,
+      "name": "Sample Sprint 1",
+      "state": "CLOSED",
+      "autoStartStop": false,
+      "startDate": "03/Feb/21 7:58 AM",
+      "endDate": "17/Feb/21 7:58 AM",
+      "activatedDate": "03/Feb/21 7:58 AM",
+      "completeDate": "17/Feb/21 6:38 AM",
+      "canUpdateSprint": true,
+      "canStartStopSprint": true,
+      "canUpdateDates": true,
+      "remoteLinks": [],
+      "daysRemaining": 0
+    }
+  ],
+  "velocityStatEntries": {
+    "1": {
+      "estimated": {
+        "value": 11.0,
+        "text": "11.0"
+      },
+      "completed": {
+        "value": 11.0,
+        "text": "11.0"
+      }
+    },
+    "2": {
+      "estimated": {
+        "value": 18.0,
+        "text": "18.0"
+      },
+      "completed": {
+        "value": 16.0,
+        "text": "16.0"
+      }
+    }
+  },
+  "queryMetadata": {
+    "allSprints": 2,
+    "querySprints": 2,
+    "maxSprints": 120,
+    "issuesLimit": 25000,
+    "issuesInSprints": 15,
+    "queryLegacyMode": false
+  }
+}

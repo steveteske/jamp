@@ -6,9 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-pandas = "*"
+pandas = "==1.1.5"
 xlsxwriter = "*"
-jira = "*"
+jira = "==2.0.0"
+argparse = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.6"
