@@ -1,0 +1,330 @@
+{
+  "contents": {
+    "completedIssues": [
+      {
+        "id": 10014,
+        "key": "AV-15",
+        "hidden": false,
+        "typeId": "10002",
+        "summary": "As a scrum master, I can see the progress of a sprint via the Burndown Chart >> Click \"Reports\" to view the Burndown Chart",
+        "priorityId": "3",
+        "done": true,
+        "hasCustomUserAvatar": false,
+        "epicId": "10024",
+        "epic": "AV-25",
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 4.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 4.0
+          }
+        },
+        "statusId": "10001",
+        "fixVersions": [],
+        "projectId": 10000
+      },
+      {
+        "id": 10015,
+        "key": "AV-16",
+        "hidden": false,
+        "typeId": "10002",
+        "summary": "As a team, we can finish the sprint by clicking the cog icon next to the sprint name above the \"To Do\" column then selecting \"Complete Sprint\" >> Try closing this sprint now",
+        "priorityId": "3",
+        "done": true,
+        "hasCustomUserAvatar": false,
+        "epicId": "10024",
+        "epic": "AV-25",
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 2.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 2.0
+          }
+        },
+        "statusId": "10001",
+        "fixVersions": [],
+        "projectId": 10000
+      },
+      {
+        "id": 10016,
+        "key": "AV-17",
+        "hidden": false,
+        "typeId": "10004",
+        "summary": "Instructions for deleting this sample board and project are in the description for this issue >> Click the \"AV-17\" link and read the description tab of the detail view for more",
+        "priorityId": "3",
+        "done": true,
+        "assignee": "steveteske",
+        "assigneeName": "email@steveteske.com",
+        "avatarUrl": "http://localhost:8080/secure/useravatar?avatarId=10349",
+        "hasCustomUserAvatar": true,
+        "epicId": "10024",
+        "epic": "AV-25",
+        "estimateStatisticRequired": false,
+        "statusId": "10001",
+        "fixVersions": [],
+        "projectId": 10000
+      }
+    ],
+    "issuesNotCompletedInCurrentSprint": [
+      {
+        "id": 10009,
+        "key": "AV-10",
+        "hidden": false,
+        "typeId": "10002",
+        "summary": "As a developer, I can update story and task status with drag and drop (click the triangle at far left of this story to show sub-tasks)",
+        "priorityId": "3",
+        "done": false,
+        "assignee": "steveteske",
+        "assigneeName": "email@steveteske.com",
+        "avatarUrl": "http://localhost:8080/secure/useravatar?avatarId=10349",
+        "hasCustomUserAvatar": true,
+        "epicId": "10024",
+        "epic": "AV-25",
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 5.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 5.0
+          }
+        },
+        "statusId": "3",
+        "fixVersions": [
+          10001
+        ],
+        "projectId": 10000
+      },
+      {
+        "id": 10012,
+        "key": "AV-13",
+        "hidden": false,
+        "typeId": "10004",
+        "summary": "As a developer, I can update details on an item using the Detail View >> Click the \"AV-13\" link at the top of this card to open the detail view",
+        "priorityId": "3",
+        "done": false,
+        "assignee": "steveteske",
+        "assigneeName": "email@steveteske.com",
+        "avatarUrl": "http://localhost:8080/secure/useravatar?avatarId=10349",
+        "hasCustomUserAvatar": true,
+        "epicId": "10024",
+        "epic": "AV-25",
+        "estimateStatisticRequired": false,
+        "statusId": "10000",
+        "fixVersions": [
+          10001
+        ],
+        "projectId": 10000
+      },
+      {
+        "id": 10013,
+        "key": "AV-14",
+        "hidden": false,
+        "typeId": "10002",
+        "summary": "As a user, I can find important items on the board by using the customisable \"Quick Filters\" above >> Try clicking the \"Only My Issues\" Quick Filter above",
+        "priorityId": "3",
+        "done": false,
+        "assignee": "steveteske",
+        "assigneeName": "email@steveteske.com",
+        "avatarUrl": "http://localhost:8080/secure/useravatar?avatarId=10349",
+        "hasCustomUserAvatar": true,
+        "epicId": "10024",
+        "epic": "AV-25",
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 3.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 3.0
+          }
+        },
+        "statusId": "10000",
+        "fixVersions": [],
+        "projectId": 10000
+      }
+    ],
+    "puntedIssues": [
+      {
+        "id": 10055,
+        "key": "AV-13000",
+        "hidden": false,
+        "typeId": "10004",
+        "summary": "As a developer, I can update details on an item using the Detail View >> Click the \"AV-13\" link at the top of this card to open the detail view",
+        "priorityId": "3",
+        "done": false,
+        "assignee": "steveteske",
+        "assigneeName": "email@steveteske.com",
+        "avatarUrl": "http://localhost:8080/secure/useravatar?avatarId=10349",
+        "hasCustomUserAvatar": true,
+        "epicId": "10024",
+        "epic": "AV-25",
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10111",
+          "statFieldValue": {
+            "value": 8.0
+          }
+          },
+          "estimateStatisticRequired": false,
+          "statusId": "10000",
+          "fixVersions": [
+            10001
+          ],
+          "projectId": 10000
+      }
+    ],
+    "issuesCompletedInAnotherSprint": [],
+    "entityData": {
+      "statuses": {
+        "3": {
+          "statusUrl": "http://localhost:8080/images/icons/statuses/inprogress.png",
+          "statusName": "In Progress",
+          "status": {
+            "id": "3",
+            "name": "In Progress",
+            "description": "This issue is being actively worked on at the moment by the assignee.",
+            "iconUrl": "http://localhost:8080/images/icons/statuses/inprogress.png",
+            "statusCategory": {
+              "id": "4",
+              "key": "indeterminate",
+              "colorName": "yellow"
+            }
+          }
+        },
+        "10000": {
+          "statusUrl": "http://localhost:8080/",
+          "statusName": "To Do",
+          "status": {
+            "id": "10000",
+            "name": "To Do",
+            "description": "",
+            "iconUrl": "http://localhost:8080/",
+            "statusCategory": {
+              "id": "2",
+              "key": "new",
+              "colorName": "blue-gray"
+            }
+          }
+        },
+        "10001": {
+          "statusUrl": "http://localhost:8080/",
+          "statusName": "Done",
+          "status": {
+            "id": "10001",
+            "name": "Done",
+            "description": "",
+            "iconUrl": "http://localhost:8080/",
+            "statusCategory": {
+              "id": "3",
+              "key": "done",
+              "colorName": "green"
+            }
+          }
+        }
+      },
+      "priorities": {
+        "3": {
+          "priorityName": "Medium",
+          "priorityUrl": "http://localhost:8080/images/icons/priorities/medium.svg"
+        }
+      },
+      "types": {
+        "10002": {
+          "typeUrl": "http://localhost:8080/images/icons/issuetypes/story.svg",
+          "typeName": "Story"
+        },
+        "10004": {
+          "typeUrl": "http://localhost:8080/secure/viewavatar?size=xsmall&avatarId=10303&avatarType=issuetype",
+          "typeName": "Bug"
+        }
+      },
+      "epics": {
+        "10024": {
+          "epicField": {
+            "id": "customfield_10104",
+            "label": "Epic",
+            "editable": false,
+            "renderer": "epiclink",
+            "epicKey": "AV-25",
+            "epicColor": "ghx-label-3",
+            "text": "Epic 2"
+          }
+        }
+      }
+    },
+    "completedIssuesInitialEstimateSum": {
+      "value": 6.0,
+      "text": "6.0"
+    },
+    "completedIssuesEstimateSum": {
+      "value": 6.0,
+      "text": "6.0"
+    },
+    "issuesNotCompletedInitialEstimateSum": {
+      "value": 8.0,
+      "text": "8.0"
+    },
+    "issuesNotCompletedEstimateSum": {
+      "value": 8.0,
+      "text": "8.0"
+    },
+    "allIssuesEstimateSum": {
+      "value": 17.0,
+      "text": "17.0"
+    },
+    "puntedIssuesInitialEstimateSum": {
+      "text": "null"
+    },
+    "puntedIssuesEstimateSum": {
+      "value": 8.0,
+      "text": "8.0"
+    },
+    "issuesCompletedInAnotherSprintInitialEstimateSum": {
+      "text": "null"
+    },
+    "issuesCompletedInAnotherSprintEstimateSum": {
+      "text": "null"
+    },
+    "issueKeysAddedDuringSprint": {
+      "AV-14": true,
+      "AV-16": true
+    }
+  },
+  "sprint": {
+    "id": 1,
+    "sequence": 1,
+    "name": "Sample Sprint 2",
+    "state": "ACTIVE",
+    "autoStartStop": false,
+    "startDate": "17/Feb/21 9:08 AM",
+    "endDate": "03/Mar/21 9:28 AM",
+    "activatedDate": "17/Feb/21 9:08 AM",
+    "completeDate": "",
+    "canUpdateSprint": true,
+    "canStartStopSprint": true,
+    "canUpdateDates": true,
+    "remoteLinks": [],
+    "daysRemaining": 0
+  },
+  "supportsPages": false
+}
