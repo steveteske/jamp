@@ -1,14 +1,15 @@
 import datetime
-from jira import JIRA
 from jira.resources import Resource
 
 
 JIRA_KEY_FIELDS = 'fields'
 JIRA_KEY_NAMES = 'name'
+JIRA_PASSWORD_ENV = 'JIRA_PASSWORD'
+
+VELOCITY_PARM_DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
 
 
 def jira_date_str(date: datetime) -> str:
-    VELOCITY_PARM_DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
     return date.strftime(VELOCITY_PARM_DATE_FORMAT)[:-3] + 'Z'
 
 
