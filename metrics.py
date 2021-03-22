@@ -49,11 +49,19 @@ class JiraProgramMetrics:
         the_split = self._args.server.split('/')
         print(the_split)
         if len(the_split) > 3:
-            print("WARNING: The server name is usually only the server name (e.g. "
-                  f"{the_split[0]}//{the_split[2]}). The current server name has a longer "
-                  f"than usual URL: {self._args.server}")
+            print("WARNING: The server name has been truncated to "
+                  f"{the_split[0]}//{the_split[2]})."
+                  f"To force the full path, use --force_full_url parameter")
 
-        return self._args.server
+        if len(the_split) < 3:
+            raise ValueError("The server name must be in the form of http|https://<domain_name>")
+
+        server_name = f"{the_split[0]}//{the_split[2]}"
+
+        if self._args.force_full_url:
+            return self._args.server
+        else:
+            return server_name
 
     @property
     def use_teams(self):
@@ -108,6 +116,10 @@ class JiraProgramMetrics:
                             help='Jira server address (e.g. https://ale-dev.atlassian.net).'
                                  'Typically only the server name is required, and no additional'
                                  'path elements are needed in the URL.')
+        parser.add_argument('--force_full_url', action='store_true',
+                            help='Force server parameter to use the full path. Typically the server '
+                                 'name is truncated to include only protocol server name and remove any '
+                                 'extra path elements.')
         parser.add_argument('--teams', action='store_true',
                             help='Test/utilize the teams API (if provisioned on the jira instance)')
 
