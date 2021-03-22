@@ -41,12 +41,9 @@ class SprintReport(GreenHopperResource):
         path = 'rapid/charts/sprintreport?{0}'
         GreenHopperResource.__init__(self, path, options, session, raw)
 
-    def jira_key(self, field_key):
-        return self._map.jira_key(field_key)
-
     def _parse_raw(self, raw):
         """
-        Overriden to address a single attribute that doesn't match how other Resources
+        Overridden to address a single attribute that doesn't match how other Resources
         define attributes:
 
         'issueKeysAddedDuringSprint' is a dict of issues keys rather than
@@ -55,8 +52,12 @@ class SprintReport(GreenHopperResource):
         :param raw:
         :return:
         """
-        self._added = raw['contents']['issueKeysAddedDuringSprint']
+
+        # Call the parent method to do the normal processing
         Resource._parse_raw(self, raw)
+
+        # Save off the list of added issues
+        self._added = raw['contents']['issueKeysAddedDuringSprint']
 
         self._added_sum = 0
         for issue_key in self._added:
@@ -70,14 +71,10 @@ class SprintReport(GreenHopperResource):
             pprint.pprint(resource.fields)
             self._added_sum += resource.raw[jamp.JIRA_KEY_FIELDS][story_points_field]
 
-    @property
-    def added_sum(self):
-        return self._added_sum
-
     def delete(self, params=None):
         raise NotImplementedError('JIRA Agile Public API does not support SprintReport removal')
 
-    def normalize_contents_stat(self, stat):
+    def _normalize_contents_stat(self, stat):
         """
         Sprint Report contents come in two flavors:
         1) Stats
@@ -94,10 +91,10 @@ class SprintReport(GreenHopperResource):
         This method solves that problem of getting undefined property when 'text == "null"
 
         :param stat: This is the PropertyHolder key representing parent structure
-        :return: float value of the stats or NAN if undefined.
+        :return: float value of the stats or 0.0 if 'null'.
         """
         if stat.text == 'null':
-            return float("NaN")
+            return 0.0
         else:
             return stat.value
 
@@ -117,7 +114,7 @@ class SprintReport(GreenHopperResource):
 
         if item in STATS:
             try:
-                return self.normalize_contents_stat(getattr(self.contents, item))
+                return self._normalize_contents_stat(getattr(self.contents, item))
             except KeyError as err:
                 return super().__getattr__(item)
 
@@ -145,6 +142,56 @@ class SprintReport(GreenHopperResource):
         else:
             return super().__getattr__(item)
 
+    def jira_key(self, field_key):
+        return self._map.jira_key(field_key)
+
+    @property
+    def added_sum(self):
+        return self._added_sum
+
+    @property
+    def committed(self):
+        committed = self.issuesNotCompletedInitialEstimateSum + \
+                    self.completedIssuesInitialEstimateSum - \
+                    self.issues_added_initial_estimate_sum
+
+        return committed
+
+    def _initial_estimate_stat(self, issues_list: list, issue_match=None):
+        sum = 0
+        for issue in issues_list:
+            stat_field = issue['estimateStatistic']['statFieldValue']
+            if stat_field:
+                stat = stat_field['value']
+            else:
+                stat = 0
+
+            if issue_match:
+                if issue['key'] == issue_match:
+                    return stat
+            else:
+                sum += stat
+
+        return sum
+
+    @property
+    def issues_added_initial_estimate_sum(self):
+        """
+        Added issues estimates are baked into all the lists for the
+        sprint report.
+        :return:
+        """
+        sum = 0
+        for issue_key in self._added:
+            contents = self.raw['contents']
+            sum += self._initial_estimate_stat(contents['completedIssues'], issue_key)
+            sum += self._initial_estimate_stat(contents['issuesNotCompletedInCurrentSprint'], issue_key)
+            #'completedIssues'
+            #'issuesNotCompletedInCurrenSprint'
+            #'puntedIssues'?????
+            #'issuesCompletedInAnotherSprint?????
+
+        return sum
 
 class VelocityReport(GreenHopperResource):
     """
@@ -155,3 +202,18 @@ class VelocityReport(GreenHopperResource):
         options['agile_rest_path'] = 'greenhopper'
         path = 'rapid/charts/velocity.json?{0}'
         GreenHopperResource.__init__(self, path, options, session, raw)
+
+    def _velocity_stat(self, sprint_id, stat):
+        try:
+            stat_entry = self.raw['velocityStatEntries'][str(sprint_id)]
+        except KeyError as e:
+            return float('NaN')
+
+        committed = stat_entry[stat]['value']
+        return float(committed)
+
+    def committed(self, sprint_id: int) -> float:
+        return self._velocity_stat(sprint_id, 'estimated')
+
+    def completed(self, sprint_id: int) -> float:
+        return self._velocity_stat(sprint_id, 'completed')
