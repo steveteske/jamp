@@ -16,7 +16,7 @@ class JiraProgramMetrics:
         self._server = self._parse_server()
 
         if jamp.JIRA_PASSWORD_ENV not in os.environ:
-            raise KeyError(f"The environment variable '{jamp.JIRA_PASSWORD_ENV}' is required"
+            raise KeyError(f"The environment variable '{jamp.JIRA_PASSWORD_ENV}' is required "
                            "to authenticate with the Jira Server.")
 
         credential = os.environ[jamp.JIRA_PASSWORD_ENV]
