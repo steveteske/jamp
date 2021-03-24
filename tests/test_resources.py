@@ -7,7 +7,7 @@ import pytest
 values = (3, 3, 1, 0, 2,  # counts
 
           6.0, 6.0, 17.0, 8.0, 8.0,
-          float("nan"), 8.0, float("nan"), float("nan"),  # stats
+          0.0, 8.0, 0.0, 0.0,  # stats
 
           ["AV-15", "AV-16", "AV-17"],
           ["AV-10", "AV-13", "AV-14"],
@@ -19,9 +19,9 @@ parms = [[x, values[i]] for i, x in enumerate(COUNTS + list(STATS) + list(LISTS)
 
 
 @pytest.mark.parametrize("test_input,expected", parms)
-def test_sprint_report(mock_sprint_report_with_id, mock_options, test_input, expected):
-    sr = SprintReport(options=mock_options, session=None, raw=mock_sprint_report_with_id)
-
+def test_sprint_report(mock_sprint_report_with_id, mock_options, test_input, expected, sprint_report):
+    # sr = SprintReport(options=mock_options, session=None, raw=mock_sprint_report_with_id)
+    sr = sprint_report
     value = getattr(sr, test_input)
 
     if isinstance(value, list):
