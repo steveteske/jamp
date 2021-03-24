@@ -1,24 +1,23 @@
+from unittest.mock import patch, MagicMock
+
 import pytest
 
-from jamp.reports import ProgramReport, SprintMetrics
+from jamp import JiraFieldMapper
+from jamp.reports import SprintMetrics
 from jamp.resources import SprintReport, VelocityReport
 
 
-def test_sprint_report():
-    pr = ProgramReport()
 
-    assert False
 
 @pytest.fixture
-def sprint_metrics(mock_options, mock_sprint_report_with_id,mock_velocity_report_with_id ):
-    sr = SprintReport(options=mock_options, session=None, raw=mock_sprint_report_with_id)
+def sprint_metrics(sprint_report, mock_velocity_report_with_id, mock_options):
     vr = VelocityReport(options=mock_options, session=None, raw=mock_velocity_report_with_id)
-    return SprintMetrics(2, sr, vr)
+    return SprintMetrics(2, sprint_report, vr)
 
 
 def test_sprint_metrics(sprint_metrics):
     actual = sprint_metrics.completion_ratio()
-    assert 16/18 == actual
+    assert 16 / 18 == actual
 
 
 def test_sprint_metrics_committed(sprint_metrics):
@@ -41,7 +40,9 @@ def test_sprint_metrics_removed_sum(sprint_metrics):
     assert 8.0 == actual
 
 
+def test_sprint_report(sprint_report):
+    assert sprint_report
 
 
-
-
+def test_sprint_report_committed(sprint_report):
+    assert 12.0 == sprint_report.committed

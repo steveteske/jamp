@@ -1,3 +1,5 @@
+import sys
+
 import pandas as pd
 from jira import JIRA
 import pprint
@@ -84,6 +86,9 @@ class JiraProgramMetrics:
         for board in board_list:
             vr = self.jr.velocity_report(board_id=board.id)
             print(f"Examining board: {board.name} ({board.id})")
+            if board.type != 'scrum':
+                continue
+
             for sprint in self.j.sprints(board_id=board.id):
                 print(f"Examining sprint: {sprint.name} ({sprint.id})")
                 sr = self.jr.sprint_report(board_id=board.id, sprint_id=sprint.id)
@@ -120,6 +125,10 @@ class JiraProgramMetrics:
                             help='Force server parameter to use the full path. Typically the server '
                                  'name is truncated to include only protocol server name and remove any '
                                  'extra path elements.')
+        parser.add_argument('--board', type=str,
+                            help='Board name and matching criteria which uses the following '
+                                 'syntax: [<name>:<match>;<str2>:<match2>;...] where match is one of'
+                                 ' MATCH_EXACT | MATCH_STARTS_WITH.  (e.g. --board JAMP:MATCH_EXACT)')
         parser.add_argument('--teams', action='store_true',
                             help='Test/utilize the teams API (if provisioned on the jira instance)')
 
@@ -145,4 +154,5 @@ class JiraProgramMetrics:
         writer.save()
 
 
-JiraProgramMetrics().run()
+if __name__ == "__main__":
+    JiraProgramMetrics().run()

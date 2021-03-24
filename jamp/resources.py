@@ -41,6 +41,14 @@ class SprintReport(GreenHopperResource):
         path = 'rapid/charts/sprintreport?{0}'
         GreenHopperResource.__init__(self, path, options, session, raw)
 
+    # @property
+    # def _options(self):
+    #     pass
+    #
+    # @property
+    # def _session(self):
+    #     pass
+
     def _parse_raw(self, raw):
         """
         Overridden to address a single attribute that doesn't match how other Resources
@@ -54,7 +62,7 @@ class SprintReport(GreenHopperResource):
         """
 
         # Call the parent method to do the normal processing
-        Resource._parse_raw(self, raw)
+        GreenHopperResource._parse_raw(self, raw)
 
         # Save off the list of added issues
         self._added = raw['contents']['issueKeysAddedDuringSprint']
@@ -62,14 +70,17 @@ class SprintReport(GreenHopperResource):
         self._added_sum = 0
         for issue_key in self._added:
             resource_format = f"issue/{issue_key}"
-            resource = Resource(resource_format,
-                                options=self._options,
-                                session=self._session)
-            resource.find(None)  # Simply calling find() populates the Resource
-            story_points_field = self.jira_key('Story Points')
+            resource = self._build_resource(resource_format)
 
-            pprint.pprint(resource.fields)
+            story_points_field = self.jira_key('Story Points')
             self._added_sum += resource.raw[jamp.JIRA_KEY_FIELDS][story_points_field]
+
+    def _build_resource(self, resource_format):
+        resource = Resource(resource_format,
+                 options=self._options,
+                 session=self._session)
+        resource.find(None)  # Simply calling find() populates the Resource
+        return resource
 
     def delete(self, params=None):
         raise NotImplementedError('JIRA Agile Public API does not support SprintReport removal')
@@ -157,14 +168,34 @@ class SprintReport(GreenHopperResource):
 
         return committed
 
-    def _initial_estimate_stat(self, issues_list: list, issue_match=None):
+    def _initial_estimate_stat(self, issues_list: list, issue_match=None) -> float:
         sum = 0
         for issue in issues_list:
+            if 'estimateStatistic' not in issue:
+                return 0.0
+
             stat_field = issue['estimateStatistic']['statFieldValue']
             if stat_field:
                 stat = stat_field['value']
             else:
-                stat = 0
+                stat = 0.0
+
+            if issue_match:
+                if issue['key'] == issue_match:
+                    return stat
+            else:
+                sum += stat
+
+        return sum
+
+    def _final_estimate_stat(self, issues_list: list, issue_match=None) -> float:
+        sum = 0
+        for issue in issues_list:
+            stat_field = issue['currentEstimateStatistic']['statFieldValue']
+            if stat_field:
+                stat = stat_field['value']
+            else:
+                stat = 0.0
 
             if issue_match:
                 if issue['key'] == issue_match:
