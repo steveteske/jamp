@@ -41,14 +41,6 @@ class SprintReport(GreenHopperResource):
         path = 'rapid/charts/sprintreport?{0}'
         GreenHopperResource.__init__(self, path, options, session, raw)
 
-    # @property
-    # def _options(self):
-    #     pass
-    #
-    # @property
-    # def _session(self):
-    #     pass
-
     def _parse_raw(self, raw):
         """
         Overridden to address a single attribute that doesn't match how other Resources
