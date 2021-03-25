@@ -69,7 +69,22 @@ class JiraProgramMetrics:
     def use_teams(self):
         return self._args.teams
 
+    def board_list(self):
+        boards = []
+        filters = self._args.board.split(';')
+
+        for f in filters:
+            (pattern, command) = f.split(":")
+            for b in self.j.boards():
+                if command == 'MATCH_STARTS_WITH' and b.name.startswith(pattern):
+                    boards.append(b)
+                elif command == 'MATCH_EXACT' and b.name == pattern:
+                    boards.append(b)
+
+        return boards
+
     def build_report(self) -> pd.DataFrame:
+
         HEADERS = ("Team",
                    "Sprint",
                    "Committed",
@@ -81,9 +96,8 @@ class JiraProgramMetrics:
                    "Completed VC",
                    "% Complete")
 
-        board_list = self.j.boards()
         data = []
-        for board in board_list:
+        for board in self.board_list():
             vr = self.jr.velocity_report(board_id=board.id)
             print(f"Examining board: {board.name} ({board.id})")
             if board.type != 'scrum':
