@@ -71,11 +71,14 @@ class JiraProgramMetrics:
 
     def board_list(self):
         boards = []
-        filters = self._args.board.split(';')
+        if not self._args.board:
+            return self.j.boards()
 
+        filters = self._args.board.split(';')
         for f in filters:
             (pattern, command) = f.split(":")
             for b in self.j.boards():
+                print(b.name)
                 if command == 'MATCH_STARTS_WITH' and b.name.startswith(pattern):
                     boards.append(b)
                 elif command == 'MATCH_EXACT' and b.name == pattern:
