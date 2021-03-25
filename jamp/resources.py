@@ -65,12 +65,16 @@ class SprintReport(GreenHopperResource):
             resource = self._build_resource(resource_format)
 
             story_points_field = self.jira_key('Story Points')
-            self._added_sum += resource.raw[jamp.JIRA_KEY_FIELDS][story_points_field]
+            story_point = resource.raw[jamp.JIRA_KEY_FIELDS][story_points_field]
+
+            # sometime story_points returns NoneType so check it first
+            if story_point:
+                self._added_sum += story_point
 
     def _build_resource(self, resource_format):
         resource = Resource(resource_format,
-                 options=self._options,
-                 session=self._session)
+                            options=self._options,
+                            session=self._session)
         resource.find(None)  # Simply calling find() populates the Resource
         return resource
 
@@ -209,18 +213,20 @@ class SprintReport(GreenHopperResource):
             contents = self.raw['contents']
             sum += self._initial_estimate_stat(contents['completedIssues'], issue_key)
             sum += self._initial_estimate_stat(contents['issuesNotCompletedInCurrentSprint'], issue_key)
-            #'completedIssues'
-            #'issuesNotCompletedInCurrenSprint'
-            #'puntedIssues'?????
-            #'issuesCompletedInAnotherSprint?????
+            # 'completedIssues'
+            # 'issuesNotCompletedInCurrenSprint'
+            # 'puntedIssues'?????
+            # 'issuesCompletedInAnotherSprint?????
 
         return sum
+
 
 class VelocityReport(GreenHopperResource):
     """
     .../rapid/charts/velocity.json?rapidViewId=1&sprintsFinishedBefore=2021-03-03T04%3A59%3A59.999Z&sprintsFinishedAfter=2020-12-02T05%3A00%3A00.000Z&_=1614720709744
 
     """
+
     def __init__(self, options, session, raw=None):
         options['agile_rest_path'] = 'greenhopper'
         path = 'rapid/charts/velocity.json?{0}'

@@ -1,7 +1,7 @@
 import os
 import sys
 from pprint import pprint
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 import pytest
 
@@ -101,3 +101,53 @@ def test_metrics_args_required_args_good_password(mock_jira_field_mapper,
     assert not mock_jira_teams.called
 
     assert mock_jira_field_mapper.called
+
+
+@patch('metrics.JIRA')
+@patch('metrics.JIRAReports')
+@patch('metrics.JIRATeams')
+@patch('metrics.JiraFieldMapper')
+def test_metrics_args_board(mock_jira_field_mapper,
+                                                  mock_jira_teams,
+                                                  mock_jira_reports,
+                                                  mock_jira,
+                                                  program_metrics,
+                                                  mock_server,
+                                                  mock_password,
+                                                  mock_user):
+    mock_board = MagicMock()
+    mock_board.name = 'JAMP'
+    mock_board.id = 100
+    mock_board.type = 'scrum'
+
+    mock_sprint = MagicMock()
+    mock_sprint.id = 200
+
+    mock_jira.return_value.boards.return_value = [mock_board]
+    mock_jira.return_value.sprints.return_value = [mock_sprint]
+
+    mock_sprint_report = MagicMock()
+    mock_sprint_report.committed = 17.0
+
+    mock_jira_reports.return_value.sprint_report.return_value = mock_sprint_report
+
+
+    pm = program_metrics(["metrics.py",
+                          '--user', mock_user,
+                          '--server', mock_server,
+                          '--board', 'JAMP:MATCH_EXACT'
+                          ],
+                         password=mock_password)
+
+    pm.build_report()
+
+    assert mock_server == mock_jira.call_args[1]['server']
+    assert (mock_user, mock_password) == mock_jira.call_args[1]['basic_auth']
+
+    assert mock_server == mock_jira_reports.call_args[1]['server']
+    assert (mock_user, mock_password) == mock_jira_reports.call_args[1]['basic_auth']
+
+    assert not mock_jira_teams.called
+
+    assert mock_jira_field_mapper.called
+
