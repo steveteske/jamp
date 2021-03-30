@@ -24,25 +24,25 @@ class JiraProgramMetrics:
         credential = os.environ[jamp.JIRA_PASSWORD_ENV]
 
         # JIRA for all normal Jira activity (Boards, Sprints, Issues, etc.)
-        self.j = JIRA(server=self._server,
-                      basic_auth=(self._args.user, credential),
-                      options={
+        self.jira_client = JIRA(server=self._server,
+                                basic_auth=(self._args.user, credential),
+                                options={
                           'agile_rest_path': 'agile'
                       })
 
         # JIRA_Reports used only for reporting, not for general Jira access
-        self.jr = JIRAReports(server=self._server,
-                              basic_auth=(self._args.user, credential))
+        self.reports_client = JIRAReports(server=self._server,
+                                          basic_auth=(self._args.user, credential))
 
         if self.use_teams:
             # JIRA for all normal Jira activity (Boards, Sprints, Issues, etc.)
-            self.jt = JIRATeams(server=self._server,
-                                basic_auth=(self._args.user, credential),
-                                options={
+            self.teams_client = JIRATeams(server=self._server,
+                                          basic_auth=(self._args.user, credential),
+                                          options={
                                        'agile_rest_path': 'teams-api'
                                    })
 
-        self._map = JiraFieldMapper(self.j._options, self.j._session)
+        self._map = JiraFieldMapper(self.jira_client._options, self.jira_client._session)
 
     def jira_key(self, field_key):
         return self._map.jira_key(field_key)
@@ -72,12 +72,12 @@ class JiraProgramMetrics:
     def board_list(self):
         boards = []
         if not self._args.board:
-            return self.j.boards()
+            return self.jira_client.boards()
 
         filters = self._args.board.split(';')
         for f in filters:
             (pattern, command) = f.split(":")
-            for b in self.j.boards():
+            for b in self.jira_client.boards():
                 print(b.name)
                 if command == 'MATCH_STARTS_WITH' and b.name.startswith(pattern):
                     boards.append(b)
@@ -90,30 +90,39 @@ class JiraProgramMetrics:
 
         HEADERS = ("Team",
                    "Sprint",
-                   "Committed",
-                   "Committed VC",
-                   "Added",
-                   "Removed",
-                   "Not Completed",
-                   "Completed",
-                   "Completed VC",
-                   "% Complete")
+                   "Story Points Committed",
+                   "Story Ponts Committed VC",
+                   "Story Points Added",
+                   "Story Points Removed",
+                   "Story Points Not Completed",
+                   "Story Points Completed",
+                   "Story Points Completed VC",
+                   "% Complete",
+                   '# Issues Committed',
+                   "# Issues Added",
+                   "# Issues Removed",
+                   "# Issues Not Completed",
+                   "# Issues Completed",
+                   "% Complete",
+                   )
 
         data = []
         for board in self.board_list():
-            vr = self.jr.velocity_report(board_id=board.id)
+            vr = self.reports_client.velocity_report(board_id=board.id)
             print(f"Examining board: {board.name} ({board.id})")
             if board.type != 'scrum':
                 continue
 
-            for sprint in self.j.sprints(board_id=board.id):
+            for sprint in self.jira_client.sprints(board_id=board.id):
                 print(f"Examining sprint: {sprint.name} ({sprint.id})")
-                sr = self.jr.sprint_report(board_id=board.id, sprint_id=sprint.id)
+                sr = self.reports_client.sprint_report(board_id=board.id, sprint_id=sprint.id)
 
                 if sr.committed > 0.0:
                     percent_complete = sr.completedIssuesEstimateSum / sr.committed
                 else:
                     percent_complete = float("NaN")
+
+                sr.committed_count
 
                 data.append((board.name,
                              sr.sprint.name,
@@ -124,7 +133,14 @@ class JiraProgramMetrics:
                              sr.issuesNotCompletedEstimateSum,
                              sr.completedIssuesEstimateSum,
                              vr.completed(sprint.id),
-                             percent_complete
+                             percent_complete,
+                             sr.committed_count,
+                             sr.added_count,
+                             sr.puntedIssuesCount,
+                             sr.issuesNotCompletedInCurrentSprintCount,
+                             sr.completedIssuesCount,
+                             sr.percent_complete_count,
+
                              ))
 
         df = pd.DataFrame.from_records(data, columns=HEADERS)
@@ -154,7 +170,7 @@ class JiraProgramMetrics:
     def run(self):
 
         if self.use_teams:
-            teams = self.jt.teams()
+            teams = self.teams_client.teams()
             pprint.pprint(teams)
             for t in teams:
                 print(t.title)

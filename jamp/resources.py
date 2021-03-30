@@ -101,7 +101,7 @@ class SprintReport(GreenHopperResource):
         :return: float value of the stats or 0.0 if 'null'.
         """
         if stat.text == 'null':
-            return 0.0
+            return float("NaN")
         else:
             return stat.value
 
@@ -147,22 +147,45 @@ class SprintReport(GreenHopperResource):
                 return 0
 
         else:
-            return super().__getattr__(item)
+            return super().__getattribute__(item)
 
-    def jira_key(self, field_key):
+    def jira_key(self, field_key) -> str:
         return self._map.jira_key(field_key)
 
     @property
-    def added_sum(self):
+    def added_sum(self) -> float:
         return self._added_sum
 
     @property
-    def committed(self):
+    def added_count(self) -> float:
+        return len(self._added)
+
+    @property
+    def committed(self) -> float:
         committed = self.issuesNotCompletedInitialEstimateSum + \
                     self.completedIssuesInitialEstimateSum - \
                     self.issues_added_initial_estimate_sum
 
         return committed
+
+    @property
+    def committed_count(self) -> int:
+        committed = self.issuesNotCompletedInCurrentSprintCount + \
+                    self.completedIssuesCount
+
+        return committed
+
+    @property
+    def completed_count(self) -> int:
+        return self.completedIssuesCount
+
+    @property
+    def percent_complete_count(self) -> float:
+        if self.committed_count == 0:
+            return float("NaN")
+
+        percent_completed = self.completed_count / self.committed_count
+        return percent_completed
 
     def _initial_estimate_stat(self, issues_list: list, issue_match=None) -> float:
         sum = 0
@@ -174,7 +197,7 @@ class SprintReport(GreenHopperResource):
             if stat_field:
                 stat = stat_field['value']
             else:
-                stat = 0.0
+                stat = float("NaN")
 
             if issue_match:
                 if issue['key'] == issue_match:
@@ -191,7 +214,7 @@ class SprintReport(GreenHopperResource):
             if stat_field:
                 stat = stat_field['value']
             else:
-                stat = 0.0
+                stat = float("NaN")
 
             if issue_match:
                 if issue['key'] == issue_match:
