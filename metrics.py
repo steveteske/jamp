@@ -76,8 +76,17 @@ class JiraProgramMetrics:
 
         filters = self._args.board.split(';')
         for f in filters:
-            (pattern, command) = f.split(":")
-            for b in self.jira_client.boards():
+            tuple = f.split(":")
+            if len(tuple) == 1:
+                command = 'MATCH_EXACT'
+                pattern = tuple[0]
+            elif len(tuple) == 2:
+                (pattern, command) = tuple
+            else:
+                raise ValueError(f"Poorly formed filter {f}. Must be PATTERN:COMMAND, where"
+                                 f"COMMAND is either 'MATCH_STARTS_WITH' or 'MATCH_EXACT'")
+
+            for b in self.jira_client.boards(type='scrum'):
                 print(b.name)
                 if command == 'MATCH_STARTS_WITH' and b.name.startswith(pattern):
                     boards.append(b)
