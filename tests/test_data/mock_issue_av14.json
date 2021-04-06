@@ -1,1 +1,250 @@
-{"expand":"renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations","id":"10013","self":"http://localhost:8080/rest/api/2/issue/10013","key":"AV-14","fields":{"issuetype":{"self":"http://localhost:8080/rest/api/2/issuetype/10002","id":"10002","description":"Created by Jira Software - do not edit or delete. Issue type for a user story.","iconUrl":"http://localhost:8080/images/icons/issuetypes/story.svg","name":"Story","subtask":false},"timespent":null,"project":{"self":"http://localhost:8080/rest/api/2/project/10000","id":"10000","key":"AV","name":"Avengers","projectTypeKey":"software","avatarUrls":{"48x48":"http://localhost:8080/secure/projectavatar?avatarId=10324","24x24":"http://localhost:8080/secure/projectavatar?size=small&avatarId=10324","16x16":"http://localhost:8080/secure/projectavatar?size=xsmall&avatarId=10324","32x32":"http://localhost:8080/secure/projectavatar?size=medium&avatarId=10324"}},"fixVersions":[],"customfield_10110":"0|i0007l:","customfield_10111":1.0,"aggregatetimespent":null,"resolution":null,"customfield_10107":null,"customfield_10108":"AV-25","customfield_10109":["com.atlassian.greenhopper.service.sprint.Sprint@13c78fa9[id=1,rapidViewId=1,state=CLOSED,name=Sample Sprint 2,startDate=2021-02-17T14:08:54.729Z,endDate=2021-03-03T14:28:54.729Z,completeDate=2021-03-02T21:42:58.761Z,activatedDate=2021-02-17T14:08:54.729Z,sequence=1,goal=<null>,autoStartStop=false]","com.atlassian.greenhopper.service.sprint.Sprint@3d303c6a[id=3,rapidViewId=1,state=CLOSED,name=Sample Sprint 3,startDate=2021-03-03T01:33:00.000Z,endDate=2021-03-17T01:33:00.000Z,completeDate=2021-03-14T12:56:39.615Z,activatedDate=2021-03-03T01:33:37.739Z,sequence=3,goal=,autoStartStop=false]","com.atlassian.greenhopper.service.sprint.Sprint@114d8de3[id=4,rapidViewId=1,state=ACTIVE,name=Sample Sprint 4,startDate=2021-03-14T13:04:00.000Z,endDate=2021-03-28T13:04:00.000Z,completeDate=<null>,activatedDate=2021-03-14T13:04:02.881Z,sequence=4,goal=,autoStartStop=false]"],"resolutiondate":null,"workratio":-1,"lastViewed":"2021-03-14T12:56:26.949+0000","watches":{"self":"http://localhost:8080/rest/api/2/issue/AV-14/watchers","watchCount":0,"isWatching":false},"created":"2021-02-23T19:08:53.016+0000","priority":{"self":"http://localhost:8080/rest/api/2/priority/3","iconUrl":"http://localhost:8080/images/icons/priorities/medium.svg","name":"Medium","id":"3"},"customfield_10100":null,"customfield_10101":null,"customfield_10102":null,"labels":[],"customfield_10103":null,"timeestimate":null,"aggregatetimeoriginalestimate":null,"versions":[],"issuelinks":[{"id":"10101","self":"http://localhost:8080/rest/api/2/issueLink/10101","type":{"id":"10001","name":"Cloners","inward":"is cloned by","outward":"clones","self":"http://localhost:8080/rest/api/2/issueLinkType/10001"},"inwardIssue":{"id":"10632","key":"AV-566","self":"http://localhost:8080/rest/api/2/issue/10632","fields":{"summary":"As a user, I can find important items on the board by using the customisable \"Quick Filters\" above >> Try clicking the \"Only My Issues\" Quick Filter above","status":{"self":"http://localhost:8080/rest/api/2/status/10000","description":"","iconUrl":"http://localhost:8080/","name":"To Do","id":"10000","statusCategory":{"self":"http://localhost:8080/rest/api/2/statuscategory/2","id":2,"key":"new","colorName":"blue-gray","name":"To Do"}},"priority":{"self":"http://localhost:8080/rest/api/2/priority/3","iconUrl":"http://localhost:8080/images/icons/priorities/medium.svg","name":"Medium","id":"3"},"issuetype":{"self":"http://localhost:8080/rest/api/2/issuetype/10002","id":"10002","description":"Created by Jira Software - do not edit or delete. Issue type for a user story.","iconUrl":"http://localhost:8080/images/icons/issuetypes/story.svg","name":"Story","subtask":false}}}}],"assignee":{"self":"http://localhost:8080/rest/api/2/user?username=steveteske","name":"steveteske","key":"JIRAUSER10000","emailAddress":"email@steveteske.com","avatarUrls":{"48x48":"http://localhost:8080/secure/useravatar?avatarId=10349","24x24":"http://localhost:8080/secure/useravatar?size=small&avatarId=10349","16x16":"http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349","32x32":"http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"},"displayName":"email@steveteske.com","active":true,"timeZone":"America/New_York"},"updated":"2021-03-14T12:56:39.689+0000","status":{"self":"http://localhost:8080/rest/api/2/status/3","description":"This issue is being actively worked on at the moment by the assignee.","iconUrl":"http://localhost:8080/images/icons/statuses/inprogress.png","name":"In Progress","id":"3","statusCategory":{"self":"http://localhost:8080/rest/api/2/statuscategory/4","id":4,"key":"indeterminate","colorName":"yellow","name":"In Progress"}},"components":[],"timeoriginalestimate":null,"description":"*Creating Quick Filters*\n\nYou can add your own Quick Filters in the board configuration (select *Board > Configure*)","timetracking":{},"archiveddate":null,"attachment":[],"aggregatetimeestimate":null,"summary":"As a user, I can find important items on the board by using the customisable \"Quick Filters\" above >> Try clicking the \"Only My Issues\" Quick Filter above","creator":{"self":"http://localhost:8080/rest/api/2/user?username=steveteske","name":"steveteske","key":"JIRAUSER10000","emailAddress":"email@steveteske.com","avatarUrls":{"48x48":"http://localhost:8080/secure/useravatar?avatarId=10349","24x24":"http://localhost:8080/secure/useravatar?size=small&avatarId=10349","16x16":"http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349","32x32":"http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"},"displayName":"email@steveteske.com","active":true,"timeZone":"America/New_York"},"subtasks":[],"reporter":{"self":"http://localhost:8080/rest/api/2/user?username=steveteske","name":"steveteske","key":"JIRAUSER10000","emailAddress":"email@steveteske.com","avatarUrls":{"48x48":"http://localhost:8080/secure/useravatar?avatarId=10349","24x24":"http://localhost:8080/secure/useravatar?size=small&avatarId=10349","16x16":"http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349","32x32":"http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"},"displayName":"email@steveteske.com","active":true,"timeZone":"America/New_York"},"customfield_10000":"{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@3a7ccdb8[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@1b1dd27[overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}},byInstanceType={}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@9f28cdf[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@6252023[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6b35e90a[overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@42f56fd3[stateCount=0,state=<null>,dueDate=<null>,overDue=false,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@5f7c8726[overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@707790d2[topEnvironments=[],showProjects=false,successfulCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@34ce5a6f[overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@5dac30d2[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6652c9f6[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@2a6f24ee[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}]},errors=[],configErrors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}","aggregateprogress":{"progress":0,"total":0},"environment":null,"duedate":null,"progress":{"progress":0,"total":0},"comment":{"comments":[{"self":"http://localhost:8080/rest/api/2/issue/10013/comment/10005","id":"10005","author":{"self":"http://localhost:8080/rest/api/2/user?username=steveteske","name":"steveteske","key":"JIRAUSER10000","emailAddress":"email@steveteske.com","avatarUrls":{"48x48":"http://localhost:8080/secure/useravatar?avatarId=10349","24x24":"http://localhost:8080/secure/useravatar?size=small&avatarId=10349","16x16":"http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349","32x32":"http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"},"displayName":"email@steveteske.com","active":true,"timeZone":"America/New_York"},"body":"Joined Sample Sprint 2 1 days 4 hours 10 minutes ago","updateAuthor":{"self":"http://localhost:8080/rest/api/2/user?username=steveteske","name":"steveteske","key":"JIRAUSER10000","emailAddress":"email@steveteske.com","avatarUrls":{"48x48":"http://localhost:8080/secure/useravatar?avatarId=10349","24x24":"http://localhost:8080/secure/useravatar?size=small&avatarId=10349","16x16":"http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349","32x32":"http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"},"displayName":"email@steveteske.com","active":true,"timeZone":"America/New_York"},"created":"2021-02-23T19:08:53.016+0000","updated":"2021-02-23T19:08:53.016+0000"}],"maxResults":1,"total":1,"startAt":0},"votes":{"self":"http://localhost:8080/rest/api/2/issue/AV-14/votes","votes":0,"hasVoted":false},"worklog":{"startAt":0,"maxResults":20,"total":0,"worklogs":[]},"archivedby":null}}
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+  "id": "10013",
+  "self": "http://localhost:8080/rest/api/2/issue/10013",
+  "key": "AV-14",
+  "fields": {
+    "issuetype": {
+      "self": "http://localhost:8080/rest/api/2/issuetype/10002",
+      "id": "10002",
+      "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+      "iconUrl": "http://localhost:8080/images/icons/issuetypes/story.svg",
+      "name": "Story",
+      "subtask": false
+    },
+    "timespent": null,
+    "project": {
+      "self": "http://localhost:8080/rest/api/2/project/10000",
+      "id": "10000",
+      "key": "AV",
+      "name": "Avengers",
+      "projectTypeKey": "software",
+      "avatarUrls": {
+        "48x48": "http://localhost:8080/secure/projectavatar?avatarId=10324",
+        "24x24": "http://localhost:8080/secure/projectavatar?size=small&avatarId=10324",
+        "16x16": "http://localhost:8080/secure/projectavatar?size=xsmall&avatarId=10324",
+        "32x32": "http://localhost:8080/secure/projectavatar?size=medium&avatarId=10324"
+      }
+    },
+    "fixVersions": [],
+    "customfield_10110": "0|i0007l:",
+    "customfield_10111": 1.0,
+    "aggregatetimespent": null,
+    "resolution": null,
+    "customfield_10107": null,
+    "customfield_10108": "AV-25",
+    "customfield_10109": [
+      "com.atlassian.greenhopper.service.sprint.Sprint@13c78fa9[id=1,rapidViewId=1,state=CLOSED,name=Sample Sprint 2,startDate=2021-02-17T14:08:54.729Z,endDate=2021-03-03T14:28:54.729Z,completeDate=2021-03-02T21:42:58.761Z,activatedDate=2021-02-17T14:08:54.729Z,sequence=1,goal=<null>,autoStartStop=false]",
+      "com.atlassian.greenhopper.service.sprint.Sprint@3d303c6a[id=3,rapidViewId=1,state=CLOSED,name=Sample Sprint 3,startDate=2021-03-03T01:33:00.000Z,endDate=2021-03-17T01:33:00.000Z,completeDate=2021-03-14T12:56:39.615Z,activatedDate=2021-03-03T01:33:37.739Z,sequence=3,goal=,autoStartStop=false]",
+      "com.atlassian.greenhopper.service.sprint.Sprint@114d8de3[id=4,rapidViewId=1,state=ACTIVE,name=Sample Sprint 4,startDate=2021-03-14T13:04:00.000Z,endDate=2021-03-28T13:04:00.000Z,completeDate=<null>,activatedDate=2021-03-14T13:04:02.881Z,sequence=4,goal=,autoStartStop=false]"
+    ],
+    "resolutiondate": null,
+    "workratio": -1,
+    "lastViewed": "2021-03-14T12:56:26.949+0000",
+    "watches": {
+      "self": "http://localhost:8080/rest/api/2/issue/AV-14/watchers",
+      "watchCount": 0,
+      "isWatching": false
+    },
+    "created": "2021-02-23T19:08:53.016+0000",
+    "priority": {
+      "self": "http://localhost:8080/rest/api/2/priority/3",
+      "iconUrl": "http://localhost:8080/images/icons/priorities/medium.svg",
+      "name": "Medium",
+      "id": "3"
+    },
+    "customfield_10100": null,
+    "customfield_10101": null,
+    "customfield_10102": null,
+    "labels": [],
+    "customfield_10103": null,
+    "timeestimate": null,
+    "aggregatetimeoriginalestimate": null,
+    "versions": [],
+    "issuelinks": [
+      {
+        "id": "10101",
+        "self": "http://localhost:8080/rest/api/2/issueLink/10101",
+        "type": {
+          "id": "10001",
+          "name": "Cloners",
+          "inward": "is cloned by",
+          "outward": "clones",
+          "self": "http://localhost:8080/rest/api/2/issueLinkType/10001"
+        },
+        "inwardIssue": {
+          "id": "10632",
+          "key": "AV-566",
+          "self": "http://localhost:8080/rest/api/2/issue/10632",
+          "fields": {
+            "summary": "As a user, I can find important items on the board by using the customisable \"Quick Filters\" above >> Try clicking the \"Only My Issues\" Quick Filter above",
+            "status": {
+              "self": "http://localhost:8080/rest/api/2/status/10000",
+              "description": "",
+              "iconUrl": "http://localhost:8080/",
+              "name": "To Do",
+              "id": "10000",
+              "statusCategory": {
+                "self": "http://localhost:8080/rest/api/2/statuscategory/2",
+                "id": 2,
+                "key": "new",
+                "colorName": "blue-gray",
+                "name": "To Do"
+              }
+            },
+            "priority": {
+              "self": "http://localhost:8080/rest/api/2/priority/3",
+              "iconUrl": "http://localhost:8080/images/icons/priorities/medium.svg",
+              "name": "Medium",
+              "id": "3"
+            },
+            "issuetype": {
+              "self": "http://localhost:8080/rest/api/2/issuetype/10002",
+              "id": "10002",
+              "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+              "iconUrl": "http://localhost:8080/images/icons/issuetypes/story.svg",
+              "name": "Story",
+              "subtask": false
+            }
+          }
+        }
+      }
+    ],
+    "assignee": {
+      "self": "http://localhost:8080/rest/api/2/user?username=steveteske",
+      "name": "steveteske",
+      "key": "JIRAUSER10000",
+      "emailAddress": "email@steveteske.com",
+      "avatarUrls": {
+        "48x48": "http://localhost:8080/secure/useravatar?avatarId=10349",
+        "24x24": "http://localhost:8080/secure/useravatar?size=small&avatarId=10349",
+        "16x16": "http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349",
+        "32x32": "http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"
+      },
+      "displayName": "email@steveteske.com",
+      "active": true,
+      "timeZone": "America/New_York"
+    },
+    "updated": "2021-03-14T12:56:39.689+0000",
+    "status": {
+      "self": "http://localhost:8080/rest/api/2/status/3",
+      "description": "This issue is being actively worked on at the moment by the assignee.",
+      "iconUrl": "http://localhost:8080/images/icons/statuses/inprogress.png",
+      "name": "In Progress",
+      "id": "3",
+      "statusCategory": {
+        "self": "http://localhost:8080/rest/api/2/statuscategory/4",
+        "id": 4,
+        "key": "indeterminate",
+        "colorName": "yellow",
+        "name": "In Progress"
+      }
+    },
+    "components": [],
+    "timeoriginalestimate": null,
+    "description": "*Creating Quick Filters*\n\nYou can add your own Quick Filters in the board configuration (select *Board > Configure*)",
+    "timetracking": {},
+    "archiveddate": null,
+    "attachment": [],
+    "aggregatetimeestimate": null,
+    "summary": "As a user, I can find important items on the board by using the customisable \"Quick Filters\" above >> Try clicking the \"Only My Issues\" Quick Filter above",
+    "creator": {
+      "self": "http://localhost:8080/rest/api/2/user?username=steveteske",
+      "name": "steveteske",
+      "key": "JIRAUSER10000",
+      "emailAddress": "email@steveteske.com",
+      "avatarUrls": {
+        "48x48": "http://localhost:8080/secure/useravatar?avatarId=10349",
+        "24x24": "http://localhost:8080/secure/useravatar?size=small&avatarId=10349",
+        "16x16": "http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349",
+        "32x32": "http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"
+      },
+      "displayName": "email@steveteske.com",
+      "active": true,
+      "timeZone": "America/New_York"
+    },
+    "subtasks": [],
+    "reporter": {
+      "self": "http://localhost:8080/rest/api/2/user?username=steveteske",
+      "name": "steveteske",
+      "key": "JIRAUSER10000",
+      "emailAddress": "email@steveteske.com",
+      "avatarUrls": {
+        "48x48": "http://localhost:8080/secure/useravatar?avatarId=10349",
+        "24x24": "http://localhost:8080/secure/useravatar?size=small&avatarId=10349",
+        "16x16": "http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349",
+        "32x32": "http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"
+      },
+      "displayName": "email@steveteske.com",
+      "active": true,
+      "timeZone": "America/New_York"
+    },
+    "customfield_10000": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@3a7ccdb8[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@1b1dd27[overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}},byInstanceType={}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@9f28cdf[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@6252023[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6b35e90a[overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@42f56fd3[stateCount=0,state=<null>,dueDate=<null>,overDue=false,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@5f7c8726[overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@707790d2[topEnvironments=[],showProjects=false,successfulCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@34ce5a6f[overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@5dac30d2[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6652c9f6[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@2a6f24ee[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}]},errors=[],configErrors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+    "aggregateprogress": {
+      "progress": 0,
+      "total": 0
+    },
+    "environment": null,
+    "duedate": null,
+    "progress": {
+      "progress": 0,
+      "total": 0
+    },
+    "comment": {
+      "comments": [
+        {
+          "self": "http://localhost:8080/rest/api/2/issue/10013/comment/10005",
+          "id": "10005",
+          "author": {
+            "self": "http://localhost:8080/rest/api/2/user?username=steveteske",
+            "name": "steveteske",
+            "key": "JIRAUSER10000",
+            "emailAddress": "email@steveteske.com",
+            "avatarUrls": {
+              "48x48": "http://localhost:8080/secure/useravatar?avatarId=10349",
+              "24x24": "http://localhost:8080/secure/useravatar?size=small&avatarId=10349",
+              "16x16": "http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349",
+              "32x32": "http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"
+            },
+            "displayName": "email@steveteske.com",
+            "active": true,
+            "timeZone": "America/New_York"
+          },
+          "body": "Joined Sample Sprint 2 1 days 4 hours 10 minutes ago",
+          "updateAuthor": {
+            "self": "http://localhost:8080/rest/api/2/user?username=steveteske",
+            "name": "steveteske",
+            "key": "JIRAUSER10000",
+            "emailAddress": "email@steveteske.com",
+            "avatarUrls": {
+              "48x48": "http://localhost:8080/secure/useravatar?avatarId=10349",
+              "24x24": "http://localhost:8080/secure/useravatar?size=small&avatarId=10349",
+              "16x16": "http://localhost:8080/secure/useravatar?size=xsmall&avatarId=10349",
+              "32x32": "http://localhost:8080/secure/useravatar?size=medium&avatarId=10349"
+            },
+            "displayName": "email@steveteske.com",
+            "active": true,
+            "timeZone": "America/New_York"
+          },
+          "created": "2021-02-23T19:08:53.016+0000",
+          "updated": "2021-02-23T19:08:53.016+0000"
+        }
+      ],
+      "maxResults": 1,
+      "total": 1,
+      "startAt": 0
+    },
+    "votes": {
+      "self": "http://localhost:8080/rest/api/2/issue/AV-14/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": []
+    },
+    "archivedby": null
+  }
+}

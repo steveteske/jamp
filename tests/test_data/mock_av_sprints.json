@@ -1,0 +1,371 @@
+{
+  "maxResults": 50,
+  "startAt": 0,
+  "isLast": true,
+  "values": [
+    {
+      "id": 777,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/777",
+      "state": "closed",
+      "name": "Sprint 5 (IDAP 2020)",
+      "startDate": "2020-02-27T16:59:05.814-05:00",
+      "endDate": "2020-03-12T16:59:00.000-04:00",
+      "completeDate": "2020-03-12T17:03:04.408-04:00",
+      "originBoardId": 458,
+      "goal": "Initiate the development and ensure inbound data/file consumption and generate notifications for the same."
+    },
+    {
+      "id": 778,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/778",
+      "state": "closed",
+      "name": "Sprint 0 (IDAP 2020)",
+      "startDate": "2020-02-13T11:52:32.922-05:00",
+      "endDate": "2020-02-27T11:52:00.000-05:00",
+      "completeDate": "2020-02-27T16:29:43.044-05:00",
+      "originBoardId": 458,
+      "goal": "Get the environment and infrastructure ready, design and deploy the data lake, deploy azure data factory and pipelines to start the development in the Sprint 5."
+    },
+    {
+      "id": 783,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/783",
+      "state": "closed",
+      "name": "Sprint 6 (IDAP 2020)",
+      "startDate": "2020-03-12T17:03:42.593-04:00",
+      "endDate": "2020-03-26T17:03:00.000-04:00",
+      "completeDate": "2020-03-26T16:04:35.996-04:00",
+      "originBoardId": 458,
+      "goal": ""
+    },
+    {
+      "id": 784,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/784",
+      "state": "closed",
+      "name": "Sprint 7 (IDAP 2020)",
+      "startDate": "2020-03-26T16:04:52.529-04:00",
+      "endDate": "2020-04-09T16:04:00.000-04:00",
+      "completeDate": "2020-04-08T16:31:01.004-04:00",
+      "originBoardId": 458,
+      "goal": ""
+    },
+    {
+      "id": 788,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/788",
+      "state": "closed",
+      "name": "Sprint 8 (IDAP 2020)",
+      "startDate": "2020-04-08T16:31:20.817-04:00",
+      "endDate": "2020-04-22T16:31:00.000-04:00",
+      "completeDate": "2020-04-22T15:58:12.088-04:00",
+      "originBoardId": 458,
+      "goal": ""
+    },
+    {
+      "id": 822,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/822",
+      "state": "closed",
+      "name": "Sprint 9 (IDAP 2020)",
+      "startDate": "2020-04-22T16:45:55.490-04:00",
+      "endDate": "2020-05-06T16:45:00.000-04:00",
+      "completeDate": "2020-05-07T14:09:52.537-04:00",
+      "originBoardId": 458,
+      "goal": ""
+    },
+    {
+      "id": 828,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/828",
+      "state": "closed",
+      "name": "Sprint 10 (IDAP 2020)",
+      "startDate": "2020-05-08T10:41:33.796-04:00",
+      "endDate": "2020-05-22T10:41:00.000-04:00",
+      "completeDate": "2020-05-21T11:13:21.214-04:00",
+      "originBoardId": 458,
+      "goal": ""
+    },
+    {
+      "id": 829,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/829",
+      "state": "closed",
+      "name": "Sprint 11 (IDAP 2020)",
+      "startDate": "2020-05-26T11:35:58.588-04:00",
+      "endDate": "2020-06-03T11:35:00.000-04:00",
+      "completeDate": "2020-06-08T13:13:44.974-04:00",
+      "originBoardId": 458,
+      "goal": "To commit to completing the user stories in Sprint 11."
+    },
+    {
+      "id": 830,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/830",
+      "state": "closed",
+      "name": "2020 Sprint 12 - Team 42",
+      "startDate": "2020-06-04T13:37:28.016-04:00",
+      "endDate": "2020-06-17T16:37:00.000-04:00",
+      "completeDate": "2020-06-18T13:04:58.660-04:00",
+      "originBoardId": 458,
+      "goal": "To complete the user stories the team committed to completing in Sprint 12."
+    },
+    {
+      "id": 832,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/832",
+      "state": "closed",
+      "name": "Sprint 13 (IDAP 2020)",
+      "startDate": "2020-06-18T15:28:54.367-04:00",
+      "endDate": "2020-07-01T18:28:00.000-04:00",
+      "completeDate": "2020-07-02T16:32:11.423-04:00",
+      "originBoardId": 458,
+      "goal": "To complete the user stories committed to in the current Sprint for the IDAP project."
+    },
+    {
+      "id": 860,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/860",
+      "state": "closed",
+      "name": "Sprint 14 (IDAP 2020)",
+      "startDate": "2020-07-02T14:01:05.395-04:00",
+      "endDate": "2020-07-15T17:01:00.000-04:00",
+      "completeDate": "2020-07-16T15:38:11.415-04:00",
+      "originBoardId": 458,
+      "goal": "To complete the user stories committed to by the Team for Sprint 14."
+    },
+    {
+      "id": 861,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/861",
+      "state": "closed",
+      "name": "Sprint 15 (IDAP 2020)",
+      "startDate": "2020-07-16T15:47:52.393-04:00",
+      "endDate": "2020-07-29T23:59:00.000-04:00",
+      "completeDate": "2020-08-05T10:40:28.761-04:00",
+      "originBoardId": 458,
+      "goal": "To complete the work committed in this Sprint for various Features to meet Client commitments."
+    },
+    {
+      "id": 895,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/895",
+      "state": "closed",
+      "name": "Sprint 16 (IDAP 2020)",
+      "startDate": "2020-07-30T13:52:02.237-04:00",
+      "endDate": "2020-08-12T23:59:00.000-04:00",
+      "completeDate": "2020-08-13T17:39:41.688-04:00",
+      "originBoardId": 458,
+      "goal": "To complete the user stories committed to in Iteration 16."
+    },
+    {
+      "id": 927,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/927",
+      "state": "closed",
+      "name": "Sprint 17 (IDAP 2020)",
+      "startDate": "2020-08-13T15:26:02.069-04:00",
+      "endDate": "2020-08-26T23:38:00.000-04:00",
+      "completeDate": "2020-08-27T16:59:28.587-04:00",
+      "originBoardId": 458,
+      "goal": "To use the guardrails to complete the user stories committed to in Sprint 17."
+    },
+    {
+      "id": 928,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/928",
+      "state": "closed",
+      "name": "Sprint 18 (IDAP 2020)",
+      "startDate": "2020-08-27T20:02:15.233-04:00",
+      "endDate": "2020-09-09T23:59:00.000-04:00",
+      "completeDate": "2020-09-10T23:24:05.469-04:00",
+      "originBoardId": 458,
+      "goal": "To complete the user stories committed to for Sprint 18."
+    },
+    {
+      "id": 932,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/932",
+      "state": "closed",
+      "name": "Sprint 19 (IDAP 2020)",
+      "startDate": "2020-09-10T13:00:05.883-04:00",
+      "endDate": "2020-09-23T23:59:00.000-04:00",
+      "completeDate": "2020-09-24T13:07:56.410-04:00",
+      "originBoardId": 458,
+      "goal": "To complete the user stories committed to in Sprint 19."
+    },
+    {
+      "id": 933,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/933",
+      "state": "closed",
+      "name": "Sprint 20 (IDAP 2020)",
+      "startDate": "2020-09-24T14:03:12.300-04:00",
+      "endDate": "2020-10-08T01:02:00.000-04:00",
+      "completeDate": "2020-10-07T16:31:19.826-04:00",
+      "originBoardId": 458,
+      "goal": "Ensure we are able to complete all the committed USs for this Sprint"
+    },
+    {
+      "id": 934,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/934",
+      "state": "closed",
+      "name": "Sprint 21 (IDAP 2020)",
+      "startDate": "2020-10-08T12:14:11.874-04:00",
+      "endDate": "2020-10-21T23:13:00.000-04:00",
+      "completeDate": "2020-10-22T13:05:16.378-04:00",
+      "originBoardId": 458,
+      "goal": "Implement multi client handling"
+    },
+    {
+      "id": 936,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/936",
+      "state": "closed",
+      "name": "Sprint 22 (IDAP 2020)",
+      "startDate": "2020-10-22T14:05:02.853-04:00",
+      "endDate": "2020-11-05T01:04:00.000-05:00",
+      "completeDate": "2020-11-05T13:26:06.950-05:00",
+      "originBoardId": 458,
+      "goal": ""
+    },
+    {
+      "id": 937,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/937",
+      "state": "closed",
+      "name": "Sprint 23 (IDAP 2020)",
+      "startDate": "2020-11-05T14:06:11.616-05:00",
+      "endDate": "2020-11-19T01:05:00.000-05:00",
+      "completeDate": "2020-11-18T15:10:42.726-05:00",
+      "originBoardId": 458,
+      "goal": "Implement Multi client handling"
+    },
+    {
+      "id": 1078,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1078",
+      "state": "closed",
+      "name": "Sprint 24 (IDAP 2020)",
+      "startDate": "2020-11-19T14:14:56.172-05:00",
+      "endDate": "2020-12-03T01:13:00.000-05:00",
+      "completeDate": "2020-12-03T13:20:49.557-05:00",
+      "originBoardId": 458,
+      "goal": "To complete Vision 837 end to end and partial completion of CMS MMR /CMS RAPS and analysis of CMMR . Regression testing for 12/16 release"
+    },
+    {
+      "id": 1056,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1056",
+      "state": "closed",
+      "name": "Sprint 25 (IDAP 2020)",
+      "startDate": "2020-12-03T14:20:22.586-05:00",
+      "endDate": "2020-12-17T01:19:00.000-05:00",
+      "completeDate": "2020-12-17T13:15:36.244-05:00",
+      "originBoardId": 458,
+      "goal": "Complete regression testing for 12/16 release and complete the foundation work for CMMR"
+    },
+    {
+      "id": 1057,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1057",
+      "state": "closed",
+      "name": "Sprint 26 (IDAP 2020)",
+      "startDate": "2020-12-17T13:46:38.382-05:00",
+      "endDate": "2020-12-31T00:45:00.000-05:00",
+      "completeDate": "2021-01-04T13:06:20.885-05:00",
+      "originBoardId": 458,
+      "goal": "Complete the CMMR foundation ticket and the conversion of HICN/MBI from fixed length to CSV files"
+    },
+    {
+      "id": 1058,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1058",
+      "state": "closed",
+      "name": "Sprint 1 (IDAP 2021)",
+      "startDate": "2021-01-04T13:53:41.375-05:00",
+      "endDate": "2021-01-14T00:52:00.000-05:00",
+      "completeDate": "2021-01-14T13:08:00.904-05:00",
+      "originBoardId": 458,
+      "goal": "Enhancing CMS MMR and HICN MBI and ingest membership file from core admin"
+    },
+    {
+      "id": 1059,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1059",
+      "state": "closed",
+      "name": "Sprint 2 (IDAP 2021)",
+      "startDate": "2021-01-14T13:32:29.274-05:00",
+      "endDate": "2021-01-28T00:31:00.000-05:00",
+      "completeDate": "2021-01-28T13:14:36.479-05:00",
+      "originBoardId": 458,
+      "goal": "Implement ARC code processing and finalize the member model"
+    },
+    {
+      "id": 1060,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1060",
+      "state": "closed",
+      "name": "Sprint 3 (IDAP 2021)",
+      "startDate": "2021-01-28T14:03:59.385-05:00",
+      "endDate": "2021-02-11T01:02:00.000-05:00",
+      "completeDate": "2021-02-10T16:04:31.421-05:00",
+      "originBoardId": 458,
+      "goal": "Start the JV implementation"
+    },
+    {
+      "id": 1061,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1061",
+      "state": "closed",
+      "name": "Sprint 4 (IDAP 2021)",
+      "startDate": "2021-02-11T08:00:15.116-05:00",
+      "endDate": "2021-02-24T23:30:00.000-05:00",
+      "completeDate": "2021-02-25T13:06:37.311-05:00",
+      "originBoardId": 458,
+      "goal": "Implementation of Standard and CMS files for NBND and VBA"
+    },
+    {
+      "id": 1066,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1066",
+      "state": "closed",
+      "name": "Sprint 5 (IDAP 2021)",
+      "startDate": "2021-02-25T16:55:06.239-05:00",
+      "endDate": "2021-03-10T08:25:00.000-05:00",
+      "completeDate": "2021-03-11T13:13:28.408-05:00",
+      "originBoardId": 458,
+      "goal": "Continue to deliver JV user stories, enhancements to the ABC framework"
+    },
+    {
+      "id": 1067,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1067",
+      "state": "closed",
+      "name": "Sprint 6 (IDAP 2021)",
+      "startDate": "2021-03-11T13:57:08.440-05:00",
+      "endDate": "2021-03-24T05:27:00.000-04:00",
+      "completeDate": "2021-03-24T15:52:01.631-04:00",
+      "originBoardId": 458,
+      "goal": "Continue with JV implementation"
+    },
+    {
+      "id": 1068,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1068",
+      "state": "active",
+      "name": "Sprint 7 (IDAP 2021)",
+      "startDate": "2021-03-25T08:00:00.984-04:00",
+      "endDate": "2021-04-07T20:00:00.000-04:00",
+      "originBoardId": 458,
+      "goal": ""
+    },
+    {
+      "id": 1069,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1069",
+      "state": "future",
+      "name": "Sprint 8 (IDAP 2021)",
+      "originBoardId": 458
+    },
+    {
+      "id": 1070,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1070",
+      "state": "future",
+      "name": "Sprint 9 (IDAP 2021)",
+      "originBoardId": 458
+    },
+    {
+      "id": 1071,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1071",
+      "state": "future",
+      "name": "Sprint 10 (IDAP 2021)",
+      "originBoardId": 458
+    },
+    {
+      "id": 1072,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1072",
+      "state": "future",
+      "name": "Sprint 11 (IDAP 2021)",
+      "originBoardId": 458
+    },
+    {
+      "id": 1073,
+      "self": "https://tm.prod.advantasure.com/rest/agile/1.0/sprint/1073",
+      "state": "future",
+      "name": "Sprint 12 (IDAP 2021)",
+      "originBoardId": 458
+    }
+  ]
+}
