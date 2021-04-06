@@ -78,7 +78,7 @@ class JiraProgramMetrics:
         for f in filters:
             tuple = f.split(":")
             if len(tuple) == 1:
-                command = 'MATCH_EXACT'
+                command = 'MATCH_STARTS_WITH'
                 pattern = tuple[0]
             elif len(tuple) == 2:
                 (pattern, command) = tuple

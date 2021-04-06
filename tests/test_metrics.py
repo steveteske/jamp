@@ -143,7 +143,7 @@ def test_metrics_required_args_good_password(mock_jira_field_mapper,
 
     # Setup
     mock_jira.return_value.boards.return_value = mock_boards
-    mock_jira.return_value.sprints.sideeffects = [mock_sprints]
+    mock_jira.return_value.sprints.return_value = mock_sprints
 
     mock_jira_reports.return_value.sprint_report.return_value = mock_sprint_report
 
@@ -162,7 +162,7 @@ def test_metrics_required_args_good_password(mock_jira_field_mapper,
     assert mock_server == mock_jira_reports.call_args[1]['server']
     assert (mock_user, mock_password) == mock_jira_reports.call_args[1]['basic_auth']
 
-    # assert mock_jira.return_value.boards.called
+    assert mock_jira.return_value.boards.called
     assert mock_jira.return_value.sprints.called
     assert mock_jira.return_value.sprints.call_count == 100 # two scrum boards
 
@@ -196,7 +196,7 @@ def test_metrics_args_board(mock_jira_field_mapper,
     pm = program_metrics(["metrics.py",
                           '--user', mock_user,
                           '--server', mock_server,
-                          '--board', 'JAMP:MATCH_EXACT'
+                          '--board', 'IDAP board:MATCH_EXACT'
                           ],
                          password=mock_password)
 
@@ -241,7 +241,7 @@ def test_metrics_args_board_no_command(mock_jira_field_mapper,
     pm = program_metrics(["metrics.py",
                           '--user', mock_user,
                           '--server', mock_server,
-                          '--board', 'JAMP'
+                          '--board', 'IDAP'
                           ],
                          password=mock_password)
 
@@ -252,7 +252,7 @@ def test_metrics_args_board_no_command(mock_jira_field_mapper,
 
     mock_jira.return_value.boards.assert_called()
     mock_jira.return_value.sprints.assert_called()
-    assert mock_jira.return_value.sprints.call_count == 1
+    assert mock_jira.return_value.sprints.call_count == 2
 
     assert mock_server == mock_jira_reports.call_args[1]['server']
     assert (mock_user, mock_password) == mock_jira_reports.call_args[1]['basic_auth']
