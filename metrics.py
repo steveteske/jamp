@@ -72,7 +72,7 @@ class JiraProgramMetrics:
     def board_list(self):
         boards = []
         if not self._args.board:
-            return self.jira_client.boards()
+            return self.jira_client.boards(maxResults=None)
 
         filters = self._args.board.split(';')
         for f in filters:
@@ -86,8 +86,10 @@ class JiraProgramMetrics:
                 raise ValueError(f"Poorly formed filter {f}. Must be PATTERN:COMMAND, where"
                                  f"COMMAND is either 'MATCH_STARTS_WITH' or 'MATCH_EXACT'")
 
-            for b in self.jira_client.boards(type='scrum'):
+            for b in self.jira_client.boards(type='scrum', maxResults=None):
                 print(b.name)
+                if "IDAP" in b.name:
+                    pprint.pprint(b.raw)
                 if command == 'MATCH_STARTS_WITH' and b.name.startswith(pattern):
                     boards.append(b)
                 elif command == 'MATCH_EXACT' and b.name == pattern:
@@ -122,7 +124,7 @@ class JiraProgramMetrics:
             if board.type != 'scrum':
                 continue
 
-            for sprint in self.jira_client.sprints(board_id=board.id):
+            for sprint in self.jira_client.sprints(board_id=board.id, maxResults=None):
                 print(f"Examining sprint: {sprint.name} ({sprint.id})")
                 sr = self.reports_client.sprint_report(board_id=board.id, sprint_id=sprint.id)
 

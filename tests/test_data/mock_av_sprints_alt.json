@@ -1,0 +1,294 @@
+{
+  "sprints": [
+    {
+      "id": 777,
+      "sequence": 777,
+      "name": "Sprint 5 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "Initiate the development and ensure inbound data/file consumption and generate notifications for the same.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 778,
+      "sequence": 778,
+      "name": "Sprint 0 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "Get the environment and infrastructure ready, design and deploy the data lake, deploy azure data factory and pipelines to start the development in the Sprint 5.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 783,
+      "sequence": 783,
+      "name": "Sprint 6 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 784,
+      "sequence": 784,
+      "name": "Sprint 7 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 788,
+      "sequence": 788,
+      "name": "Sprint 8 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 822,
+      "sequence": 822,
+      "name": "Sprint 9 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 828,
+      "sequence": 828,
+      "name": "Sprint 10 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 829,
+      "sequence": 829,
+      "name": "Sprint 11 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To commit to completing the user stories in Sprint 11.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 830,
+      "sequence": 830,
+      "name": "2020 Sprint 12 - Team 42",
+      "state": "CLOSED",
+      "goal": "To complete the user stories the team committed to completing in Sprint 12.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 832,
+      "sequence": 832,
+      "name": "Sprint 13 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To complete the user stories committed to in the current Sprint for the IDAP project.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 857,
+      "sequence": 857,
+      "name": "B.I. Team 42 - Sprint 13",
+      "state": "CLOSED",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 860,
+      "sequence": 860,
+      "name": "Sprint 14 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To complete the user stories committed to by the Team for Sprint 14.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 861,
+      "sequence": 861,
+      "name": "Sprint 15 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To complete the work committed in this Sprint for various Features to meet Client commitments.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 895,
+      "sequence": 895,
+      "name": "Sprint 16 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To complete the user stories committed to in Iteration 16.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 927,
+      "sequence": 927,
+      "name": "Sprint 17 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To use the guardrails to complete the user stories committed to in Sprint 17.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 928,
+      "sequence": 928,
+      "name": "Sprint 18 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To complete the user stories committed to for Sprint 18.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 932,
+      "sequence": 932,
+      "name": "Sprint 19 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To complete the user stories committed to in Sprint 19.",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 933,
+      "sequence": 933,
+      "name": "Sprint 20 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "Ensure we are able to complete all the committed USs for this Sprint",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 934,
+      "sequence": 934,
+      "name": "Sprint 21 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "Implement multi client handling",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 936,
+      "sequence": 936,
+      "name": "Sprint 22 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 937,
+      "sequence": 937,
+      "name": "Sprint 23 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "Implement Multi client handling",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1078,
+      "sequence": 1056,
+      "name": "Sprint 24 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "To complete Vision 837 end to end and partial completion of CMS MMR /CMS RAPS and analysis of CMMR . Regression testing for 12/16 release",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1056,
+      "sequence": 1057,
+      "name": "Sprint 25 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "Complete regression testing for 12/16 release and complete the foundation work for CMMR",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1057,
+      "sequence": 1058,
+      "name": "Sprint 26 (IDAP 2020)",
+      "state": "CLOSED",
+      "goal": "Complete the CMMR foundation ticket and the conversion of HICN/MBI from fixed length to CSV files",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1058,
+      "sequence": 1059,
+      "name": "Sprint 1 (IDAP 2021)",
+      "state": "CLOSED",
+      "goal": "Enhancing CMS MMR and HICN MBI and ingest membership file from core admin",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1059,
+      "sequence": 1060,
+      "name": "Sprint 2 (IDAP 2021)",
+      "state": "CLOSED",
+      "goal": "Implement ARC code processing and finalize the member model",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1060,
+      "sequence": 1061,
+      "name": "Sprint 3 (IDAP 2021)",
+      "state": "CLOSED",
+      "goal": "Start the JV implementation",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1061,
+      "sequence": 1066,
+      "name": "Sprint 4 (IDAP 2021)",
+      "state": "CLOSED",
+      "goal": "Implementation of Standard and CMS files for NBND and VBA",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1066,
+      "sequence": 1067,
+      "name": "Sprint 5 (IDAP 2021)",
+      "state": "CLOSED",
+      "goal": "Continue to deliver JV user stories, enhancements to the ABC framework",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1067,
+      "sequence": 1068,
+      "name": "Sprint 6 (IDAP 2021)",
+      "state": "CLOSED",
+      "goal": "Continue with JV implementation",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1068,
+      "sequence": 1069,
+      "name": "Sprint 7 (IDAP 2021)",
+      "state": "ACTIVE",
+      "goal": "",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1069,
+      "sequence": 1070,
+      "name": "Sprint 8 (IDAP 2021)",
+      "state": "FUTURE",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1070,
+      "sequence": 1071,
+      "name": "Sprint 9 (IDAP 2021)",
+      "state": "FUTURE",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1071,
+      "sequence": 1072,
+      "name": "Sprint 10 (IDAP 2021)",
+      "state": "FUTURE",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1072,
+      "sequence": 1073,
+      "name": "Sprint 11 (IDAP 2021)",
+      "state": "FUTURE",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1073,
+      "sequence": 1074,
+      "name": "Sprint 12 (IDAP 2021)",
+      "state": "FUTURE",
+      "linkedPagesCount": 0
+    },
+    {
+      "id": 1087,
+      "sequence": 1087,
+      "name": "Sprint 23 (IDAP 2021)",
+      "state": "FUTURE",
+      "linkedPagesCount": 0
+    }
+  ],
+  "rapidViewId": 442
+}

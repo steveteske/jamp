@@ -12,7 +12,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 @pytest.fixture
 def mock_av_boards():
-    f = open(os.path.join(dir_path, "test_data/mock_av_boards.json"))
+    f = open(os.path.join(dir_path, "test_data/mock_av_rapidview_list.json"))
     return json.load(f)
 
 
