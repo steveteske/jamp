@@ -1,5 +1,6 @@
 import math
 
+from jamp import NAN
 from jamp.resources import SprintReport, COUNTS, STATS, LISTS, VelocityReport
 import pytest
 
@@ -7,7 +8,7 @@ import pytest
 values = (3, 3, 1, 0, 2,  # counts
 
           6.0, 6.0, 17.0, 8.0, 8.0,
-          float("NaN"), 8.0, float("NaN"), float("NaN"),  # stats
+          NAN, 8.0, NAN, NAN,  # stats
 
           ["AV-15", "AV-16", "AV-17"],
           ["AV-10", "AV-13", "AV-14"],

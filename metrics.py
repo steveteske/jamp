@@ -1,13 +1,13 @@
 import sys
 
 import pandas as pd
-from jira import JIRA
+from jira import JIRA, JIRAError
 import pprint
 import argparse
 import os
 
 import jamp
-from jamp import JiraFieldMapper
+from jamp import JiraFieldMapper, NAN
 from jamp.client import JIRAReports, JIRATeams
 
 
@@ -126,12 +126,23 @@ class JiraProgramMetrics:
 
             for sprint in self.jira_client.sprints(board_id=board.id, maxResults=None):
                 print(f"Examining sprint: {sprint.name} ({sprint.id})")
-                sr = self.reports_client.sprint_report(board_id=board.id, sprint_id=sprint.id)
+
+                try:
+                    # Once during a run, Jira returned a internal error
+                    # ... HTTPS 500 "Passed List had more than one value."
+                    # ... Catch the error and continue on.
+                    sr = self.reports_client.sprint_report(board_id=board.id, sprint_id=sprint.id)
+                except JIRAError as err:
+                    print("JIRAError occured: ", err)
+                    continue
+
+                if "IDAP" in board.name:
+                    pprint.pprint(sr.raw)
 
                 if sr.committed > 0.0:
                     percent_complete = sr.completedIssuesEstimateSum / sr.committed
                 else:
-                    percent_complete = float("NaN")
+                    percent_complete = NAN
 
                 sr.committed_count
 
