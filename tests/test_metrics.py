@@ -24,7 +24,8 @@ def mock_password():
 def mock_user():
     return 'steve'
 
-def build_sprint(name,id):
+
+def build_sprint(name, id):
     mock_sprint = MagicMock()
     mock_sprint.name = name
     mock_sprint.id = id
@@ -53,7 +54,7 @@ def build_board(name: str, id: int, type: str) -> MagicMock:
 @pytest.fixture
 def mock_boards(mock_av_boards):
     mock_boards = []
-    options = {'agile_rest_path': 'agile' }
+    options = {'agile_rest_path': 'agile'}
     for raw_boards_json in mock_av_boards['views']:
         raw_boards_json['self'] = 'https://dummy.com'
         if (raw_boards_json['sprintSupportEnabled']):
@@ -67,6 +68,7 @@ def mock_boards(mock_av_boards):
     # mock_boards.append(build_board('XYZ', 200, 'kanban'))
 
     return mock_boards
+
 
 @pytest.fixture
 def mock_sprint_report():
@@ -130,20 +132,20 @@ def test_metrics_args_required_args_no_password(program_metrics):
 @patch('metrics.JIRATeams')
 @patch('metrics.JiraFieldMapper')
 def test_metrics_required_args_good_password(mock_jira_field_mapper,
-                                                  mock_jira_teams,
-                                                  mock_jira_reports,
-                                                  mock_jira,
-                                                  program_metrics,
-                                                  mock_server,
-                                                  mock_password,
-                                                  mock_user,
-                                                  mock_boards,
-                                                  mock_sprints,
+                                             mock_jira_teams,
+                                             mock_jira_reports,
+                                             mock_jira,
+                                             program_metrics,
+                                             mock_server,
+                                             mock_password,
+                                             mock_user,
+                                             mock_boards,
+                                             mock_sprints,
                                              mock_sprint_report):
-
     # Setup
-    mock_jira.return_value.boards.return_value = mock_boards
-    mock_jira.return_value.sprints.return_value = mock_sprints
+    mock_jira_client_instance = mock_jira.return_value
+    mock_jira_client_instance.boards.return_value = mock_boards
+    mock_jira_client_instance.sprints.return_value = mock_sprints
 
     mock_jira_reports.return_value.sprint_report.return_value = mock_sprint_report
 
@@ -162,9 +164,9 @@ def test_metrics_required_args_good_password(mock_jira_field_mapper,
     assert mock_server == mock_jira_reports.call_args[1]['server']
     assert (mock_user, mock_password) == mock_jira_reports.call_args[1]['basic_auth']
 
-    assert mock_jira.return_value.boards.called
-    assert mock_jira.return_value.sprints.called
-    assert mock_jira.return_value.sprints.call_count == 100 # two scrum boards
+    mock_jira_client_instance.boards.assert_called()
+    mock_jira_client_instance.sprints.assert_called()
+    assert mock_jira_client_instance.sprints.call_count == 100  # two scrum boards
 
     assert not mock_jira_teams.called
 
@@ -186,7 +188,6 @@ def test_metrics_args_board(mock_jira_field_mapper,
                             mock_boards,
                             mock_sprints,
                             mock_sprint_report):
-
     mock_jira_client_instance = mock_jira.return_value
     mock_jira_client_instance.boards.return_value = mock_boards
     mock_jira_client_instance.sprints.return_value = mock_sprints
@@ -232,9 +233,9 @@ def test_metrics_args_board_no_command(mock_jira_field_mapper,
                                        mock_boards,
                                        mock_sprints,
                                        mock_sprint_report):
-
-    mock_jira.return_value.boards.return_value = mock_boards
-    mock_jira.return_value.sprints.return_value = mock_sprints
+    mock_jira_client_instance = mock_jira.return_value
+    mock_jira_client_instance.boards.return_value = mock_boards
+    mock_jira_client_instance.sprints.return_value = mock_sprints
 
     mock_jira_reports.return_value.sprint_report.return_value = mock_sprint_report
 
@@ -250,9 +251,9 @@ def test_metrics_args_board_no_command(mock_jira_field_mapper,
     assert mock_server == mock_jira.call_args[1]['server']
     assert (mock_user, mock_password) == mock_jira.call_args[1]['basic_auth']
 
-    mock_jira.return_value.boards.assert_called()
-    mock_jira.return_value.sprints.assert_called()
-    assert mock_jira.return_value.sprints.call_count == 2
+    mock_jira_client_instance.boards.assert_called()
+    mock_jira_client_instance.sprints.assert_called()
+    assert mock_jira_client_instance.sprints.call_count == 2
 
     assert mock_server == mock_jira_reports.call_args[1]['server']
     assert (mock_user, mock_password) == mock_jira_reports.call_args[1]['basic_auth']

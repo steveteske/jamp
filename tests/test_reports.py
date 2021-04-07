@@ -46,3 +46,11 @@ def test_sprint_report(sprint_report):
 
 def test_sprint_report_committed(sprint_report):
     assert 12.0 == sprint_report.committed
+
+
+def test_sprint_report_added_count(sprint_report):
+    assert 2 == sprint_report.added_count
+
+
+def test_sprint_report_committed_count(sprint_report):
+    assert 5 == sprint_report.committed_count

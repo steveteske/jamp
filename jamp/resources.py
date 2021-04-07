@@ -1,9 +1,10 @@
+import math
 import pprint
 
 from jira.resources import Resource, GreenHopperResource
 
 import jamp
-from jamp import JiraFieldMapper
+from jamp import JiraFieldMapper, NAN, JIRA_KEY_KEY, JIRA_KEY_VALUE
 
 
 class Team(Resource):
@@ -14,6 +15,8 @@ class Team(Resource):
         if raw:
             self._parse_raw(raw)
 
+KEY_ISSUE_KEYS_ADDED_DURING_SPRINT = 'issueKeysAddedDuringSprint'
+KEY_ESTIMATE_STATISTIC = 'estimateStatistic'
 
 STATS = ('completedIssuesInitialEstimateSum',
          'completedIssuesEstimateSum',
@@ -28,7 +31,7 @@ LISTS = ('completedIssues',
          'issuesNotCompletedInCurrentSprint',
          'puntedIssues',
          'issuesCompletedInAnotherSprint',
-         'issueKeysAddedDuringSprint')
+         KEY_ISSUE_KEYS_ADDED_DURING_SPRINT)
 COUNTS = [x + 'Count' for x in LISTS]
 
 
@@ -46,7 +49,7 @@ class SprintReport(GreenHopperResource):
         Overridden to address a single attribute that doesn't match how other Resources
         define attributes:
 
-        'issueKeysAddedDuringSprint' is a dict of issues keys rather than
+        KEY_ISSUE_KEYS_ADDED_DURING_SPRINT is a dict of issues keys rather than
         a list of keys.
 
         :param raw:
@@ -57,7 +60,7 @@ class SprintReport(GreenHopperResource):
         GreenHopperResource._parse_raw(self, raw)
 
         # Save off the list of added issues
-        self._added = raw['contents']['issueKeysAddedDuringSprint']
+        self._added = raw['contents'][KEY_ISSUE_KEYS_ADDED_DURING_SPRINT]
 
         self._added_sum = 0
         for issue_key in self._added:
@@ -101,7 +104,7 @@ class SprintReport(GreenHopperResource):
         :return: float value of the stats or 0.0 if 'null'.
         """
         if stat.text == 'null':
-            return float("NaN")
+            return NAN
         else:
             return stat.value
 
@@ -127,7 +130,7 @@ class SprintReport(GreenHopperResource):
 
         if item in LISTS:
             try:
-                if item == 'issueKeysAddedDuringSprint':
+                if item == KEY_ISSUE_KEYS_ADDED_DURING_SPRINT:
                     return self._added
                 else:
                     return getattr(self.contents, item)
@@ -136,7 +139,7 @@ class SprintReport(GreenHopperResource):
 
         if item in COUNTS:
             base_item = item[:-len('Count')]
-            if base_item == 'issueKeysAddedDuringSprint':
+            if base_item == KEY_ISSUE_KEYS_ADDED_DURING_SPRINT:
                 return len(self._added)
 
             value = getattr(self.contents, base_item)
@@ -162,16 +165,25 @@ class SprintReport(GreenHopperResource):
 
     @property
     def committed(self) -> float:
-        committed = self.issuesNotCompletedInitialEstimateSum + \
-                    self.completedIssuesInitialEstimateSum - \
-                    self.issues_added_initial_estimate_sum
+        committed = 0.0
+        if not math.isnan(self.issuesNotCompletedInitialEstimateSum):
+            committed = self.issuesNotCompletedInitialEstimateSum
+        if not math.isnan(self.completedIssuesInitialEstimateSum):
+            committed += self.completedIssuesInitialEstimateSum
+        if not math.isnan(self.puntedIssuesInitialEstimateSum):
+            committed += self.puntedIssuesInitialEstimateSum
+
+        committed -= self.issues_added_initial_estimate_sum
 
         return committed
 
     @property
     def committed_count(self) -> int:
-        committed = self.issuesNotCompletedInCurrentSprintCount + \
-                    self.completedIssuesCount
+        committed = 0
+        committed += self.issuesNotCompletedInCurrentSprintCount
+        committed += self.completedIssuesCount
+        committed += self.puntedIssuesCount
+        committed -= self.added_count
 
         return committed
 
@@ -182,7 +194,7 @@ class SprintReport(GreenHopperResource):
     @property
     def percent_complete_count(self) -> float:
         if self.committed_count == 0:
-            return float("NaN")
+            return NAN
 
         percent_completed = self.completed_count / self.committed_count
         return percent_completed
@@ -190,17 +202,17 @@ class SprintReport(GreenHopperResource):
     def _initial_estimate_stat(self, issues_list: list, issue_match=None) -> float:
         sum = 0
         for issue in issues_list:
-            if 'estimateStatistic' not in issue:
+            if KEY_ESTIMATE_STATISTIC not in issue:
                 return 0.0
 
-            stat_field = issue['estimateStatistic']['statFieldValue']
+            stat_field = issue[KEY_ESTIMATE_STATISTIC]['statFieldValue']
             if stat_field:
-                stat = stat_field['value']
+                stat = stat_field[JIRA_KEY_VALUE]
             else:
-                stat = float("NaN")
+                stat = NAN
 
             if issue_match:
-                if issue['key'] == issue_match:
+                if issue[JIRA_KEY_KEY] == issue_match:
                     return stat
             else:
                 sum += stat
@@ -212,12 +224,12 @@ class SprintReport(GreenHopperResource):
         for issue in issues_list:
             stat_field = issue['currentEstimateStatistic']['statFieldValue']
             if stat_field:
-                stat = stat_field['value']
+                stat = stat_field[JIRA_KEY_VALUE]
             else:
-                stat = float("NaN")
+                stat = NAN
 
             if issue_match:
-                if issue['key'] == issue_match:
+                if issue[JIRA_KEY_KEY] == issue_match:
                     return stat
             else:
                 sum += stat
@@ -231,15 +243,13 @@ class SprintReport(GreenHopperResource):
         sprint report.
         :return:
         """
-        sum = 0
+        sum = 0.0
         for issue_key in self._added:
             contents = self.raw['contents']
             sum += self._initial_estimate_stat(contents['completedIssues'], issue_key)
             sum += self._initial_estimate_stat(contents['issuesNotCompletedInCurrentSprint'], issue_key)
-            # 'completedIssues'
-            # 'issuesNotCompletedInCurrenSprint'
-            # 'puntedIssues'?????
-            # 'issuesCompletedInAnotherSprint?????
+            sum += self._initial_estimate_stat(contents['puntedIssues'], issue_key)
+            # TODO: should this be included: 'issuesCompletedInAnotherSprint?????
 
         return sum
 
@@ -261,7 +271,7 @@ class VelocityReport(GreenHopperResource):
         except KeyError as e:
             return float('NaN')
 
-        committed = stat_entry[stat]['value']
+        committed = stat_entry[stat][JIRA_KEY_VALUE]
         return float(committed)
 
     def committed(self, sprint_id: int) -> float:

@@ -7,7 +7,7 @@ import argparse
 import os
 
 # Story point sizes that are acceptable in a sprint
-from jamp import JiraFieldMapper
+from jamp import JiraFieldMapper, JIRA_KEY_KEY
 
 size_pts_seq = (1, 2, 3, 5, 8)
 
@@ -58,7 +58,7 @@ class BuildProgramInJira:
             summary_field += f' {random_story_number}'
 
         field_dict = {
-            self.jira_key("Project"): {'key': self._project_key},
+            self.jira_key("Project"): {JIRA_KEY_KEY: self._project_key},
             self.jira_key('Summary'): summary_field,
             self.jira_key('Description'): f'Look into this issue for the {random_story_number}th time',
             self.jira_key('Issue Type'): {'name': 'Story'},
