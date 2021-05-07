@@ -101,6 +101,7 @@ class JiraProgramMetrics:
 
         HEADERS = ("Team",
                    "Sprint",
+                   "State",
                    "Story Points Committed",
                    "Story Ponts Committed VC",
                    "Story Points Added",
@@ -148,6 +149,7 @@ class JiraProgramMetrics:
 
                 data.append((board.name,
                              sr.sprint.name,
+                             sr.sprint.state,
                              sr.committed,
                              vr.committed(sprint.id),
                              sr.added_sum,
