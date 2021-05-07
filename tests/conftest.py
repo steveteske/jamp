@@ -17,6 +17,36 @@ def mock_av_boards():
 
 
 @pytest.fixture
+def mock_sprint_1_report_json():
+    f = open(os.path.join(dir_path, "test_data/mock_av_sprint_1_report_1058.json"))
+    r_json = json.load(f)
+    r_json['id'] = 'fake'
+    return r_json
+
+
+@pytest.fixture
+def mock_sprint_2_report_json():
+    f = open(os.path.join(dir_path, "test_data/mock_av_sprint_2_report_1059.json"))
+    r_json = json.load(f)
+    r_json['id'] = 'fake'
+    return r_json
+
+
+@pytest.fixture
+def mock_sprint_6_report_json():
+    f = open(os.path.join(dir_path, "test_data/mock_av_sprint_6_report_1067.json"))
+    r_json = json.load(f)
+    r_json['id'] = 'fake'
+    return r_json
+
+@pytest.fixture
+def mock_velocity_av_report_json():
+    f = open(os.path.join(dir_path, "test_data/mock_av_velocity_report_0458.json"))
+    r_json = json.load(f)
+    r_json['id'] = 'fake'
+    return r_json
+
+@pytest.fixture
 def mock_sprint_report():
     f = open(os.path.join(dir_path, "test_data/mock_sprintreport.json"))
     return json.load(f)
@@ -81,3 +111,39 @@ def sprint_report(mock_jira_key, mock_field_mapper, mock_field_mapper_build_map,
     mock_jira_key.return_value = 'customfield_10111'
     sr = SprintReport(options=mock_options, session=None, raw=mock_sprint_report_with_id)
     return sr
+
+@pytest.fixture
+@patch.object(SprintReport, '_build_resource')
+@patch.object(JiraFieldMapper, '_build_field_name_map')
+@patch.object(JiraFieldMapper, 'jira_key')
+def sprint_1_report(mock_jira_key, mock_field_mapper, mock_field_mapper_build_map,
+                  mock_options, mock_sprint_1_report_json):
+
+    mock_jira_key.return_value = 'customfield_10111'
+    sr = SprintReport(options=mock_options, session=None, raw=mock_sprint_1_report_json)
+    return sr
+
+
+@pytest.fixture
+@patch.object(SprintReport, '_build_resource')
+@patch.object(JiraFieldMapper, '_build_field_name_map')
+@patch.object(JiraFieldMapper, 'jira_key')
+def sprint_2_report(mock_jira_key, mock_field_mapper, mock_field_mapper_build_map,
+                  mock_options, mock_sprint_2_report_json):
+
+    mock_jira_key.return_value = 'customfield_10111'
+    sr = SprintReport(options=mock_options, session=None, raw=mock_sprint_2_report_json)
+    return sr
+
+
+@pytest.fixture
+@patch.object(SprintReport, '_build_resource')
+@patch.object(JiraFieldMapper, '_build_field_name_map')
+@patch.object(JiraFieldMapper, 'jira_key')
+def sprint_6_report(mock_jira_key, mock_field_mapper, mock_field_mapper_build_map,
+                  mock_options, mock_sprint_6_report_json):
+
+    mock_jira_key.return_value = 'customfield_10111'
+    sr = SprintReport(options=mock_options, session=None, raw=mock_sprint_6_report_json)
+    return sr
+

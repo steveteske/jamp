@@ -1,0 +1,504 @@
+{
+  "contents": {
+    "completedIssues": [
+      {
+        "id": 160443,
+        "key": "IDAP-647",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "MEMOUT: Ingest, Validate MEMOUT files into Data Lake",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-232",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-232",
+          "epicColor": "ghx-label-13",
+          "text": "Memout sourced, validated and loaded to the Data Lake",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31213
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 164568,
+        "key": "IDAP-754",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "Configure Level2  Validations for CMS HICN /MBI files",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/high.svg",
+        "priorityName": "High",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-198",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-198",
+          "epicColor": "ghx-label-1",
+          "text": "CMS HICN/MBI Crosswalk files sourced, validated and loaded to the Data Lake",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 5.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 5.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31213
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 164940,
+        "key": "IDAP-773",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "CMS MMR: Configure  existing fixed length file types to new 'Conversion Pipeline' ",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-231",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-231",
+          "epicColor": "ghx-label-13",
+          "text": "CMS MMR sourced, validated and loaded to the Data Lake",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31213
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 172787,
+        "key": "IDAP-1006",
+        "hidden": false,
+        "typeName": "Non Production Defect",
+        "typeId": "11200",
+        "summary": "csv conversion pipeline issue",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25002&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/medium.svg",
+        "priorityName": "Medium",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-743",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-743",
+          "epicColor": "ghx-label-13",
+          "text": "Audit, Balance, Control Reporting (ABC) T1",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 5.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 5.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31213
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 198325,
+        "key": "IDAP-1178",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "CMMR - POC -Initial Build of the ARCode Processing",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-246",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-246",
+          "epicColor": "ghx-label-13",
+          "text": "cMMR sourced, validated, generated and ready for client T1",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          32601
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 198627,
+        "key": "IDAP-1201",
+        "hidden": false,
+        "typeName": "Spike",
+        "typeId": "11300",
+        "summary": "Detail Design for Purging and Archiving  historical data from IDAP",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25004&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/medium.svg",
+        "priorityName": "Medium",
+        "done": false,
+        "assignee": "Ihar.Kuntsevich",
+        "assigneeName": "Ihar Kuntsevich",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?avatarId=10814",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-1089",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-1089",
+          "epicColor": "ghx-label-8",
+          "text": "Archive and Purging Strategy",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          32601
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 199292,
+        "key": "IDAP-1217",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "Regression Testing - Jan 13 OCR release",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/medium.svg",
+        "priorityName": "Medium",
+        "done": true,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 5.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 5.0
+          }
+        },
+        "statusId": "11200",
+        "statusName": "Released",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "11200",
+          "name": "Released",
+          "description": "Ticket has been released and now must be validated before closing.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31611
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      }
+    ],
+    "issuesNotCompletedInCurrentSprint": [],
+    "puntedIssues": [],
+    "issuesCompletedInAnotherSprint": [],
+    "completedIssuesInitialEstimateSum": {
+      "value": 39.0,
+      "text": "39.0"
+    },
+    "completedIssuesEstimateSum": {
+      "value": 39.0,
+      "text": "39.0"
+    },
+    "issuesNotCompletedInitialEstimateSum": {
+      "text": "null"
+    },
+    "issuesNotCompletedEstimateSum": {
+      "text": "null"
+    },
+    "allIssuesEstimateSum": {
+      "value": 39.0,
+      "text": "39.0"
+    },
+    "puntedIssuesInitialEstimateSum": {
+      "text": "null"
+    },
+    "puntedIssuesEstimateSum": {
+      "text": "null"
+    },
+    "issuesCompletedInAnotherSprintInitialEstimateSum": {
+      "text": "null"
+    },
+    "issuesCompletedInAnotherSprintEstimateSum": {
+      "text": "null"
+    },
+    "issueKeysAddedDuringSprint": {}
+  },
+  "sprint": {
+    "id": 1058,
+    "sequence": 1059,
+    "name": "Sprint 1 (IDAP 2021)",
+    "state": "CLOSED",
+    "goal": "Enhancing CMS MMR and HICN MBI and ingest membership file from core admin",
+    "linkedPagesCount": 0,
+    "startDate": "Jan/4/21 1:53 PM",
+    "endDate": "Jan/14/21 12:52 AM",
+    "completeDate": "Jan/14/21 1:08 PM",
+    "canUpdateSprint": false,
+    "remoteLinks": [],
+    "daysRemaining": 0
+  },
+  "lastUserToClose": "<a class=\"user-hover\" rel=\"sidharth.sood\" id=\"_sidharth.sood\" href=\"/secure/ViewProfile.jspa?name=sidharth.sood\">Sidharth Sood </a>",
+  "userWhoStarted": "<a class=\"user-hover\" rel=\"sidharth.sood\" id=\"_sidharth.sood\" href=\"/secure/ViewProfile.jspa?name=sidharth.sood\">Sidharth Sood </a>",
+  "supportsPages": true
+}

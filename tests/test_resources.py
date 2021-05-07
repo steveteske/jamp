@@ -44,6 +44,7 @@ velocity_parms = \
      ]
     ]
 
+
 @pytest.mark.parametrize("test_input,expected", velocity_parms)
 def test_velocity_report(mock_velocity_report_with_id, mock_options, test_input, expected):
     sr = VelocityReport(options=mock_options, session=None, raw=mock_velocity_report_with_id)
@@ -60,4 +61,16 @@ def test_velocity_report(mock_velocity_report_with_id, mock_options, test_input,
             sprint = getattr(value, e['id'])
             assert sprint.estimated.value == e['estimated']
             assert sprint.completed.value == e['completed']
+
+
+def test_sprint_1_report_committed(sprint_1_report):
+    assert 39.0 == sprint_1_report.committed
+
+
+def test_sprint_2_report_committed(sprint_2_report):
+    assert 35.0 == sprint_2_report.committed
+
+
+def test_sprint_6_report_committed(sprint_6_report):
+    assert 68.0 == sprint_6_report.committed
 

@@ -209,7 +209,7 @@ class SprintReport(GreenHopperResource):
             if stat_field:
                 stat = stat_field[JIRA_KEY_VALUE]
             else:
-                stat = NAN
+                stat = 0.0
 
             if issue_match:
                 if issue[JIRA_KEY_KEY] == issue_match:
@@ -226,7 +226,7 @@ class SprintReport(GreenHopperResource):
             if stat_field:
                 stat = stat_field[JIRA_KEY_VALUE]
             else:
-                stat = NAN
+                stat = 0.0
 
             if issue_match:
                 if issue[JIRA_KEY_KEY] == issue_match:
