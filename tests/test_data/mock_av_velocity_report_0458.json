@@ -1,0 +1,1139 @@
+{
+  "contents": {
+    "completedIssues": [
+      {
+        "id": 171033,
+        "key": "IDAP-935",
+        "hidden": false,
+        "typeName": "Non Production Defect",
+        "typeId": "11200",
+        "summary": "Level 2 Invalid Date issue",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25002&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-238",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-238",
+          "epicColor": "ghx-label-13",
+          "text": "Audit, Balance, Control Reporting (ABC)",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 2.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 2.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 201081,
+        "key": "IDAP-1283",
+        "hidden": false,
+        "typeName": "Task",
+        "typeId": "3",
+        "summary": "Regression Testing - April 2021 release",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10318&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/medium.svg",
+        "priorityName": "Medium",
+        "done": false,
+        "assignee": "sidharth.sood",
+        "assigneeName": "Sidharth Sood ",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=sidharth.sood&avatarId=26300",
+        "hasCustomUserAvatar": true,
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31248
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 201903,
+        "key": "IDAP-1335",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "VBA & NBND - Load/Setup Member Enrollment 7.12 file",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 202348,
+        "key": "IDAP-1370",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "VBA & NBND CMS MAO-002: Ingest and Convert CMS MAO002 fixed width file to CSV file ",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 202374,
+        "key": "IDAP-1377",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "VBA & NBND: Configure and Convert CMS RAPS file into IDAP",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 202531,
+        "key": "IDAP-1380",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "VBA & NBND: Configure and convert CMS MAO004 fixed width file to CSV file",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 3.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 3.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 203138,
+        "key": "IDAP-1413",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "VBA & NBND: Ingest and Convert CMS MORD fixed width file to CSV file",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 203141,
+        "key": "IDAP-1416",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "VBA & NBND: Ingest and Convert CMS MOR fixed width file to CSV file",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 204671,
+        "key": "IDAP-1475",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "Configure BCBSM FCF files in IDAP",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-233",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-233",
+          "epicColor": "ghx-label-13",
+          "text": "FCF sourced, validated and loaded to the Data Lake",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 1.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 1.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 205935,
+        "key": "IDAP-1523",
+        "hidden": false,
+        "typeName": "Story",
+        "typeId": "10001",
+        "summary": "Enhance Copy to IDAP ",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10315&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-238",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-238",
+          "epicColor": "ghx-label-13",
+          "text": "Audit, Balance, Control Reporting (ABC)",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 3.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 3.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 206670,
+        "key": "IDAP-1554",
+        "hidden": false,
+        "typeName": "Spike",
+        "typeId": "11300",
+        "summary": "POC & Design: Enhance level 3 validation to include RowID",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25004&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/medium.svg",
+        "priorityName": "Medium",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-238",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-238",
+          "epicColor": "ghx-label-13",
+          "text": "Audit, Balance, Control Reporting (ABC)",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 8.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          32601
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 207498,
+        "key": "IDAP-1564",
+        "hidden": false,
+        "typeName": "Non Production Defect",
+        "typeId": "11200",
+        "summary": "Level 2 Validators issue",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25002&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Rekha.Rasineni",
+        "assigneeName": "Rekha Rasineni",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=rekha.rasineni&avatarId=17500",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-238",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-238",
+          "epicColor": "ghx-label-13",
+          "text": "Audit, Balance, Control Reporting (ABC)",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 3.0
+          }
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {
+            "value": 3.0
+          }
+        },
+        "statusId": "12300",
+        "statusName": "Accepted",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "12300",
+          "name": "Accepted",
+          "description": "Item has been reviewed by product owner who agrees all the defined acceptance criteria have been successfully met.  This item can be released once release hardening is completed satisfactorily.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        },
+        "fixVersions": [
+          31412
+        ],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      }
+    ],
+    "issuesNotCompletedInCurrentSprint": [
+      {
+        "id": 199685,
+        "key": "IDAP-1238",
+        "hidden": false,
+        "typeName": "Spike",
+        "typeId": "11300",
+        "summary": "MEMOUT: Process MEMOUT Span information is delta lake",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25004&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/medium.svg",
+        "priorityName": "Medium",
+        "done": false,
+        "assignee": "scott.walden",
+        "assigneeName": "Scott Walden",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=scott.walden&avatarId=12809",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "statusId": "3",
+        "statusName": "In Progress",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/inprogress.png",
+        "status": {
+          "id": "3",
+          "name": "In Progress",
+          "description": "This issue is being actively worked on at the moment by the assignee.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/inprogress.png",
+          "statusCategory": {
+            "id": "4",
+            "key": "indeterminate",
+            "colorName": "yellow"
+          }
+        },
+        "fixVersions": [],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 201568,
+        "key": "IDAP-1321",
+        "hidden": false,
+        "typeName": "Spike",
+        "typeId": "11300",
+        "summary": "Design a solution to backout bad data that got processed thru IDAP",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25004&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "Ihar.Kuntsevich",
+        "assigneeName": "Ihar Kuntsevich",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?avatarId=10814",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-941",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-941",
+          "epicColor": "ghx-label-5",
+          "text": "Monitoring built to maintain data controls",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "statusId": "10901",
+        "statusName": "Ready",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+        "status": {
+          "id": "10901",
+          "name": "Ready",
+          "description": "Issues ready for sprint planning:  Prioritized, Acceptance Criteria Defined and Sized.  Can be completed in 1 sprint.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/generic.png",
+          "statusCategory": {
+            "id": "2",
+            "key": "new",
+            "colorName": "blue-gray"
+          }
+        },
+        "fixVersions": [],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 202382,
+        "key": "IDAP-1379",
+        "hidden": false,
+        "typeName": "Spike",
+        "typeId": "11300",
+        "summary": "NBND & VBA: Consolidate Vision Claims feeds",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25004&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "scott.walden",
+        "assigneeName": "Scott Walden",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=scott.walden&avatarId=12809",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "statusId": "3",
+        "statusName": "In Progress",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/inprogress.png",
+        "status": {
+          "id": "3",
+          "name": "In Progress",
+          "description": "This issue is being actively worked on at the moment by the assignee.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/inprogress.png",
+          "statusCategory": {
+            "id": "4",
+            "key": "indeterminate",
+            "colorName": "yellow"
+          }
+        },
+        "fixVersions": [],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 203084,
+        "key": "IDAP-1411",
+        "hidden": false,
+        "typeName": "Task",
+        "typeId": "3",
+        "summary": "IDAP Data Models: Updated Data Model for Standard files",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=10318&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "scott.walden",
+        "assigneeName": "Scott Walden",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=scott.walden&avatarId=12809",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "statusId": "3",
+        "statusName": "In Progress",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/inprogress.png",
+        "status": {
+          "id": "3",
+          "name": "In Progress",
+          "description": "This issue is being actively worked on at the moment by the assignee.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/inprogress.png",
+          "statusCategory": {
+            "id": "4",
+            "key": "indeterminate",
+            "colorName": "yellow"
+          }
+        },
+        "fixVersions": [],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      },
+      {
+        "id": 207265,
+        "key": "IDAP-1558",
+        "hidden": false,
+        "typeName": "Spike",
+        "typeId": "11300",
+        "summary": "IDAP PCP Attribution Data Model",
+        "typeUrl": "https://tm.prod.advantasure.com/secure/viewavatar?size=xsmall&avatarId=25004&avatarType=issuetype",
+        "priorityUrl": "https://tm.prod.advantasure.com/images/icons/priorities/low.svg",
+        "priorityName": "Low",
+        "done": false,
+        "assignee": "scott.walden",
+        "assigneeName": "Scott Walden",
+        "avatarUrl": "https://tm.prod.advantasure.com/secure/useravatar?ownerId=scott.walden&avatarId=12809",
+        "hasCustomUserAvatar": true,
+        "epic": "IDAP-949",
+        "epicField": {
+          "id": "customfield_10008",
+          "label": "Epic",
+          "editable": false,
+          "renderer": "epiclink",
+          "epicKey": "IDAP-949",
+          "epicColor": "ghx-label-3",
+          "text": "Implement Joint Venture VT",
+          "canRemoveEpic": true
+        },
+        "columnStatistic": {
+          "statFieldId": "issueCountExclSubs",
+          "statFieldValue": {
+            "value": 1.0,
+            "text": "1.0"
+          }
+        },
+        "currentEstimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "estimateStatisticRequired": false,
+        "estimateStatistic": {
+          "statFieldId": "customfield_10005",
+          "statFieldValue": {}
+        },
+        "statusId": "3",
+        "statusName": "In Progress",
+        "statusUrl": "https://tm.prod.advantasure.com/images/icons/statuses/inprogress.png",
+        "status": {
+          "id": "3",
+          "name": "In Progress",
+          "description": "This issue is being actively worked on at the moment by the assignee.",
+          "iconUrl": "https://tm.prod.advantasure.com/images/icons/statuses/inprogress.png",
+          "statusCategory": {
+            "id": "4",
+            "key": "indeterminate",
+            "colorName": "yellow"
+          }
+        },
+        "fixVersions": [],
+        "projectId": 14200,
+        "linkedPagesCount": 0
+      }
+    ],
+    "puntedIssues": [],
+    "issuesCompletedInAnotherSprint": [],
+    "completedIssuesInitialEstimateSum": {
+      "value": 68.0,
+      "text": "68.0"
+    },
+    "completedIssuesEstimateSum": {
+      "value": 68.0,
+      "text": "68.0"
+    },
+    "issuesNotCompletedInitialEstimateSum": {
+      "text": "null"
+    },
+    "issuesNotCompletedEstimateSum": {
+      "text": "null"
+    },
+    "allIssuesEstimateSum": {
+      "value": 68.0,
+      "text": "68.0"
+    },
+    "puntedIssuesInitialEstimateSum": {
+      "text": "null"
+    },
+    "puntedIssuesEstimateSum": {
+      "text": "null"
+    },
+    "issuesCompletedInAnotherSprintInitialEstimateSum": {
+      "text": "null"
+    },
+    "issuesCompletedInAnotherSprintEstimateSum": {
+      "text": "null"
+    },
+    "issueKeysAddedDuringSprint": {}
+  },
+  "sprint": {
+    "id": 1067,
+    "sequence": 1068,
+    "name": "Sprint 6 (IDAP 2021)",
+    "state": "CLOSED",
+    "goal": "Continue with JV implementation",
+    "linkedPagesCount": 0,
+    "startDate": "Mar/11/21 1:57 PM",
+    "endDate": "Mar/24/21 5:27 AM",
+    "completeDate": "Mar/24/21 3:52 PM",
+    "canUpdateSprint": false,
+    "remoteLinks": [],
+    "daysRemaining": 0
+  },
+  "lastUserToClose": "<a class=\"user-hover\" rel=\"sidharth.sood\" id=\"_sidharth.sood\" href=\"/secure/ViewProfile.jspa?name=sidharth.sood\">Sidharth Sood </a>",
+  "userWhoStarted": "<a class=\"user-hover\" rel=\"sidharth.sood\" id=\"_sidharth.sood\" href=\"/secure/ViewProfile.jspa?name=sidharth.sood\">Sidharth Sood </a>",
+  "supportsPages": true
+}

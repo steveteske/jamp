@@ -126,12 +126,12 @@ class JiraProgramMetrics:
                 continue
 
             for sprint in self.jira_client.sprints(board_id=board.id, maxResults=None):
-                print(f"Examining sprint: {sprint.name} ({sprint.id})")
-
                 try:
                     # Once during a run, Jira returned a internal error
                     # ... HTTPS 500 "Passed List had more than one value."
                     # ... Catch the error and continue on.
+                    print(f"Examining sprint: {sprint.name} ({sprint.id})")
+
                     sr = self.reports_client.sprint_report(board_id=board.id, sprint_id=sprint.id)
                 except JIRAError as err:
                     print("JIRAError occured: ", err)
@@ -144,8 +144,6 @@ class JiraProgramMetrics:
                     percent_complete = sr.completedIssuesEstimateSum / sr.committed
                 else:
                     percent_complete = NAN
-
-                sr.committed_count
 
                 data.append((board.name,
                              sr.sprint.name,

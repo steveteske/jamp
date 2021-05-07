@@ -54,3 +54,12 @@ def test_sprint_report_added_count(sprint_report):
 
 def test_sprint_report_committed_count(sprint_report):
     assert 5 == sprint_report.committed_count
+
+
+@pytest.fixture
+# def sprint_2_metrics(sprint_2_report, mock_velocity_av_report_json, mock_options):
+def sprint_2_metrics(sprint_2_report, mock_velocity_report_with_id, mock_options):
+    vr = VelocityReport(options=mock_options, session=None, raw=mock_velocity_report_with_id)
+    return SprintMetrics(2, sprint_2_report, vr)
+
+
