@@ -1,0 +1,527 @@
+
+C:\Users\JVakas\Downloads>metrics.exe --user james.vakas --server https://tm.prod.advantasure.com/secure/RapidBoard.jspa?rapidView=458&projectKey=IDAP&view=planning.nodetail&epics=visible
+ERROR:root:Expecting value: line 7 column 1 (char 6)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Agile Board - Tessellate Ticket Management</title>
+<meta name="application-name" content="JIRA" data-name="jira" data-version="7.13.5"><meta name="ajs-server-scheme" content="https">
+<meta name="ajs-server-port" content="443">
+<meta name="ajs-server-name" content="tm.prod.advantasure.com">
+<meta name="ajs-behind-proxy" content="null">
+<meta name="ajs-base-url" content="https://tm.prod.advantasure.com">
+<meta name="ajs-dev-mode" content="false">
+<meta name="ajs-context-path" content="">
+<meta name="ajs-version-number" content="7.13.5">
+<meta name="ajs-build-number" content="713005">
+<meta name="ajs-is-beta" content="false">
+<meta name="ajs-is-rc" content="false">
+<meta name="ajs-is-snapshot" content="false">
+<meta name="ajs-is-milestone" content="false">
+<meta name="ajs-remote-user" content="James.Vakas">
+<meta name="ajs-remote-user-fullname" content="James Vakas">
+<meta name="ajs-user-locale" content="en_US">
+<meta name="ajs-user-locale-group-separator" content=",">
+<meta name="ajs-app-title" content="Tessellate Ticket Management">
+<meta name="ajs-keyboard-shortcuts-enabled" content="true">
+<meta name="ajs-keyboard-accesskey-modifier" content="Alt">
+<meta name="ajs-enabled-dark-features" content="[&quot;com.atlassian.jira.agile.darkfeature.editable.detailsview&quot;,&quot;nps.survey.inline.dialog&quot;,&quot;com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled&quot;,&quot;jira.plugin.devstatus.phasetwo&quot;,&quot;jira.frother.reporter.field&quot;,&quot;atlassian.rest.xsrf.legacy.enabled&quot;,&quot;jira.issue.status.lozenge&quot;,&quot;com.atlassian.jira.config.BIG_PIPE&quot;,&quot;com.atlassian.jira.projects.issuenavigator&quot;,&quot;com.atlassian.jira.config.PDL&quot;,&quot;jira.plugin.devstatus.phasetwo.enabled&quot;,&quot;atlassian.aui.raphael.disabled&quot;,&quot;com.atlassian.portfolio.planTimeZone.defaultToSystem&quot;,&quot;app-switcher.new &quot;,&quot;frother.assignee.field&quot;,&quot;sd.internal.base.off.thread.on.completion.events.enabled&quot;,&quot;jira.onboarding.cyoa&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.enabled&quot;,&quot;sd.slavalue.record.updated.date.enabled&quot;,&quot;com.atlassian.jira.config.ProjectConfig.MENU &quot;,&quot;com.atlassian.jira.projects.sidebar.DEFER_RESOURCES&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled&quot;,&quot;com.atlassian.jira.agile.darkfeature.sprint.goal.enabled&quot;,&quot;connect.no-applinks&quot;,&quot;jira.zdu.admin-updates-ui&quot;,&quot;jira.event.mau.logging.disable&quot;,&quot;jira.zdu.jmx-monitoring&quot;,&quot;sd.sla.improved.rendering.enabled&quot;,&quot;sd.canned.responses.enabled&quot;,&quot;sd.new.settings.sidebar.location.disabled&quot;,&quot;jira.zdu.cluster-upgrade-state&quot;,&quot;com.atlassian.jira.agile.darkfeature.splitissue&quot;,&quot;com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED&quot;,&quot;sd.automation.issue.linked.enabled&quot;,&quot;jira.export.csv.enabled&quot;]">
+<meta name="ajs-in-admin-mode" content="false">
+<meta name="ajs-is-sysadmin" content="false">
+<meta name="ajs-is-admin" content="false">
+<meta name="ajs-outgoing-mail-enabled" content="true">
+<meta name="ajs-archiving-enabled" content="false">
+<meta name="ajs-date-relativize" content="true">
+<meta name="ajs-date-time" content="h:mm a">
+<meta name="ajs-date-day" content="EEEE h:mm a">
+<meta name="ajs-date-dmy" content="M/d/yy">
+<meta name="ajs-date-complete" content="M/d/yy h:mm">
+<script type="text/javascript">var AJS=AJS||{};AJS.debug=true;</script>
+
+
+
+<meta id="atlassian-token" name="atlassian-token" content="B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin">
+
+
+
+<link rel="shortcut icon" href="/s/-upkoxk/713005/b6b48b2829824b869586ac216d119363/_/images/fav-generic.png">
+<link rel="search" type="application/opensearchdescription+xml" href="/osd.jsp" title="Agile Board - Tessellate Ticket Management"/>
+
+
+
+
+
+<!--[if IE]><![endif]-->
+<script type="text/javascript">
+    (function() {
+        var contextPath = '';
+        var eventBuffer = [];
+
+        function printDeprecatedMsg() {
+            if (console && console.warn) {
+                console.warn('DEPRECATED JS - contextPath global variable has been deprecated since 7.4.0. Use `wrm/context-path` module instead.');
+            }
+        }
+
+        function sendEvent(analytics, postfix) {
+            analytics.send({
+                name: 'js.globals.contextPath.' + postfix
+            });
+        }
+
+        function sendDeprecatedEvent(postfix) {
+            try {
+                var analytics = require('jira/analytics');
+                if (eventBuffer.length) {
+                    eventBuffer.forEach(function(value) {
+                        sendEvent(analytics, value);
+                    });
+                    eventBuffer = [];
+                }
+
+                if (postfix) {
+                    sendEvent(analytics, postfix);
+                }
+            } catch(ex) {
+                eventBuffer.push(postfix);
+                setTimeout(sendDeprecatedEvent, 1000);
+            }
+        }
+
+        Object.defineProperty(window, 'contextPath', {
+            get: function() {
+                printDeprecatedMsg();
+                sendDeprecatedEvent('get');
+                return contextPath;
+            },
+            set: function(value) {
+                printDeprecatedMsg();
+                sendDeprecatedEvent('set');
+                contextPath = value;
+            }
+        });
+    })();
+
+</script>
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
+WRM._unparsedData["jira.webresources:feature-flags.feature-flag-data"]="{\"enabled-feature-keys\":[\"com.atlassian.jira.agile.darkfeature.editable.detailsview\",\"nps.survey.inline.dialog\",\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled\",\"jira.plugin.devstatus.phasetwo\",\"jira.frother.reporter.field\",\"atlassian.rest.xsrf.legacy.enabled\",\"jira.issue.status.lozenge\",\"com.atlassian.jira.config.BIG_PIPE\",\"com.atlassian.jira.projects.issuenavigator\",\"com.atlassian.jira.config.PDL\",\"jira.plugin.devstatus.phasetwo.enabled\",\"atlassian.aui.raphael.disabled\",\"com.atlassian.portfolio.planTimeZone.defaultToSystem\",\"app-switcher.new\",\"frother.assignee.field\",\"sd.internal.base.off.thread.on.completion.events.enabled\",\"jira.onboarding.cyoa\",\"com.atlassian.jira.agile.darkfeature.kanplan.enabled\",\"sd.slavalue.record.updated.date.enabled\",\"com.atlassian.jira.config.ProjectConfig.MENU\",\"com.atlassian.jira.projects.sidebar.DEFER_RESOURCES\",\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled\",\"com.atlassian.jira.agile.darkfeature.sprint.goal.enabled\",\"connect.no-applinks\",\"jira.zdu.admin-updates-ui\",\"jira.event.mau.logging.disable\",\"jira.zdu.jmx-monitoring\",\"sd.sla.improved.rendering.enabled\",\"sd.canned.responses.enabled\",\"sd.new.settings.sidebar.location.disabled\",\"jira.zdu.cluster-upgrade-state\",\"com.atlassian.jira.agile.darkfeature.splitissue\",\"com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED\",\"sd.automation.issue.linked.enabled\",\"jira.export.csv.enabled\"],\"feature-flag-states\":{\"sd.customer.profile.multi.languages\":true,\"sd.customer.portal.transitions\":true,\"sd.customer.portal.transitions.config\":true,\"sd.custom.email.stripping.rules\":false,\"sd.sla.lucene.issue.id.callback.performance\":true,\"sd.new.settings.sidebar.location\":true,\"sd.workload.report.paginator\":true,\"sd.customer.search.post.agent.filtering\":true,\"sd.customer.portal.help.center.agent.announcement\":true,\"sd.sla.improved.rendering\":false,\"sd.approvals.visibility\":true,\"sd.customer.feedback.validate.reporter.on.token\":true,\"sd.custom.email.notifications.utf8.csat.star\":true,\"sd.who.create.customers.by.email.setting\":true,\"com.atlassian.jira.issuetable.move.links.hidden\":true,\"jira.renderer.consider.variable.format\":true,\"sd.password.helper.dialog\":true,\"jira.priorities.per.project.jsd\":true,\"sd.email.attachment.stripping\":false,\"sd.canned.responses\":false,\"sd.portal.help.center.customer.signup.secondary.email\":true,\"com.atlassian.jira.sharedEntityEditRights\":true,\"sd.use.search.by.permissions\":true,\"sd.slavalue.record.updated.date\":false,\"sd.report.custom.date.range\":false,\"sd.kb.article.helpfulness.report\":false,\"jira.spectrum.m1b\":false,\"com.atlassian.jira.agile.darkfeature.sprint.goal\":false,\"sd.portal.help.center.customer.signup.secondary.email.fallback\":true,\"sd.workinghours.new.page.bulldog.1\":false,\"sd.customer.portal.two.step.login\":false,\"sd.automation.psmq.async.executor\":true,\"sd.customer.org.list.page.lazy.search\":true,\"sd.approval.requested.when.handler\":true,\"com.atlassian.jira.agile.darkfeature.sidebar.boards.list\":true,\"sd.request.type.field.rest.api.filtering.bugfix\":true,\"com.atlassian.jira.custom.csv.escaper\":true,\"sd.automation.then.action.auto.answer.approval\":true,\"sd.adgs.m1\":true,\"com.atlassian.jira.plugin.issuenavigator.filtersUxImprovment\":true,\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions\":false,\"sla.will.only.be.paused.if.they.are.already.started\":true,\"com.atlassian.advancedroadmaps.rebrand\":true,\"sd.approvals.notification.email.action\":true,\"com.atlassian.jira.upgrade.startup.fix.index\":true,\"sd.customer.notifications.suppress.welcome.email\":true,\"sd.portal.help.center.customer.signup\":true,\"sd.sla.agent.jql.security.restricted\":true,\"sd.test.feature.flag.x\":true,\"sd.test.feature.flag.y\":false,\"sd.cluster.safe.mail.channel.shutdown\":true,\"sd.email.channel.folders\":false,\"sd.email.analytics.open\":false,\"jira.spectrum.m1\":true,\"sd.workinghours.new.page\":false,\"sd.confluence.anonymous.permission.fix\":true,\"com.atlassian.jira.issuetable.draggable\":true,\"sd.customer.portal.project.agent.announcement\":true,\"sd.automation.audit.log\":true,\"com.atlassian.jira.agile.darkfeature.kanban.hide.old.done.issues\":true,\"jira.jql.suggestrecentfields\":false,\"sd.canned.responses.check.index.startup\":false,\"sd.sla.conditions.due.date\":true,\"sd.new.project.templates\":true,\"sd.custom.email.notifications.custom.rules.simple.ui\":false,\"sd.dismiss.all.misconfiguration.warnings.setting\":true,\"com.atlassian.jira.agile.darkfeature.optimistic.transitions\":true,\"sd.sla.configurations.export\":true,\"sd.canned.responses.variable.substitution\":true,\"com.atlassian.jira.agile.darkfeature.kanplan\":false,\"sd.internal.base.off.thread.on.completion.events\":false,\"sd.customer.portal.prioties.per.project.fix\":true,\"jira.instrumentation.laas\":false,\"sd.kb.self.service.report\":false,\"jira.customfields.paginated.ui\":true,\"sla.improved.request.handling\":true,\"sd.no.schedule.async.upgrade.tasks\":true,\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint\":false,\"sd.email.outsider.comments\":true,\"jira.create.linked.issue\":true,\"jira.sal.host.connect.accessor.existing.transaction.will.create.transactions\":true,\"sd.approvals.light.weight\":false,\"sd.automation.then.webhook\":true,\"sd.priorities.per.project\":true,\"jira.quick.search\":true,\"com.atlassian.jira.projects.per.project.permission.query\":true,\"sd.respect.inline.edit.issue.off\":true,\"jira.jql.smartautoselectfirst\":false,\"sd.global.portal.search.atlassian.only.tracking\":false,\"com.atlassian.jira.projects.archiving\":true,\"sd.automation.if.condition.comment.primary.action\":true,\"index.use.snappy\":true,\"jira.priorities.per.project\":true,\"sd.inline.noformat.renderer\":true}}";
+WRM._unparsedData["jira.webresources:default-comment-security-level.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://docs.atlassian.com/jira/jsw-docs-0713/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-restrictacomment\",\"isLocal\":false}";
+WRM._unparsedData["jira.webresources:dateFormatProvider.allFormats"]="{\"dateFormats\":{\"meridiem\":[\"AM\",\"PM\"],\"eras\":[\"BC\",\"AD\"],\"months\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"monthsShort\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"],\"weekdaysShort\":[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],\"weekdays\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]},\"lookAndFeelFormats\":{\"relativize\":\"true\",\"time\":\"h:mm a\",\"day\":\"EEEE h:mm a\",\"dmy\":\"M/d/yy\",\"complete\":\"M/d/yy h:mm\"}}";
+WRM._unparsedData["com.atlassian.plugins.helptips.jira-help-tips:help-tip-manager.JiraHelpTipData"]="{\"dismissed\":[\"newsletter-signup-tip\",\"qs-onboarding-tip\"],\"anonymous\":false}";
+WRM._unparsedData["com.atlassian.jira.jira-issue-nav-components:issueviewer.features"]="{\"rteEnabled\":true}";
+WRM._unparsedData["com.pyxis.greenhopper.jira:wrm-data.kanplan-acknowledment"]="{\"isClosedOnPlanMode\":false,\"isClosedOnWorkMode\":true}";
+WRM._unparsedData["com.pyxis.greenhopper.jira:wrm-data.kanplan-epics-onboarding"]="{\"isClosedOnPlanMode\":true,\"isClosedOnWorkMode\":true}";
+WRM._unparsedData["com.pyxis.greenhopper.jira:wrm-data.sprint-goal-onboarding"]="{\"isSprintGoalOnboardingClosed\":false}";
+WRM._unparsedData["jira.webresources:jqlautocomplete.jql.autocomplete.recentFields"]="{\"key\":\"jqlValues\",\"value\":[\"affectedVersion\",\"assignee\",\"component\",\"description\",\"issue\",\"labels\",\"parent\",\"priority\",\"project\",\"reporter\",\"resolution\",\"status\",\"summary\",\"type\",\"watcher\"]}";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.servicedesk.servicedesk-canned-responses-plugin:canned-responses-data-provider.data"]="{\"userId\":34205,\"substitutionVariables\":{\"issue.summary\":\"Issue summary\",\"issue.description\":\"Issue description\",\"issue.key\":\"Issue key\",\"issue.reporter.name\":\"Issue reporter\",\"issue.resolution\":\"Issue resolution\",\"request.url\":\"Request URL\",\"request.status\":\"Request status\",\"request.details\":\"Request details\"}}";
+WRM._unparsedData["jira.webresources:avatar-picker.data"]="{}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:dismissedFlags.flags"]="{\"dismissed\":[]}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:newsletter-signup-tip-init.newsletterSignup"]="{\"signupDescription\":\"Get updates, inspiration and best practices from the team behind Jira.\",\"formUrl\":\"https://www.atlassian.com/apis/exact-target/{0}/subscribe?mailingListId=1401671\",\"userEmail\":\"James.Vakas@advantasure.com\",\"signupTitle\":\"Sign up!\",\"signupId\":\"newsletter-signup-tip\",\"showNewsletterTip\":true}";
+WRM._unparsedData["com.atlassian.jira.project-templates-plugin:project-templates-plugin-resources.ptAnalyticsData"]="{\"instanceCreatedDate\":\"2015-07-17\"}";
+WRM._unparsedData["com.atlassian.plugins.atlassian-nps-plugin:atlassian-nps-plugin-resources.is-server-instance-data-provider"]="true";
+WRM._unparsedData["com.atlassian.plugins.atlassian-nps-plugin:atlassian-nps-plugin-resources.is-current-user-jsd-agent-data-provider"]="false";
+WRM._unparsedData["com.atlassian.servicedesk.core-ui:util-help-links.help-links"]="{\"help\":{\"email.settings\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Receiving+requests+by+email\",\"managing.queues\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Setting+up+queues+for+your+team\",\"email.setup\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Receiving+requests+by+email\",\"request.settings.help.bubble\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Managing+access+to+your+service+desk\",\"email.settings.suitablerequest\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Receiving+requests+by+email#Receivingrequestsbyemail-suitablerequest\",\"sla.import.help\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Importing+SLAs\",\"documentation.home\":\"https://docs.atlassian.com/jira/jsd-docs-0316/JIRA+Service+Desk+Documentation\",\"default\":\"https://docs.atlassian.com/jira/jsd-docs-0316/\",\"create.space.help\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Knowledge+base+settings+and+permissions\",\"advanced.approval.notifications\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Approving+a+service+desk+request\",\"email.settings.troubleshooting\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Troubleshooting+issues+with+the+email+channel\",\"admin.notifications.config\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Managing+service+desk+notifications\",\"troubleshoot.requesttype\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Troubleshooting+issues+with+request+types\",\"approvals.configuration\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Configuring+JIRA+Service+Desk+approvals\",\"setting.up.reports\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Setting+up+service+desk+reports\",\"public.signup\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Configuring+public+signup\",\"knowledge.base\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Set+up+a+knowledge+base+for+self-service\",\"resolve.permission.scheme.errors\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Resolving+permission+scheme+errors\",\"getting.started\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Getting+started+with+JIRA+Service+Desk\",\"getting.started.agent\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Getting+started+for+service+desk+agents\",\"invite.customers\":\"https://docs.atlassian.com/jira/jsd-docs-0316/Managing+access+to+your+service+desk\"},\"kb\":{\"default\":\"https://confluence.atlassian.com/display/SDKB/\",\"troubleshooting.user.management.issues\":\"https://confluence.atlassian.com/display/SDKB/Troubleshooting+issues+with+service+desk+user+management\",\"legacytransition\":\"https://confluence.atlassian.com/display/SDKB/Replacing+legacy+automatic+transitions+with+automation+rules\",\"umtroubleshoot\":\"https://confluence.atlassian.com/display/SDKB/Troubleshooting+issues+with+service+desk+user+management\"}}";
+WRM._unparsedData["com.atlassian.servicedesk.core-ui:util-base-url.base-url"]="\"https://tm.prod.advantasure.com\"";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-wiki-editor:wiki-editor-thumbnails.thumbnails-allowed"]="true";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-wiki-editor:wiki-editor-resources.help-data"]="{\"showHelp\":true,\"editorDocumentationUrl\":[\"https://docs.atlassian.com/jira/jsw-docs-0713/Visual+editing\"],\"editorDocumentationTitle\":[\"Show me documentation for the visual editor\"]}";
+WRM._unparsedData["jira.webresources:user-message-flags.adminLockout"]="{}";
+WRM._unparsedData["jira.request.correlation-id"]="\"26a5747dcfeb4d\"";
+WRM._unparsedData["tzdetect.pref.auto.detect"]="true";
+WRM._unparsedData["tzdetect.pref.tzid"]="\"America/New_York\"";
+WRM._unparsedData["tzdetect.pref.tzname"]="\"(GMT-05:00) New York\"";
+WRM._unparsedData["tzdetect.pref.janOffset"]="-18000000";
+WRM._unparsedData["tzdetect.pref.julyOffset"]="-14400000";
+WRM._unparsedData["com.atlassian.greenhopper:rapid-view-config"]="{\"currentViewConfig\":{\"id\":458,\"name\":\"IDAP Scrum Board (AbracaData)\",\"canEdit\":false,\"sprintSupportEnabled\":true,\"showDaysInColumn\":true,\"kanPlanEnabled\":false,\"showEpicAsPanel\":true,\"oldDoneIssuesCutoff\":\"NONE\",\"quickFilters\":[{\"id\":1964,\"name\":\"Naresh\",\"query\":\"assignee = Naresh.Kantimahanti \",\"description\":\"\"},{\"id\":1830,\"name\":\"Paige\",\"query\":\"assignee =paige.li \",\"description\":\"Assignee user story\"},{\"id\":1730,\"name\":\"Steve\",\"query\":\"assignee in (steve.walker)\",\"description\":\"\"},{\"id\":2297,\"name\":\"Doug\",\"query\":\"assignee = Douglas.Staples \",\"description\":\"USs assigned to Doug\"},{\"id\":2233,\"name\":\"Matt\",\"query\":\"assignee = Matt.Dolan \",\"description\":\"USs assigned to Matt\"},{\"id\":1675,\"name\":\"Scott\",\"query\":\"assignee in (scott.walden)\",\"description\":\"\"},{\"id\":2176,\"name\":\"Gary\",\"query\":\"assignee = Ihar.Kuntsevich \",\"description\":\"USs assigned to Gary\"},{\"id\":1677,\"name\":\"Rahul\",\"query\":\"assignee in (Rahul.Madhari)\",\"description\":\"\"},{\"id\":2160,\"name\":\"Sobhan\",\"query\":\"assignee = Sobhanbabu.Tokala \",\"description\":\"USs assigned to Sobhan\"},{\"id\":1674,\"name\":\"Rekha\",\"query\":\"assignee in (Rekha.Rasineni)\\n\",\"description\":\"\"},{\"id\":1962,\"name\":\"Alex\",\"query\":\"assignee = Alex.Waddell \",\"description\":\"\"},{\"id\":1602,\"name\":\"Only My Issues\",\"query\":\"assignee = currentUser()\",\"description\":\"Displays issues which are currently assigned to the current user\"},{\"id\":1603,\"name\":\"Recently Updated\",\"query\":\"updatedDate \u003e= -1d\",\"description\":\"Displays issues which have been updated in the last day\"},{\"id\":1963,\"name\":\"Tickets with Due Date \",\"query\":\"duedate is not EMPTY  \",\"description\":\"Displays User Stories with Due Date\"}],\"swimlanes\":[{\"id\":1062,\"name\":\"Everything Else\",\"query\":\"\",\"description\":\"\",\"isDefault\":true}],\"columns\":[{\"id\":2724,\"name\":\"To Do\",\"statusIds\":[\"10900\",\"10000\",\"1\"],\"isKanPlanColumn\":false},{\"id\":3021,\"name\":\"Ready for Development\",\"statusIds\":[\"10901\"],\"isKanPlanColumn\":false},{\"id\":2725,\"name\":\"In Development\",\"statusIds\":[\"3\",\"10702\"],\"isKanPlanColumn\":false},{\"id\":2799,\"name\":\"In Testing\",\"statusIds\":[\"10500\"],\"isKanPlanColumn\":false},{\"id\":2907,\"name\":\"Ready for Acceptance\",\"statusIds\":[\"10904\"],\"isKanPlanColumn\":false},{\"id\":2726,\"name\":\"Done\",\"statusIds\":[\"10001\",\"11200\",\"12600\",\"12300\",\"6\",\"11503\",\"12201\"],\"isKanPlanColumn\":false}],\"statisticConfig\":{\"fieldConfigured\":true,\"typeId\":\"issueCount\",\"id\":\"\",\"name\":\"Issue Count\"},\"swimlaneStrategy\":\"parentChild\",\"estimationStatistic\":{\"typeId\":\"field\",\"fieldId\":\"customfield_10005\",\"id\":\"field_customfield_10005\",\"name\":\"Story Points\",\"isValid\":true,\"isEnabled\":true,\"renderer\":\"number\"},\"trackingStatistic\":{\"typeId\":\"none\",\"id\":\"none_\",\"name\":\"None\",\"isValid\":true,\"isEnabled\":false,\"renderer\":\"number\"},\"isBoardAdmin\":false,\"canManageSprints\":false,\"fastKanbanEnabled\":true},\"globalConfig\":{\"parallelSprints\":true,\"stickySprintHeaders\":true,\"daysInColumn\":true,\"epicConfig\":{\"storyIssueTypeId\":\"10001\",\"storyIssueTypeName\":\"Story\",\"epicIssueTypeId\":\"10000\",\"epicIssueTypeName\":\"Epic\",\"epicLabelFieldId\":\"customfield_10008\",\"epicStatusFieldId\":\"customfield_10010\",\"epicStatusDoneValueId\":10003,\"epicColorFieldId\":\"customfield_10011\",\"epicLinkFieldId\":\"customfield_10009\",\"epicLinkFieldName\":\"Epic Link\"},\"sprintConfig\":{\"sprintFieldId\":\"customfield_10007\"},\"dateFormat\":\"%b/%e/%y\",\"userTimeZoneLabel\":\"GMT-04:00\",\"numberGroupingSeparator\":\",\",\"numberDecimalSeparator\":\".\",\"timeTrackingConfig\":{\"hoursPerDay\":8,\"daysPerWeek\":5,\"timeFormat\":\"hours\",\"symbols\":{\"week\":\"w\",\"day\":\"d\",\"hour\":\"h\",\"minute\":\"m\"}},\"dateTimePickerFormat\":\"%b/%e/%y %I:%M %p\",\"userConfig\":{\"canCreateBoard\":true,\"canCreateIssue\":true,\"hasProjectsAccessible\":true,\"hasFiltersAccessible\":true,\"canCreateProject\":false,\"name\":\"James.Vakas\",\"displayName\":\"James Vakas\",\"avatarUrl\":\"https://www.gravatar.com/avatar/879eacc461c6247a04c9b95093b38e3e?d=mm&s=16\",\"isGlobalAdmin\":false},\"isSampleDataAvailable\":true,\"kanPlanLabEnabled\":true}}";
+WRM._unparsedData["sidebar-collapsed-by-default"]="true";
+WRM._unparsedData["project-id"]="14200";
+WRM._unparsedData["project-key"]="\"IDAP\"";
+WRM._unparsedData["project-name"]="\"Integrated Data Analytics\"";
+WRM._unparsedData["project-type"]="\"software\"";
+WRM._unparsedData["should-display-chaperone"]="false";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="/s/cb4106af9b5468b15d1d8c39c83c2450-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/484b2eaf39d005d2b73e70e754585289/_/download/contextbatch/css/_super/batch.css?spectrum=true" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="/s/9d715c1dc0ac1d55105cae9e286260c7-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/19a799bfa31494357fa23eb1ecbf2e73/_/download/contextbatch/css/greenhopper-rapid-non-gadget,atl.general,jira.project.sidebar,gh-rapid,com.atlassian.jira.projects.sidebar.init,jira.global,gh-rapid-charts,jira.general,-_super/batch.css?agile_global_admin_condition=true&amp;is-server-instance=true&amp;jag=true&amp;jaguser=true&amp;jira-nps-enabled=true&amp;nps-acknowledged=true&amp;nps-not-opted-out=true&amp;richediton=true&amp;spectrum=true" data-wrm-key="greenhopper-rapid-non-gadget,atl.general,jira.project.sidebar,gh-rapid,com.atlassian.jira.projects.sidebar.init,jira.global,gh-rapid-charts,jira.general,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="/s/b2927fde31c9571c5780cae395fc5498-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/484b2eaf39d005d2b73e70e754585289/_/download/contextbatch/js/_super/batch.js?locale=en-US&amp;spectrum=true" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/3e673f6b4b24470e182041278210fe62/_/download/contextbatch/js/gh-rapid-exception,-_super/batch.js?spectrum=true" data-wrm-key="gh-rapid-exception,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="/s/7c526ed20b4c46b78a699f5f38f3be82-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/19a799bfa31494357fa23eb1ecbf2e73/_/download/contextbatch/js/greenhopper-rapid-non-gadget,atl.general,jira.project.sidebar,gh-rapid,com.atlassian.jira.projects.sidebar.init,jira.global,gh-rapid-charts,jira.general,-_super/batch.js?agile_global_admin_condition=true&amp;is-server-instance=true&amp;jag=true&amp;jaguser=true&amp;jira-nps-enabled=true&amp;locale=en-US&amp;nps-acknowledged=true&amp;nps-not-opted-out=true&amp;richediton=true&amp;spectrum=true" data-wrm-key="greenhopper-rapid-non-gadget,atl.general,jira.project.sidebar,gh-rapid,com.atlassian.jira.projects.sidebar.init,jira.global,gh-rapid-charts,jira.general,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<!--[if IE]>
+<script type="text/javascript" src="/s/7c526ed20b4c46b78a699f5f38f3be82-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/19a799bfa31494357fa23eb1ecbf2e73/_/download/contextbatch/js/greenhopper-rapid-non-gadget,atl.general,jira.project.sidebar,gh-rapid,com.atlassian.jira.projects.sidebar.init,jira.global,gh-rapid-charts,jira.general,-_super/batch.js?agile_global_admin_condition=true&amp;ieonly=true&amp;is-server-instance=true&amp;jag=true&amp;jaguser=true&amp;jira-nps-enabled=true&amp;locale=en-US&amp;nps-acknowledged=true&amp;nps-not-opted-out=true&amp;richediton=true&amp;spectrum=true" data-wrm-key="greenhopper-rapid-non-gadget,atl.general,jira.project.sidebar,gh-rapid,com.atlassian.jira.projects.sidebar.init,jira.global,gh-rapid-charts,jira.general,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<![endif]-->
+<script type="text/javascript" src="/s/56c1fb1876d57e32ed3250a80402d2ac-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/9296915968fd19e3630cf5546b9a3e64/_/download/contextbatch/js/atl.global,-_super/batch.js?locale=en-US&amp;spectrum=true" data-wrm-key="atl.global,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="/s/4c4eb97da4cdb60ecfa010684282227d-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/3.0.3/_/download/batch/com.atlassian.jira.jira-tzdetect-plugin:tzdetect-banner-component/com.atlassian.jira.jira-tzdetect-plugin:tzdetect-banner-component.js?locale=en-US" data-wrm-key="com.atlassian.jira.jira-tzdetect-plugin:tzdetect-banner-component" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/3.0.3/_/download/batch/com.atlassian.jira.jira-tzdetect-plugin:tzdetect-lib/com.atlassian.jira.jira-tzdetect-plugin:tzdetect-lib.js" data-wrm-key="com.atlassian.jira.jira-tzdetect-plugin:tzdetect-lib" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/1.0/_/download/batch/jira.webresources:calendar-localisation-moment/jira.webresources:calendar-localisation-moment.js" data-wrm-key="jira.webresources:calendar-localisation-moment" data-wrm-batch-type="resource" data-initially-rendered></script>
+<link type="text/css" rel="stylesheet" href="/s/bf9513d5d5d68bd9135040f2d71e8027-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/d302fde02b80c462b2798dc5fcafad3e/_/download/contextbatch/css/jira.global.look-and-feel,-_super/batch.css?spectrum=true" data-wrm-key="jira.global.look-and-feel,-_super" data-wrm-batch-type="context" media="all">
+
+<script type="text/javascript" src="/rest/api/1.0/shortcuts/713005/a2e946294b1c54d76cbc400dcbab9c38/shortcuts.js?context=greenhopper"></script>
+
+
+        <meta name='decorator' content='atl.general'/>
+
+
+
+                    <meta name="ajs-sidebar-enabled" content="true" />
+
+        <meta name="ajs-onboarding-has-completed-first-use-flow" content="true" />
+
+                <script type="text/javascript">
+
+                                    window.onbeforeunload = null;
+
+            AJS.$(GH.RapidBoard.init);
+        </script>
+        <meta name="ghx-plugin-key" content="com.pyxis.greenhopper.jira">
+                            <meta name="ghx-project-key" content="IDAP">
+
+
+</head>
+<body id="jira" class="aui-layout aui-theme-default ghx-agile" data-version="7.13.5">
+<div id="page">
+    <header id="header" role="banner">
+
+
+<script>
+require(["jquery", "jira/license-banner"], function ($, licenseBanner) {
+    $(function () {
+        licenseBanner.showLicenseBanner("");
+        licenseBanner.showLicenseFlag("");
+    });
+});
+</script>
+
+
+<script type="text/javascript">
+                var zEncKeyFld = "AO-7DEABF";
+                var zEncKeyVal = "xP+MpcrpM+8tKUY9DTVU8ybW5YqabGs9eexrXKUKa2y29s9MZBvq/OT2J32hMzzFkzVmH2PdqCbnTAOQtuWMNg==";
+        var zshowWF = true
+                </script>               <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">Loading&hellip;</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://tm.prod.advantasure.com/secure/MyJiraHome.jspa"><img src="/s/-upkoxk/713005/b6b48b2829824b869586ac216d119363/_/images/jira-generic.png" alt="" /><span class="aui-header-logo-text">Tessellate Ticket Management</span></a></h1><ul class='aui-nav'><li><a href="/secure/Dashboard.jspa" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="home_link" aria-haspopup="true" aria-controls="home_link-content" title="View and manage your dashboards" accesskey="d">Dashboards</a><div class="aui-dropdown2 aui-style-default" id="home_link-content" data-aui-dropdown2-ajax-key="home_link"></div></li><li><a href="/browse/IDAP" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="browse_link" aria-haspopup="true" aria-controls="browse_link-content" title="View recent projects and browse a list of projects" accesskey="p">Projects</a><div class="aui-dropdown2 aui-style-default" id="browse_link-content" data-aui-dropdown2-ajax-key="browse_link"></div></li><li><a href="/issues/" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="find_link" aria-haspopup="true" aria-controls="find_link-content" title="Search for issues and view recent issues" accesskey="i">Issues</a><div class="aui-dropdown2 aui-style-default" id="find_link-content" data-aui-dropdown2-ajax-key="find_link"></div></li><li><a href="/secure/RapidBoard.jspa" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="greenhopper_menu" aria-haspopup="true" aria-controls="greenhopper_menu-content" title="Manage your project with Jira Software">Boards</a><div class="aui-dropdown2 aui-style-default" id="greenhopper_menu-content" data-aui-dropdown2-ajax-key="greenhopper_menu"></div></li><li><a href="/secure/ZephyrWelcome.jspa" class=" aui-nav-link aui-dropdown2-trigger" id="zephyr_je.topnav.tests" aria-haspopup="true" aria-controls="zephyr_je.topnav.tests-content" title="Zephyr Test Management and Execution">Tests</a><div class="aui-dropdown2 aui-style-default" id="zephyr_je.topnav.tests-content"><div id="zephyr-je.topnav.manage.section" class="aui-dropdown2-section" ><ul class="aui-list-truncate"><li id="zephyr-je.topnav.tests.test.search"><a href="/secure/SearchTest.jspa" id="zephyr-je.topnav.tests.test.search_lnk" class="">Search Tests</a></li><li id="zephyr-je.topnav.tests.create"><a href="/secure/CreateTestIssue.jspa" id="zephyr-je.topnav.tests.create_lnk" class="">Create a Test</a></li></ul></div><div id="zephyr-je.topnav.tests.execution.section" class="aui-dropdown2-section" ><ul class="aui-list-truncate"><li id="zephyr-je.topnav.tests.plan.cycle"><a href="/secure/PlanTestCycle.jspa" id="zephyr-je.topnav.tests.plan.cycle_lnk" class="">Plan Test Cycle</a></li><li id="zephyr-je.topnav.tests.execution.search"><a href="/secure/ExecutionNavigator.jspa" id="zephyr-je.topnav.tests.execution.search_lnk" class="">Search Test Executions</a></li><li id="manage_zql_filters_link"><a href="/secure/ZQLManageFilters.jspa" id="manage_zql_filters_link_lnk" class="">Manage Execution Filters</a></li><li id="zephyr-je.topnav.tests.plan.execute"><a href="/secure/PlanExecuteTest.jspa" id="zephyr-je.topnav.tests.plan.execute_lnk" class="">Execute Tests</a></li></ul></div><div id="zephyr-je.topnav.tests.summary.section" class="aui-dropdown2-section" ><ul class="aui-list-truncate"><li id="zephyr-je.topnav.tests.test.plan.summary"><a href="/secure/TestSummary.jspa" id="zephyr-je.topnav.tests.test.plan.summary_lnk" class="">Test Summary</a></li><li id="zephyr-je.topnav.tests.test.plan.metrics"><a href="/secure/DisplayMetricsDashboard.jspa" id="zephyr-je.topnav.tests.test.plan.metrics_lnk" class="">Test Metrics</a></li><li id="zephyr-je.topnav.tests.test.plan.traceability"><a href="/secure/TraceabilityReport.jspa" id="zephyr-je.topnav.tests.test.plan.traceability_lnk" class="">Traceability</a></li></ul></div><div id="zephyr-je.topnav.tests.importer.section" class="aui-dropdown2-section" ><ul class="aui-list-truncate"><li id="zephyr-je.topnav.tests.test.importer.import"><a href="/secure/TestIssueImporter.jspa" id="zephyr-je.topnav.tests.test.importer.import_lnk" class="">Importer</a></li></ul></div><div id="zephyr-je.topnav.tests.about.section" class="aui-dropdown2-section" ><ul class="aui-list-truncate"><li id="zfj_welcome"><a href="/secure/ZephyrWelcome.jspa" id="zfj_welcome_lnk" class="">Welcome</a></li><li id="com.thed.zephyr.je:zephyr-je.topnav.tests.help"><a href="/secure/Help.jspa" id="com.thed.zephyr.je:zephyr-je.topnav.tests.help_lnk" class="">Documentation</a></li><li id="add_feedback"><a href="https://www.getzephyr.com/products/zephyr-for-jira/feedback" id="add_feedback_lnk" class="">Give Feedback</a></li><li id="support_link"><a href="https://support.smartbear.com/message/?prod=zephyr" id="support_link_lnk" class="">Support</a></li><li id="add-about"><a href="" id="add-about_lnk" class="">About Zephyr</a></li></ul></div></div></li><li><a href="" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="plugins-jira-webitem-main" aria-haspopup="true" aria-controls="plugins-jira-webitem-main-content" title="View and manage your Advanced Roadmaps plans">Plans</a><div class="aui-dropdown2 aui-style-default" id="plugins-jira-webitem-main-content" data-aui-dropdown2-ajax-key="plugins-jira-webitem-main"></div></li><li><a href="/secure/TestFLOProjects!default.jspa" class=" aui-nav-link aui-dropdown2-trigger" id="suitest_links" aria-haspopup="true" aria-controls="suitest_links-content">TestFLO</a><div class="aui-dropdown2 aui-style-default" id="suitest_links-content"><div id="suitest_section_top" class="aui-dropdown2-section" ><ul class="aui-list-truncate"><li id="tct_repository_link"><a href="/secure/TmsSearchIssue!repository.jspa" id="tct_repository_link_lnk" class="">Test Case Templates</a></li><li id="open_test_plans_link"><a href="/secure/TmsSearchIssue!testPlans.jspa" id="open_test_plans_link_lnk" class="">Test Plans</a></li><li id="testflo_projects_link"><a href="/secure/TestFLOProjects!default.jspa" id="testflo_projects_link_lnk" class="">TestFLO projects</a></li><li id="create-tcts-in-bulk-link"><a href="/secure/CreateTCTsInBulk!default.jspa" id="create-tcts-in-bulk-link_lnk" class="">Create TCTs In Bulk</a></li></ul></div><div id="suitest_section_bottom" class="aui-dropdown2-section" ><ul class="aui-list-truncate"><li id="documentation_link"><a href="https://deviniti.com/support/addon/server/testflo/latest/about" id="documentation_link_lnk" class="">Documentation / Help</a></li></ul></div></div></li>
+<li id="create-menu"><a  id="create_link"  class="aui-button aui-button-primary aui-style create-issue "  title="Create a new issue / bug / feature request / etc" href="/secure/CreateIssue!default.jspa" accesskey="c">Create</a></li></ul></div><div class="aui-header-secondary"><ul class='aui-nav'>
+<li id="quicksearch-menu">
+    <form action="/secure/QuickSearch.jspa" method="get" id="quicksearch" class="aui-quicksearch dont-default-focus ajs-dirty-warning-exempt">
+        <input id="quickSearchInput" autocomplete="off"  class="search" type="text" title="Search" placeholder="Search" name="searchString" accessKey="q" />
+        <input type="submit" class="hidden" value="Search">
+    </form>
+</li>
+<li><a class="jira-feedback-plugin" role="button" aria-haspopup="true" id="jira-header-feedback-link" href="#"><span class="aui-icon aui-icon-small aui-iconfont-feedback">Give feedback to Atlassian</span></a></li>
+
+
+
+
+    <li id="system-help-menu">
+                    <a class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless"
+                   id="help_menu" aria-haspopup="true" aria-owns="system-help-menu-content" href="https://docs.atlassian.com/jira/jsw-docs-0713/"  target="$textUtils.htmlEncode($rootHelpMenuItem.params.target)"  title="Help"><span class="aui-icon aui-icon-small aui-iconfont-question-filled">Help</span></a>
+        <div id="system-help-menu-content" class="aui-dropdown2 aui-style-default">
+                            <div class="aui-dropdown2-section">
+                                                                <ul id="jira-help" class="aui-list-truncate">
+                                                            <li>
+                                    <a id="gh_view_help" class="aui-nav-link " title="Get help online for Jira Software" href="https://docs.atlassian.com/jira/jsw-docs-0713/"  target="_blank" >Jira Software help</a>
+                                </li>
+                                                            <li>
+                                    <a id="view_core_help" class="aui-nav-link " title="Go to the online documentation for Jira Core" href="https://docs.atlassian.com/jira/jcore-docs-0713/"  target="_blank" >Jira Core help</a>
+                                </li>
+                                                            <li>
+                                    <a id="rm-roadmaps-webitem-docs" class="aui-nav-link "  href="https://confluence.atlassian.com/display/JIRAPortfolioServer" >Advanced Roadmaps for Jira help</a>
+                                </li>
+                                                            <li>
+                                    <a id="jpo-keyboard-shortcuts" class="aui-nav-link jpo-keyboard-shortcuts"  href="/secure/PortfolioKeyboardShortcuts.jspa" >Advanced Roadmaps Keyboard Shortcuts</a>
+                                </li>
+                                                            <li>
+                                    <a id="keyshortscuthelp" class="aui-nav-link " title="Get more information about Jira's Keyboard Shortcuts" href="/secure/ViewKeyboardShortcuts!default.jspa"  target="_blank" >Keyboard Shortcuts</a>
+                                </li>
+                                                            <li>
+                                    <a id="view_about" class="aui-nav-link " title="Get more information about Jira" href="/secure/AboutPage.jspa" >About Jira</a>
+                                </li>
+                                                            <li>
+                                    <a id="view_credits" class="aui-nav-link " title="See who did what" href="/secure/JiraCreditsPage!default.jspa"  target="_blank" >Jira Credits</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+                    </div>
+    </li>
+
+<li id="user-options">
+                        <a id="header-details-user-fullname" class="aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" aria-haspopup="true" aria-owns="user-options-content" data-username="James.Vakas" data-displayname="James Vakas" href="/secure/ViewProfile.jspa" title="User profile for James Vakas">
+                    <span class="aui-avatar aui-avatar-small">
+                <span class="aui-avatar-inner">
+                    <img src="https://www.gravatar.com/avatar/879eacc461c6247a04c9b95093b38e3e?d=mm&s=24" alt="User profile for James Vakas"/>
+                </span>
+            </span>
+        </a>
+                <div id="user-options-content" class="aui-dropdown2 aui-style-default">
+                            <div class="aui-dropdown2-section">
+                                                                <ul id="personal" class="aui-list-truncate">
+                                                                                                                            <li>
+                                        <a  id="view_profile"   class=""  title="View and change your details and preferences" href="/secure/ViewProfile.jspa">Profile</a>
+                                    </li>
+                                                                                                                                <li>
+                                        <a  id="upm-requests-link"   class=""   href="/plugins/servlet/upm/requests?source=header_user">Atlassian Marketplace</a>
+                                    </li>
+                                                                                    </ul>
+                                    </div>
+                            <div class="aui-dropdown2-section">
+                                            <strong>My Jira Home</strong>
+                                                                <ul id="set_my_jira_home" class="aui-list-truncate">
+                                                                                                                                                                                                                                                                    <li>
+                                        <a  id="set_my_jira_home_default"  class="aui-dropdown2-radio interactive checked    " title="Set my Jira Home to the Dashboard." href="/secure/UpdateMyJiraHome.jspa?target=com.atlassian.jira.jira-my-home-plugin%3Aset_my_jira_home_dashboard&atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin">Dashboard</a>
+                                    </li>
+                                                                                                                                <li>
+                                        <a  id="greenhopper-my-jira-home-set"  class="aui-dropdown2-radio interactive    " title="Set my Jira home page to Boards." href="/secure/UpdateMyJiraHome.jspa?target=com.pyxis.greenhopper.jira%3Agreenhopper-my-jira-home-set-51&atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin">Boards</a>
+                                    </li>
+                                                                                                                                <li>
+                                        <a  id="set_my_jira_home_issuenav"  class="aui-dropdown2-radio interactive    " title="Set my Jira Home to the Issue Navigator." href="/secure/UpdateMyJiraHome.jspa?target=com.atlassian.jira.jira-my-home-plugin%3Aset_my_jira_home_issue&atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin">Issue Navigator</a>
+                                    </li>
+                                                                                    </ul>
+                                    </div>
+                            <div class="aui-dropdown2-section">
+                                                                <ul id="system" class="aui-list-truncate">
+                                                                                                                            <li>
+                                        <a  id="log_out"   class=""  title="Log out and cancel any automatic login." href="/logout?atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin">Log Out</a>
+                                    </li>
+                                                                                    </ul>
+                                    </div>
+                    </div>
+    </li>
+</ul></div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    </header>
+
+    <section id="content" role="main">
+
+        <big-pipe data-id="sidebar-id" unresolved></big-pipe><div class="aui-sidebar  sidebar-placeholder" ><div class="aui-sidebar-wrapper"><div class="aui-sidebar-body"></div><div class="aui-sidebar-footer"><a class="aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy" data-tooltip="Expand sidebar ( [ )" href="#"><span class="aui-icon aui-icon-small"></span></a></div></div></div><script id="projects-sidebar-events-attach">
+        (function () {
+            var scriptTag = document.getElementById('projects-sidebar-events-attach');
+            var sidebarElement = document.querySelector('big-pipe[data-id=sidebar-id]');
+            sidebarElement.addEventListener('error', function (e) {
+                require(['jira/projects/sidebar/sidebar-placeholder-initializer'], function (sidebarPlaceholderInitializer) {
+                    sidebarPlaceholderInitializer.onError(e);
+                });
+            });
+            sidebarElement.addEventListener('success', function (e) {
+                require(['jira/projects/sidebar/sidebar-placeholder-initializer'], function (sidebarPlaceholderInitializer) {
+                    sidebarPlaceholderInitializer.onSuccess(e);
+                });
+            });
+            scriptTag.parentElement.removeChild(scriptTag);
+        }())
+    </script><script id="projects-sidebar-init">
+    require(['jira/projects/sidebar/expansion-manager'], function(expansionManager) {
+        var scriptTag = document.getElementById('projects-sidebar-init');
+        var sidebar = AJS.sidebar('.aui-sidebar');
+        expansionManager(sidebar);
+        scriptTag.parentElement.removeChild(scriptTag);
+    });
+    </script>
+
+        <div id="gh" class="ghx-gh ghx-no-touch aui-page-panel">
+            <noscript>
+    <div class="aui-message warning">
+        <p>
+            <span class="aui-icon icon-warning"></span>
+            Either you have JavaScript disabled or your browser does not support JavaScript. To work properly, this page requires JavaScript to be enabled.
+        </p>
+    </div>
+</noscript>
+        </div>
+
+        <div class="hidden js-issueaction-container-dot">
+                        <a id="com.atlassian.servicedesk.approvals-plugin:approve-approval" class="js-issueaction js-issueaction-approve-approval" href="#"></a>
+                                <a id="edit-issue" class="js-issueaction issueaction-edit-issue" href="/secure/EditIssue!default.jspa?id={0}"></a>
+                                <a id="com.atlassian.servicedesk.approvals-plugin:reject-approval" class="js-issueaction js-issueaction-reject-approval" href="#"></a>
+                                <a id="assign-issue" class="js-issueaction issueaction-assign-issue" href="/secure/AssignIssue!default.jspa?id={0}"></a>
+                                <a id="assign-to-me" class="js-issueaction issueaction-assign-to-me hide-from-opsbar" href="/secure/AssignIssue.jspa?atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin&id={0}&assignee=James.Vakas"></a>
+                                <a id="comment-issue" class="js-issueaction issueaction-comment-issue add-issue-comment" href="/secure/AddComment!default.jspa?id={0}"></a>
+                                <a id="log-work" class="js-issueaction issueaction-log-work" href="/secure/CreateWorklog!default.jspa?id={0}"></a>
+                                <a id="com.atlassian.servicedesk.approvals-plugin:create-approval" class="js-issueaction js-issueaction-create-approval" href="#"></a>
+                                <a id="greenhopper-rapidboard-operation" class="js-issueaction issueaction-greenhopper-rapidboard-operation js-rapidboard-operation-issue" href="/secure/GHGoToBoard.jspa?issueId={0}"></a>
+                                <a id="greenhopper-rank-top-operation" class="js-issueaction issueaction-greenhopper-rank-top-operation" href="/secure/RankTop.jspa?issueId={0}"></a>
+                                <a id="greenhopper-rank-bottom-operation" class="js-issueaction issueaction-greenhopper-rank-bottom-operation" href="/secure/RankBottom.jspa?issueId={0}"></a>
+                                <a id="attach-file" class="js-issueaction unified-attach-file" href="/secure/AttachFile!default.jspa?id={0}"></a>
+                                <a id="attach-screenshot-html5" class="js-issueaction issueaction-attach-screenshot-html5" href="/secure/ShowAttachScreenshotFormAction!default.jspa?id={0}"></a>
+                                <a id="toggle-vote-issue" class="js-issueaction issueaction-vote-issue" href="/secure/VoteOrWatchIssue.jspa?atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin&id={0}&vote=vote"></a>
+                                <a id="toggle-vote-issue" class="js-issueaction issueaction-unvote-issue" href="/secure/VoteOrWatchIssue.jspa?atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin&id={0}&vote=unvote"></a>
+                                <a id="view-voters" class="js-issueaction issueaction-view-voters" href="/secure/ViewVoters!default.jspa?id={0}"></a>
+                                <a id="toggle-watch-issue" class="js-issueaction issueaction-watch-issue" href="/secure/VoteOrWatchIssue.jspa?atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin&id={0}&watch=watch"></a>
+                                <a id="toggle-watch-issue" class="js-issueaction issueaction-unwatch-issue" href="/secure/VoteOrWatchIssue.jspa?atl_token=B692-EW33-ULGC-WT4H_2bd740ea3f56a93ad303216664e6066e9d342c4d_lin&id={0}&watch=unwatch"></a>
+                                <a id="manage-watchers" class="js-issueaction issueaction-manage-watchers" href="/secure/ManageWatchers!default.jspa?id={0}"></a>
+                                <a id="create-subtask" class="js-issueaction issueaction-create-subtask" href="/secure/CreateSubTaskIssue!default.jspa?parentIssueId={0}"></a>
+                                <a id="subtask-to-issue" class="js-issueaction issueaction-subtask-to-issue" href="/secure/ConvertSubTask.jspa?id={0}"></a>
+                                <a id="issue-to-subtask" class="js-issueaction issueaction-issue-to-subtask" href="/secure/ConvertIssue.jspa?id={0}"></a>
+                                <a id="createTestPlanFromRequirement-operation-link" class="js-issueaction create-test-plan-from-requirement-link" href="/secure/ReqCreateIssueChooseProject!default.jspa?originatorIssueId=$issue.id&pid=$project.id&projectModuleName=test_execution&chosenType=tp"></a>
+                                <a id="prepareTestPlanFormWithRequirementAndTestCasesAction-operation-link" class="js-issueaction prepare-test-plan-form-with-requirement-and-test-cases-link" href="/secure/PrepareTestPlanWithRequirementAndTestCases!default.jspa?requirementId=$issue.id"></a>
+                                <a id="createTCTfromRequirement-operation" class="js-issueaction " href="/secure/ReqCreateIssueChooseProject!default.jspa?originatorIssueId=$issue.id&pid=$project.id&projectModuleName=test_repository&chosenType=tct"></a>
+                                <a id="cta-create-branch" class="js-issueaction devstatus-cta-link" href="#devstatus.cta.createbranch"></a>
+                                <a id="create-linked-issue" class="js-issueaction issueaction-create-linked-issue" href="#"></a>
+                                <a id="move-issue" class="js-issueaction issueaction-move-issue" href="/secure/MoveIssue!default.jspa?id={0}"></a>
+                                <a id="move-issue" class="js-issueaction issueaction-move-subtask" href="/secure/MoveSubTaskChooseOperation!default.jspa?id={0}"></a>
+                                <a id="link-issue" class="js-issueaction issueaction-link-issue" href="/secure/LinkJiraIssue!default.jspa?id={0}"></a>
+                                <a id="clone-issue" class="js-issueaction issueaction-clone-issue" href="/secure/CloneIssueDetails!default.jspa?id={0}"></a>
+                                <a id="edit-labels" class="js-issueaction issueaction-edit-labels" href="/secure/EditLabels!default.jspa?id={0}"></a>
+                                <a id="createTestCasesLink" class="js-issueaction issueSearcherDialog-link" href="/secure/IssueSearcher!default.jspa?issueId={0}&context=tct"></a>
+                                <a id="linkWithRequirementLink" class="js-issueaction issueSearcherDialog-link" href="/secure/IssueSearcher!default.jspa?issueId={0}&context=req"></a>
+                                <a id="linkWithRequirementLink" class="js-issueaction issueSearcherDialog-link" href="/secure/IssueSearcher!default.jspa?issueId={0}&context=def"></a>
+                                <a id="createDefect-operation" class="js-issueaction issueaction-move-issue" href="/secure/TmsCreateIssue!default.jspa?originatorIssueId={0}&skipRequirementFieldValidation=true&requirementCfId=$requirementCfId&pid=&issuetype="></a>
+                                <a id="addToExistingTPLink" class="js-issueaction issueSearcherDialog-link" href="/secure/IssueSearcher!default.jspa?issueId={0}&context=tp"></a>
+                                <a id="createDefect2-operation" class="js-issueaction issueaction-move-issue" href="/secure/TmsCreateIssue!default.jspa?originatorIssueId={0}&requirementSource=tct&skipRequirementFieldValidation=true&requirementCfId=$requirementCfId&pid=&issuetype="></a>
+                                <a id="updateTestCases-operation" class="js-issueaction issueaction-update-test-cases-link" href="/secure/UpdateTestCases!default.jspa?id={0}"></a>
+                                <a id="copyTestPlan-operation" class="js-issueaction issueaction-copy-test-plan-link" href=""></a>
+                                <a id="assignTestCase-operation" class="js-issueaction issueaction-assign-test-case-link" href="/secure/AssignTestCase!default.jspa?id={0}"></a>
+                                <a id="next-test-plan-iteration-operation" class="js-issueaction issueaction-next-iteration-link" href="/secure/NextIteration!default.jspa?testPlanId={0}"></a>
+                                <a id="updateTCfromTCT-operation" class="js-issueaction issueaction-update-test-cases-link" href="/secure/UpdateTestCases!default.jspa?id={0}"></a>
+                                <a id="delete-issue" class="js-issueaction issueaction-delete-issue" href="/secure/DeleteIssue!default.jspa?id={0}"></a>
+        </div>
+
+<fieldset class="hidden parameters">
+    <input type="hidden" id="thanks_issue_updated" value="{0} has been updated.">
+    <input type="hidden" id="thanks_issue_transitioned" value="{0} has been updated.">
+    <input type="hidden" id="thanks_issue_assigned" value="{0} has been assigned.">
+    <input type="hidden" id="thanks_issue_commented" value="{0} has been updated with your comment.">
+    <input type="hidden" id="thanks_issue_worklogged" value="Work has been logged on {0}.">
+    <input type="hidden" id="thanks_issue_voted" value="Your vote on {0} has been updated.">
+    <input type="hidden" id="thanks_issue_watched" value="Your watcher status on {0} has been updated.">
+    <input type="hidden" id="thanks_issue_moved" value="{0} has been moved.">
+    <input type="hidden" id="thanks_issue_linked" value="The links on {0} have been updated.">
+    <input type="hidden" id="thanks_issue_cloned" value="{0} has been cloned.">
+    <input type="hidden" id="thanks_issue_labelled" value="The labels on {0} have been updated.">
+    <input type="hidden" id="thanks_issue_deleted" value="{0} has been deleted.">
+    <input type="hidden" id="thanks_issue_attached" value="The file(s) have been attached to {0}.">
+</fieldset>
+
+    </section>
+    <footer id="footer" role="contentinfo">
+
+
+
+<section class="footer-body">
+    <ul id="ghx-footer" style="display: none" class="gh-build-version" >
+        <li>
+
+
+            <a class='seo-link' href='http://www.atlassian.com/software/jira/?utm_source=gh_footer'>Agile project management</a> for <a class='seo-link' href='http://www.atlassian.com/software/jira/?utm_source=gh_footer'>Kanban</a> and <a class='seo-link' href='http://www.atlassian.com/software/jira/?utm_source=gh_footer'>Scrum software development</a> powered by <a class='seo-link' href='http://www.atlassian.com/software/jira/?utm_source=gh_footer'>Jira Software</a>
+            (v7.13.0-DAILY20190605023142)
+        </li>
+    </ul>
+<ul class="atlassian-footer">
+    <li>
+        Atlassian Jira <a class="seo-link" rel="nofollow" href="https://www.atlassian.com/software/jira">Project Management Software</a>
+                                            <span id="footer-build-information">(v7.13.5#713005-<span title='8d78f1047b9cca7d35d4d13f706b37e27d869e07' data-commit-id='8d78f1047b9cca7d35d4d13f706b37e27d869e07}'>sha1:8d78f10</span>)</span>
+    </li>
+    <li>
+        <a id="about-link" rel="nofollow" href="/secure/AboutPage.jspa/secure/AboutPage.jspa">About Jira</a>
+    </li>
+    <li>
+        <a id="footer-report-problem-link" rel="nofollow" href="/secure/CreateIssue!default.jspa">Report a problem</a>
+    </li>
+</ul>
+    <ul class="atlassian-footer">
+        <li class="licensemessage">
+
+        </li>
+    </ul>
+
+    <div id="footer-logo"><a rel="nofollow" href="http://www.atlassian.com/">Atlassian</a></div>
+</section>
+
+<fieldset class="hidden parameters">
+    <input type="hidden" title="loggedInUser" value="James.Vakas">
+    <input type="hidden" title="ajaxTimeout" value="The call to the Jira server did not complete within the timeout period.  We are unsure of the result of this operation.">
+    <input type="hidden" title="JiraVersion" value="7.13.5" />
+    <input type="hidden" title="ajaxUnauthorised" value="You are not authorized to perform this operation.  Please log in.">
+    <input type="hidden" title="baseURL" value="https://tm.prod.advantasure.com" />
+    <input type="hidden" title="ajaxCommsError" value="The Jira server could not be contacted. This may be a temporary glitch or the server may be down. ">
+    <input type="hidden" title="ajaxServerError" value="The Jira server was contacted but has returned an error response. We are unsure of the result of this operation.">
+    <input type="hidden" title="ajaxErrorCloseDialog" value="Close this dialog and press refresh in your browser">
+    <input type="hidden" title="ajaxErrorDialogHeading" value="Communications Breakdown">
+
+    <input type="hidden" title="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.">
+    <input type="hidden" title="dirtyDialogMessage" value="You have entered new data in this dialog. If you navigate away from this dialog without first saving your data, the changes will be lost. Click cancel to return to the dialog.">
+    <input type="hidden" title="keyType" value="Type">
+    <input type="hidden" title="keyThen" value="then">
+    <input type="hidden" title="dblClickToExpand" value="Double click to expand">
+    <input type="hidden" title="actions" value="Actions">
+    <input type="hidden" title="removeItem" value="Remove">
+    <input type="hidden" title="workflow" value="Workflow">
+    <input type="hidden" title="labelNew" value="New Label">
+    <input type="hidden" title="issueActionsHint" value="Begin typing for available operations or press down to see all">
+    <input type="hidden" title="closelink" value="Close">
+    <input type="hidden" title="dotOperations" value="Operations">
+    <input type="hidden" title="dotLoading" value="Loading...">
+    <input type="hidden" title="frotherSuggestions" value="Suggestions">
+    <input type="hidden" title="frotherNomatches" value="No Matches">
+    <input type="hidden" title="multiselectVersionsError" value="{0} is not a valid version.">
+    <input type="hidden" title="multiselectComponentsError" value="{0} is not a valid component.">
+    <input type="hidden" title="multiselectGenericError" value="The value {0} is invalid.">
+</fieldset>
+
+    </footer>
+</div>
+
+
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/1.0/_/download/batch/jira.webresources:bigpipe-js/jira.webresources:bigpipe-js.js" data-wrm-key="jira.webresources:bigpipe-js" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["scope-filter-data"]="{\"selectedScope\":{\"link\":\"/secure/RapidBoard.jspa?rapidView\\u003d458\\u0026projectKey\\u003dIDAP\\u0026useStoredSettings\\u003dtrue\",\"label\":\"IDAP Scrum Board (AbracaData)\",\"styleClass\":\"\"},\"scopes\":[{\"link\":\"/secure/RapidBoard.jspa?rapidView\\u003d458\\u0026projectKey\\u003dIDAP\\u0026useStoredSettings\\u003dtrue\",\"label\":\"IDAP Scrum Board (AbracaData)\",\"styleClass\":\"\"},{\"link\":\"/secure/RapidBoard.jspa?rapidView\\u003d506\\u0026projectKey\\u003dIDAP\\u0026useStoredSettings\\u003dtrue\",\"label\":\"Data Engineering \",\"styleClass\":\"\"},{\"link\":\"/secure/RapidBoard.jspa?rapidView\\u003d442\\u0026projectKey\\u003dIDAP\\u0026useStoredSettings\\u003dtrue\",\"label\":\"IDAP board\",\"styleClass\":\"\"},{\"link\":\"/secure/RapidBoard.jspa?rapidView\\u003d463\\u0026projectKey\\u003dIDAP\\u0026useStoredSettings\\u003dtrue\",\"label\":\"IDAP Epic Grooming\",\"styleClass\":\"\"},{\"link\":\"/secure/RapidBoard.jspa?rapidView\\u003d449\\u0026projectKey\\u003dIDAP\\u0026useStoredSettings\\u003dtrue\",\"label\":\"Maestros (IDAP) Board\",\"styleClass\":\"\"}],\"createScopeActions\":[{\"link\":\"\",\"label\":\"Create board\",\"styleClass\":\"scope-filter-create-board js-create-board\"}]}";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:can-manage"]="false";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:with-icons"]="false";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:shortcuts"]="[]";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:project-id"]="14200";
+WRM._unparsedData["sidebar-id"]="\"\u003cdiv class=\\\"aui-sidebar  projects-sidebar sidebar-pending\\\" \u003e\u003cdiv class=\\\"aui-sidebar-wrapper\\\"\u003e\u003cdiv class=\\\"aui-sidebar-body\\\"\u003e\u003cheader class=\\\"aui-page-header\\\"\u003e\u003cdiv class=\\\"aui-page-header-inner\\\"\u003e\u003cdiv class=\\\"aui-page-header-image\\\"\u003e\u003ca href=\\\"\\/projects\\/IDAP\\/summary\\\" title=\\\"Integrated Data Analytics\\\" class=\\\"jira-project-avatar\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-large aui-avatar-project\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"\\/secure\\/projectavatar?pid=14200&amp;avatarId=10807\\\" alt=\\\"Integrated Data Analytics\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e\u003cimg src=\\\"data:image\\/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiBpZD0iV2Fyc3R3YV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MiA3MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNzIgNzIiPjxzdHlsZT4uc3Qye2ZpbGw6I2ZmZn08L3N0eWxlPjxnIGlkPSJHcm91cCI+PGNpcmNsZSBpZD0iT3ZhbCIgY3g9IjM2IiBjeT0iMzYiIHI9IjM2IiBmaWxsPSIjZmY5OTFmIi8+PC9nPjxnIGlkPSJQYWdlLTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2IDIxKSI+PGcgaWQ9Ikdyb3VwLTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLjYxNjcpIj48ZGVmcz48ZmlsdGVyIGlkPSJBZG9iZV9PcGFjaXR5TWFza0ZpbHRlciIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIuNCIgd2lkdGg9IjE2LjkiIGhlaWdodD0iMjcuNiI+PGZlQ29sb3JNYXRyaXggdmFsdWVzPSIxIDAgMCAwIDAgMCAxIDAgMCAwIDAgMCAxIDAgMCAwIDAgMCAxIDAiLz48L2ZpbHRlcj48L2RlZnM+PG1hc2sgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iLjQiIHdpZHRoPSIxNi45IiBoZWlnaHQ9IjI3LjYiIGlkPSJtYXNrLTJfMV8iPjxnIGZpbHRlcj0idXJsKCNBZG9iZV9PcGFjaXR5TWFza0ZpbHRlcikiPjxwYXRoIGlkPSJwYXRoLTFfMV8iIGNsYXNzPSJzdDIiIGQ9Ik0wIC40aDE2LjlWMjhIMHoiLz48L2c+PC9tYXNrPjxwYXRoIGlkPSJGaWxsLTEiIGQ9Ik0xMy43IDI4Yy0uOCAwLTEuNi0uMy0yLjMtLjlMMS4xIDE2LjhjLTEuNS0xLjUtMS41LTMuOSAwLTUuNGwxMC0xMGMxLjItMS4yIDMuMy0xLjIgNC41IDAgMS4yIDEuMyAxLjIgMy4zIDAgNC41bC04LjIgOC4yIDguNSA4LjVjMS4yIDEuMiAxLjIgMy4zIDAgNC41LS42LjYtMS40LjktMi4yLjkiIG1hc2s9InVybCgjbWFzay0yXzFfKSIgZmlsbD0iI2ZmZiIvPjwvZz48ZyBpZD0iR3JvdXAtNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjMgLjYxNjcpIj48ZGVmcz48ZmlsdGVyIGlkPSJBZG9iZV9PcGFjaXR5TWFza0ZpbHRlcl8xXyIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIuNCIgeT0iLjQiIHdpZHRoPSIxNi45IiBoZWlnaHQ9IjI3LjYiPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMSAwIDAgMCAwIDAgMSAwIDAgMCAwIDAgMSAwIDAgMCAwIDAgMSAwIi8+PC9maWx0ZXI+PC9kZWZzPjxtYXNrIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9Ii40IiB5PSIuNCIgd2lkdGg9IjE2LjkiIGhlaWdodD0iMjcuNiIgaWQ9Im1hc2stNF8xXyI+PGcgZmlsdGVyPSJ1cmwoI0Fkb2JlX09wYWNpdHlNYXNrRmlsdGVyXzFfKSI+PHBhdGggaWQ9InBhdGgtM18xXyIgY2xhc3M9InN0MiIgZD0iTS40LjRoMTYuOVYyOEguNHoiLz48L2c+PC9tYXNrPjxwYXRoIGlkPSJGaWxsLTQiIGQ9Ik0xMS43IDE1Ljl6TTMuNiAyOGMtLjggMC0xLjYtLjMtMi4zLS45LTEuMi0xLjItMS4yLTMuMyAwLTQuNWw4LjUtOC41LTguMi04LjNDLjQgNC42LjQgMi41IDEuNiAxLjMgMi44LjEgNC45LjEgNi4xIDEuM2wxMCAxMGMuNy43IDEuMSAxLjcgMS4xIDIuNyAwIDEtLjQgMi0xLjEgMi43TDUuOSAyNy4xYy0uNi42LTEuNS45LTIuMy45eiIgbWFzaz0idXJsKCNtYXNrLTRfMV8pIiBmaWxsPSIjZmZmIi8+PC9nPjwvZz48L3N2Zz4=\\\" alt=\\\"Icon indicating the project type\\\" class=\\\"jira-project-avatar-icon\\\" \\/\u003e\u003c\\/a\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-image --\u003e\u003cdiv class=\\\"aui-page-header-main\\\"\u003e\u003ch1\u003e\u003cdiv class=\\\"aui-group aui-group-split\\\"\u003e\u003cdiv class=\\\"aui-item project-title\\\"\u003e\u003ca href=\\\"\\/projects\\/IDAP\\/summary\\\" title=\\\"Integrated Data Analytics\\\"\u003eIntegrated Data Analytics\u003c\\/a\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/h1\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-main --\u003e\u003cdiv class=\\\"aui-page-header-main scopeFilterContainer\\\"\u003e\u003cdiv class=\\\"scope-filter aui-scope-filter-spectrum\\\"\u003e\u003ca href=\\\"\\/secure\\/RapidBoard.jspa?rapidView=458&amp;projectKey=IDAP&amp;useStoredSettings=true\\\" aria-owns=\\\"sidebar-scope-filter-list\\\" aria-haspopup=\\\"true\\\" class=\\\"aui-button aui-button-subtle aui-style-default aui-dropdown2-trigger scope-filter-trigger\\\" data-scope-filter-id=\\\"scope-filter-board-item-458\\\"\u003e\u003cspan class=\\\"scope-filter-icon aui-icon\\\"\u003e\u003c\\/span\u003eIDAP Scrum Board (AbracaData)\u003c\\/a\u003e\u003cdiv id=\\\"sidebar-scope-filter-list\\\" class=\\\"aui-dropdown2 aui-style-default scope-filter-list\\\"\u003e\u003cdiv class=\\\"aui-dropdown2-section\\\"\u003e\u003cstrong\u003eBoards in this project\u003c\\/strong\u003e\u003cul class=\\\"aui-list-truncate\\\"\u003e\u003cli\u003e\u003ca href=\\\"\\/secure\\/RapidBoard.jspa?rapidView=506&amp;projectKey=IDAP&amp;useStoredSettings=true\\\" title=\\\"Data Engineering \\\" data-scope-filter-id=\\\"scope-filter-board-item-506\\\"\u003eData Engineering \u003c\\/a\u003e\u003c\\/li\u003e\u003cli\u003e\u003ca href=\\\"\\/secure\\/RapidBoard.jspa?rapidView=442&amp;projectKey=IDAP&amp;useStoredSettings=true\\\" title=\\\"IDAP board\\\" data-scope-filter-id=\\\"scope-filter-board-item-442\\\"\u003eIDAP board\u003c\\/a\u003e\u003c\\/li\u003e\u003cli\u003e\u003ca href=\\\"\\/secure\\/RapidBoard.jspa?rapidView=463&amp;projectKey=IDAP&amp;useStoredSettings=true\\\" title=\\\"IDAP Epic Grooming\\\" data-scope-filter-id=\\\"scope-filter-board-item-463\\\"\u003eIDAP Epic Grooming\u003c\\/a\u003e\u003c\\/li\u003e\u003cli\u003e\u003ca href=\\\"\\/secure\\/RapidBoard.jspa?rapidView=449&amp;projectKey=IDAP&amp;useStoredSettings=true\\\" title=\\\"Maestros (IDAP) Board\\\" data-scope-filter-id=\\\"scope-filter-board-item-449\\\"\u003eMaestros (IDAP) Board\u003c\\/a\u003e\u003c\\/li\u003e\u003c\\/ul\u003e\u003c\\/div\u003e\u003cdiv class=\\\"aui-dropdown2-section\\\"\u003e\u003cul class=\\\"aui-list-truncate\\\"\u003e\u003cli\u003e\u003ca href=\\\"\\\"class=\\\"scope-filter-create-board js-create-board\\\"\u003eCreate board\u003c\\/a\u003e\u003c\\/li\u003e\u003c\\/ul\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-main --\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-inner --\u003e\u003c\\/header\u003e\u003c!-- .aui-page-header --\u003e\u003cnav class=\\\"aui-navgroup aui-navgroup-vertical\\\"\u003e\u003cdiv class=\\\"aui-navgroup-inner sidebar-content-container jira-navigation\\\"\u003e\u003cdiv class=\\\"aui-sidebar-group aui-sidebar-group-tier-one\\\" data-id=\\\"sidebar-navigation-panel\\\"\u003e\u003cul class=\\\"aui-nav\\\"\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item hidden\\\" href=\\\"\\/projects\\/IDAP?selectedItem=com.easyagile.plugins.easy-agile-programs&amp;rapidView=458\\\" data-link-id=\\\"com.easyagile.programs:easy-agile-programs\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large easy-agile-icon-programs\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Programs\\\"\u003ePrograms\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/secure\\/RapidBoard.jspa?projectKey=IDAP&amp;rapidView=458&amp;view=planning\\\" data-link-id=\\\"com.pyxis.greenhopper.jira:project-sidebar-plan-scrum\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large agile-icon-plan aui-iconfont-backlog\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Backlog\\\"\u003eBacklog\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/secure\\/RapidBoard.jspa?projectKey=IDAP&amp;rapidView=458\\\" data-link-id=\\\"com.pyxis.greenhopper.jira:project-sidebar-work-scrum\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large agile-icon-work aui-iconfont-board\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Active sprints\\\"\u003eActive sprints\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/IDAP?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:release-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-release aui-iconfont-ship\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Releases\\\"\u003eReleases\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/IDAP?selectedItem=com.atlassian.jira.jira-projects-plugin:report-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:report-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large agile-icon-report aui-iconfont-graph-line\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Reports\\\"\u003eReports\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/IDAP\\/issues\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-issue-navigator:sidebar-issue-navigator\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-issues aui-iconfont-issues\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Issues\\\"\u003eIssues\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/IDAP?selectedItem=com.atlassian.jira.jira-projects-plugin:components-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:components-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-components\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Components\\\"\u003eComponents\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/IDAP?selectedItem=com.thed.zephyr.je:zephyr-tests-page#test-summary-tab\\\" data-link-id=\\\"com.thed.zephyr.je:zephyr-tests-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-test\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Tests\\\"\u003eTests\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/projects\\/IDAP?selectedItem=com.thed.zephyr.je:zephyr-atom-project-sidebar\\\" data-link-id=\\\"com.thed.zephyr.je:zephyr-atom-project-sidebar\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-test-atom\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Test Automation\\\"\u003eTest Automation\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003c\\/ul\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/nav\u003e\u003c\\/div\u003e\u003cdiv class=\\\"aui-sidebar-footer\\\"\u003e\u003ca class=\\\"aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy\\\" data-tooltip=\\\"Expand sidebar ( [ )\\\" href=\\\"#\\\"\u003e\u003cspan class=\\\"aui-icon aui-icon-small\\\"\u003e\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/div\u003e\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-upkoxk/713005/b6b48b2829824b869586ac216d119363/1.0/_/download/batch/jira.webresources:bigpipe-init/jira.webresources:bigpipe-init.js" data-wrm-key="jira.webresources:bigpipe-init" data-wrm-batch-type="resource" data-initially-rendered></script>
+
+<form id="jira_request_timing_info" class="dont-default-focus" >
+        <fieldset class="parameters hidden">
+                <input type="hidden" title="jira.request.start.millis" value="1616443436136" />
+                <input type="hidden" title="jira.request.server.time" value="220" />
+                <input type="hidden" title="jira.request.id" value="963x165090x1" />
+                <input type="hidden" title="jira.session.expiry.time" value="-" />
+                <input type="hidden" title="jira.session.expiry.in.mins" value="-" />
+                <input id="jiraConcurrentRequests" type="hidden" name="jira.request.concurrent.requests" value="1" />
+                <input type="hidden" title="db.reads.time.in.ms" value="26" />
+                <input type="hidden" title="db.writes.time.in.ms" value="12" />
+                <input type="hidden" title="db.conns.time.in.ms" value="110" />
+        </fieldset>
+</form>
+<!--
+                         REQUEST ID : 963x165090x1
+                  REQUEST TIMESTAMP : [22/Mar/2021:16:03:56 -0400]
+                       REQUEST TIME : 0.2200
+                         ASESSIONID : jp6vey
+                CONCURRENT REQUESTS : 1
+
+                              db.reads : OpSnapshot{name='db.reads', invocationCount=31, elapsedTotal=26959205, elapsedMin=546900, elapsedMax=1835200, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+                             db.writes : OpSnapshot{name='db.writes', invocationCount=4, elapsedTotal=12651399, elapsedMin=2758400, elapsedMax=3595800, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+                              db.conns : OpSnapshot{name='db.conns', invocationCount=58, elapsedTotal=110520699, elapsedMin=566700, elapsedMax=12496300, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+-->
+
+</body>
+</html>
+
+Traceback (most recent call last):
+  File "metrics.py", line 101, in <module>
+  File "metrics.py", line 22, in __init__
+  File "jira\client.py", line 472, in __init__
+  File "jira\client.py", line 2133, in server_info
+  File "jira\client.py", line 2554, in _get_json
+  File "jira\client.py", line 2551, in _get_json
+  File "jira\utils\__init__.py", line 80, in json_loads
+  File "requests\models.py", line 900, in json
+  File "json\__init__.py", line 354, in loads
+  File "json\decoder.py", line 339, in decode
+  File "json\decoder.py", line 357, in raw_decode
+json.decoder.JSONDecodeError: Expecting value: line 7 column 1 (char 6)
+[10544] Failed to execute script metrics
+'projectKey' is not recognized as an internal or external command,
+operable program or batch file.
+'view' is not recognized as an internal or external command,
+operable program or batch file.
+'epics' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\JVakas\Downloads>

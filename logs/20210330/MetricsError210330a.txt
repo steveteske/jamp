@@ -1,0 +1,31 @@
+C:\Users\JVakas\Downloads>metrics.exe --user james.vakas --server https://tm.prod.advantasure.com --board "IDAP Scrum Board (AbracaData)"
+['https:', '', 'tm.prod.advantasure.com']
+Traceback (most recent call last):
+  File "metrics.py", line 191, in <module>
+  File "metrics.py", line 178, in run
+  File "metrics.py", line 110, in build_report
+  File "metrics.py", line 79, in board_list
+ValueError: not enough values to unpack (expected 2, got 1)
+[13700] Failed to execute script metrics
+
+C:\Users\JVakas\Downloads>metrics.exe --user james.vakas --server https://tm.prod.advantasure.com/ --board "IDAP Board"
+['https:', '', 'tm.prod.advantasure.com', '']
+WARNING: The server name has been truncated to https://tm.prod.advantasure.com).To force the full path, use --force_full_url parameter
+Traceback (most recent call last):
+  File "metrics.py", line 191, in <module>
+  File "metrics.py", line 178, in run
+  File "metrics.py", line 110, in build_report
+  File "metrics.py", line 79, in board_list
+ValueError: not enough values to unpack (expected 2, got 1)
+[10420] Failed to execute script metrics
+
+C:\Users\JVakas\Downloads>metrics.exe --user james.vakas --server https://tm.prod.advantasure.com --board "IDAP Board"
+['https:', '', 'tm.prod.advantasure.com']
+Traceback (most recent call last):
+  File "metrics.py", line 191, in <module>
+  File "metrics.py", line 178, in run
+  File "metrics.py", line 110, in build_report
+  File "metrics.py", line 79, in board_list
+ValueError: not enough values to unpack (expected 2, got 1)
+[17528] Failed to execute script metrics
+

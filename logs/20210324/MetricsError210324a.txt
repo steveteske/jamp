@@ -1,0 +1,73 @@
+C:\Users\JVakas\Downloads>metrics.exe --user james.vakas --server https://tm.prod.advantasure.com
+['https:', '', 'tm.prod.advantasure.com']
+Examining board: Data Ops (29)
+Examining board: ETP Backlog (35)
+Examining sprint: Sprint 1 (8)
+Examining sprint: Sprint 2 (9)
+Examining sprint: Sprint 3 (16)
+Examining sprint: Sprint 4 (18)
+Examining sprint: Sprint 5 (20)
+Examining sprint: Sprint 6 (21)
+Examining sprint: Sprint 7 (22)
+Examining sprint: Sprint 8 (23)
+Examining sprint: Sprint 9 (24)
+Examining sprint: Sprint 10 (25)
+Examining sprint: Sprint 11 (26)
+Examining sprint: Sprint 12 (31)
+Examining sprint: Sprint 13 (32)
+Examining sprint: Sprint 14 (34)
+Examining sprint: Sprint 15 (36)
+Examining sprint: Sprint 16 (37)
+Examining sprint: Sprint 17 (38)
+Examining sprint: Sprint 18 (42)
+Examining sprint: Sprint 19 (43)
+Examining sprint: Sprint 20 (44)
+Examining sprint: PK Sprint 9 (40)
+Examining sprint: PK Sprint 10 (41)
+Examining sprint: PK Sprint 7 (33)
+Examining sprint: PK Sprint 6 (30)
+Examining sprint: PK Sprint 8 (35)
+Examining sprint: Sprint 21 (46)
+Examining sprint: PK Sprint 11 (45)
+Examining sprint: Sprint 22 (48)
+Examining sprint: Sprint 23 (50)
+Examining sprint: Sprint 24 (51)
+Examining sprint: Sprint 25 (53)
+Examining sprint: PK Sprint 12 (49)
+Examining sprint: PK Sprint 13 (52)
+Examining sprint: Retrieval Kanban (47)
+Examining sprint: Sprint 26 (56)
+Examining sprint: Sprint 30 (63)
+Examining sprint: Sprint 27 (59)
+Examining sprint: Sprint 28 (60)
+Examining sprint: Sprint 29 (61)
+Examining sprint: Sprint 31 (64)
+Examining sprint: Base Platform Sprint 39 (122)
+Examining sprint: Base Platform Sprint 43 (143)
+Examining sprint: 2017 BP Sprint 12 (196)
+Examining sprint: 2017 BP Sprint 13 (197)
+Examining sprint: 2017 BP Sprint 14 (198)
+Examining sprint: 2017 BP Sprint 16 (217)
+Examining sprint: 2017 BP Sprint 19 (236)
+Examining sprint: 2017 BP Sprint 17 (234)
+Examining sprint: 2017 BP Sprint 21 (281)
+Examining sprint: 2017 BP Sprint 22 (282)
+Examining board: ETP Kanban Board (37)
+Examining board: Data Management Development (38)
+Examining sprint: Sprint 1 (10)
+Examining sprint: Sprint 2 (11)
+Examining sprint: Sprint 3 (12)
+Examining sprint: Sprint 4 (15)
+Examining sprint: Sprint 5 (19)
+Traceback (most recent call last):
+  File "metrics.py", line 158, in <module>
+  File "metrics.py", line 145, in run
+  File "metrics.py", line 94, in build_report
+  File "jamp\client.py", line 25, in sprint_report
+  File "jamp\resources.py", line 42, in __init__
+  File "jira\resources.py", line 846, in __init__
+  File "jamp\resources.py", line 68, in _parse_raw
+TypeError: unsupported operand type(s) for +=: 'int' and 'NoneType'
+[6804] Failed to execute script metrics
+
+C:\Users\JVakas\Downloads>
