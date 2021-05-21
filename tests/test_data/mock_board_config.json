@@ -1,0 +1,149 @@
+{
+  "currentViewConfig": {
+    "id": 1,
+    "name": "JAMP Program",
+    "canEdit": true,
+    "sprintSupportEnabled": true,
+    "showDaysInColumn": false,
+    "kanPlanEnabled": false,
+    "showEpicAsPanel": true,
+    "isSimpleBoard": false,
+    "jqsInJsw": false,
+    "quickFilters": [
+      {
+        "id": 1,
+        "name": "Only My Issues",
+        "query": "assignee = currentUser()",
+        "description": "Displays issues which are currently assigned to the current user"
+      },
+      {
+        "id": 2,
+        "name": "Recently Updated",
+        "query": "updatedDate >= -1d",
+        "description": "Displays issues which have been updated in the last day"
+      }
+    ],
+    "swimlanes": [
+      {
+        "id": 1,
+        "name": "Everything Else",
+        "query": "",
+        "description": "",
+        "isDefault": true
+      }
+    ],
+    "columns": [
+      {
+        "id": 4,
+        "name": "To Do",
+        "statusIds": [
+          "10000"
+        ],
+        "isKanPlanColumn": false
+      },
+      {
+        "id": 5,
+        "name": "In Progress",
+        "statusIds": [
+          "3"
+        ],
+        "isKanPlanColumn": false
+      },
+      {
+        "id": 6,
+        "name": "Done",
+        "statusIds": [
+          "10001"
+        ],
+        "isKanPlanColumn": false
+      }
+    ],
+    "statisticConfig": {
+      "fieldConfigured": false,
+      "typeId": "none",
+      "id": "",
+      "name": "None"
+    },
+    "swimlaneStrategy": "parentChild",
+    "estimationStatistic": {
+      "typeId": "field",
+      "fieldId": "customfield_10030",
+      "id": "field_customfield_10030",
+      "name": "Story Points",
+      "isValid": true,
+      "isEnabled": true,
+      "renderer": "number"
+    },
+    "query": "project = JAMP ORDER BY Rank ASC",
+    "trackingStatistic": {
+      "typeId": "none",
+      "id": "none_",
+      "name": "None",
+      "isValid": true,
+      "isEnabled": false,
+      "renderer": "number"
+    },
+    "isBoardAdmin": true,
+    "canManageSprints": true,
+    "complexQuery": false,
+    "isSimpleQueryBoard": true,
+    "isRoadmapEnabled": true,
+    "isRoadmapCrossProject": false,
+    "cardColorStrategy": "NONE",
+    "workModeExtraFieldIds": [],
+    "planModeExtraFieldIds": [],
+    "locationType": "project",
+    "isIssueListBacklog": false,
+    "isReportsEnabled": true
+  },
+  "globalConfig": {
+    "parallelSprints": false,
+    "epicConfig": {
+      "storyIssueTypeId": "10001",
+      "storyIssueTypeName": "Story",
+      "epicIssueTypeId": "10000",
+      "epicIssueTypeName": "Epic",
+      "epicLabelFieldId": "customfield_10011",
+      "epicStatusFieldId": "customfield_10012",
+      "epicStatusDoneValueId": 10018,
+      "epicColorFieldId": "customfield_10013",
+      "epicLinkFieldId": "customfield_10014",
+      "epicLinkFieldName": "Epic Link"
+    },
+    "sprintConfig": {
+      "sprintFieldId": "customfield_10020"
+    },
+    "dateFormat": "%e/%b/%y",
+    "userTimeZoneLabel": "GMT-04:00",
+    "numberGroupingSeparator": ",",
+    "numberDecimalSeparator": ".",
+    "timeTrackingConfig": {
+      "hoursPerDay": 8,
+      "daysPerWeek": 5,
+      "symbols": {
+        "week": "w",
+        "day": "d",
+        "hour": "h",
+        "minute": "m"
+      }
+    },
+    "dateTimePickerFormat": "%e/%b/%y %I:%M %p",
+    "quickCreateDefaultIssueTypeId": "10001",
+    "userConfig": {
+      "canCreateBoard": true,
+      "canCreateIssue": true,
+      "hasProjectsAccessible": true,
+      "hasFiltersAccessible": true,
+      "canCreateProject": true,
+      "accountId": "5c01e6c20ecb4f1b2ffa8ba5",
+      "name": "ug:4f7856bc-360d-46cd-842b-e090a7eaaeb8",
+      "displayName": "Steve Teske",
+      "avatarUrl": "https://secure.gravatar.com/avatar/d38615e0808a58b7eb44a2bb5945d740?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FST-5.png",
+      "isGlobalAdmin": true
+    },
+    "isSampleDataAvailable": true,
+    "useISO8601WeekNumbers": false,
+    "dateServerFormat": "d/MMM/yy",
+    "dateTimeServerFormat": "dd/MMM/yy h:mm a"
+  }
+}

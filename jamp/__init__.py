@@ -49,3 +49,25 @@ class JiraFieldMapper:
     def jira_key(self, name) -> str:
         return self._map[name]
 
+class JiraParmParser:
+    def __init__(self):
+        pass
+
+
+def _parse_server(_args):
+    the_split = _args.server.split('/')
+    print(the_split)
+    if len(the_split) > 3:
+        print("WARNING: The server name has been truncated to "
+              f"{the_split[0]}//{the_split[2]})."
+              f"To force the full path, use --force_full_url parameter")
+
+    if len(the_split) < 3:
+        raise ValueError("The server name must be in the form of http|https://<domain_name>")
+
+    server_name = f"{the_split[0]}//{the_split[2]}"
+
+    if _args.force_full_url:
+        return _args.server
+    else:
+        return server_name

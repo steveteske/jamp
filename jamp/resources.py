@@ -1,6 +1,8 @@
+import datetime
 import math
 import pprint
-
+import numpy as np
+import pandas as pd
 from jira.resources import Resource, GreenHopperResource
 
 import jamp
@@ -256,7 +258,10 @@ class SprintReport(GreenHopperResource):
 
 class VelocityReport(GreenHopperResource):
     """
-    .../rapid/charts/velocity.json?rapidViewId=1&sprintsFinishedBefore=2021-03-03T04%3A59%3A59.999Z&sprintsFinishedAfter=2020-12-02T05%3A00%3A00.000Z&_=1614720709744
+    .../rapid/charts/velocity.json?
+            rapidViewId=1&
+            sprintsFinishedBefore=2021-03-03T04%3A59%3A59.999Z&
+            sprintsFinishedAfter=2020-12-02T05%3A00%3A00.000Z&_=1614720709744
 
     """
 
@@ -279,3 +284,106 @@ class VelocityReport(GreenHopperResource):
 
     def completed(self, sprint_id: int) -> float:
         return self._velocity_stat(sprint_id, 'completed')
+
+
+class CfdReport(GreenHopperResource):
+    """
+
+    """
+
+    def __init__(self, options, session, raw=None, config=None):
+        options['agile_rest_path'] = 'greenhopper'
+        path = 'rapid/charts/cumulativeflowdiagram?{0}'
+        self._config = config
+        GreenHopperResource.__init__(self, path, options, session, raw)
+
+    @property
+    def board_name(self) -> str:
+        return self._config['currentViewConfig']['name']
+
+    def report(self) -> pd.DataFrame:
+        KEY_COLUMN_CHANGES = 'columnChanges'
+        KEY_COLUMNS = 'columns'
+        KEY_COLUMN_FROM = 'columnFrom'
+        KEY_COLUMN_TO = 'columnTo'
+        KEY_STATUS_TO = 'statusTo'
+        KEY_CUM_WIP = 'cumWip'
+        KEY_DATE = 'date'
+
+        COL_UNKNOWN = -1
+
+        cum = {}
+        _entry = {}
+        _exit = {}
+        columns = self.raw[KEY_COLUMNS]
+        for index, title in enumerate(columns):
+            cum[index] = {'title': title['name'],
+                          'value': 0
+                          }
+            _entry[index] = 0
+            _exit[index] = 0
+
+        data = []
+        for col_key, value in self.raw[KEY_COLUMN_CHANGES].items():
+            # print(col_key)
+            timestamp = int(col_key)
+            ts = datetime.datetime.utcfromtimestamp(timestamp/1000).strftime('%Y-%m-%d %H:%M:%S')
+
+            for i in value:
+                col_from = i.get(KEY_COLUMN_FROM, COL_UNKNOWN)
+                col_to = i.get(KEY_COLUMN_TO, COL_UNKNOWN)
+                status_to = i.get(KEY_STATUS_TO, COL_UNKNOWN)
+
+                if col_from != COL_UNKNOWN:
+                    _exit[col_from] += 1
+
+                if col_to != COL_UNKNOWN:
+                    _entry[col_to] += 1
+
+                for index, col in enumerate(columns):
+                    cum[index]['value'] = _entry[index] - _exit[index]
+
+                if status_to in ("4", "10000"):
+                    count_open = 1
+                else:
+                    count_open = 0
+
+                if status_to in ("5", "3"):
+                    count_wip = 1
+                else:
+                    count_wip = 0
+
+                if status_to in ("6", "10001"):
+                    count_done = 1
+                else:
+                    count_done = 0
+
+                item = {
+                    'date': ts,
+                    'key': i['key'],
+                    'from': col_from,
+                    'to': col_to,
+                    'status_to': status_to,
+                    # 'cumEnterOpen': cum_enter_open,
+                    # 'cumExitOpen': cum_exit_open,
+                    # 'cumEnterInProgress': cum_enter_inprogress,
+                    # 'cumExitInProgress' : cum_exit_inprogress,
+                    # 'cumEnterFinished': cum_enter_finished,
+                    # 'cumExitFinished' : cum_exit_finished,
+                    # 'cumEnterDone' : cum_enter_done,
+                    # 'cumExitDone' : cum_exit_done,
+                    # 'cumWip' : cum_finished + cum_in_progress,
+                    # 'countOpen' : count_open,
+                    # 'countWip': count_wip,
+                    # 'countDone': count_done
+                }
+                for key, counter in cum.items():
+                    item[counter['title']] = counter['value']
+
+                data.append(item)
+
+        df = pd.DataFrame(data)
+        if data:
+            df = df.astype(dtype={'date': np.datetime64})
+
+        return pd.DataFrame(df)
