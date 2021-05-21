@@ -205,9 +205,11 @@ class JiraProgramMetrics:
         if self.cfd_requested:
             cfd_list = self.build_cfd()
             writer = pd.ExcelWriter(self.cfd_filename, engine='xlsxwriter')
+            MAX_TAB_NAME_LENGTH = 30
+            board_name_max = MAX_TAB_NAME_LENGTH - len('CFD ')
             for cfd in cfd_list:
                 df = cfd.report()
-                df.to_excel(writer, sheet_name=f'CFD {cfd.board_name}', index=False)
+                df.to_excel(writer, sheet_name=f'CFD {cfd.board_name[:board_name_max]}', index=False)
 
             writer.save()
 
