@@ -1,4 +1,4 @@
-import sys
+from typing import List
 
 import pandas as pd
 from jira import JIRA, JIRAError
@@ -7,19 +7,20 @@ import argparse
 import os
 
 import jamp
-from jamp import JiraFieldMapper, NAN
+from jamp import JiraFieldMapper, NAN, _parse_server
 from jamp.client import JIRAReports, JIRATeams
+from jamp.resources import CfdReport
 
 
 class JiraProgramMetrics:
 
     def __init__(self):
         self._args = self.parse_args()
-        self._server = self._parse_server()
+        self._server = _parse_server(self._args)
 
         if jamp.JIRA_PASSWORD_ENV not in os.environ:
-            raise KeyError(f"The environment variable '{jamp.JIRA_PASSWORD_ENV}' is required "
-                           "to authenticate with the Jira Server.")
+            raise KeyError(f"The environment variable '{jamp.JIRA_PASSWORD_ENV}'"
+                           f" is required to authenticate with the Jira Server.")
 
         credential = os.environ[jamp.JIRA_PASSWORD_ENV]
 
@@ -47,23 +48,13 @@ class JiraProgramMetrics:
     def jira_key(self, field_key):
         return self._map.jira_key(field_key)
 
-    def _parse_server(self):
-        the_split = self._args.server.split('/')
-        print(the_split)
-        if len(the_split) > 3:
-            print("WARNING: The server name has been truncated to "
-                  f"{the_split[0]}//{the_split[2]})."
-                  f"To force the full path, use --force_full_url parameter")
+    @property
+    def cfd_requested(self) -> bool:
+        return self._args.cfd is not None
 
-        if len(the_split) < 3:
-            raise ValueError("The server name must be in the form of http|https://<domain_name>")
-
-        server_name = f"{the_split[0]}//{the_split[2]}"
-
-        if self._args.force_full_url:
-            return self._args.server
-        else:
-            return server_name
+    @property
+    def cfd_filename(self) -> bool:
+        return self._args.cfd
 
     @property
     def use_teams(self):
@@ -97,7 +88,19 @@ class JiraProgramMetrics:
 
         return boards
 
+    def build_cfd(self) -> List[CfdReport]:
+        """
+        """
+        cfd_list = []
+        for board in self.board_list():
+            print(board, "hi")
+            cfd = self.reports_client.cfd_report(board_id=board.id)
+            cfd_list.append(cfd)
+        return cfd_list
+
     def build_report(self) -> pd.DataFrame:
+        """
+        """
 
         HEADERS = ("Team",
                    "Sprint",
@@ -180,6 +183,8 @@ class JiraProgramMetrics:
                             help='Force server parameter to use the full path. Typically the server '
                                  'name is truncated to include only protocol server name and remove any '
                                  'extra path elements.')
+        parser.add_argument('--cfd', type=str,
+                            help='Create a Cumulative Flow Diagram output file with the specified file name')
         parser.add_argument('--board', type=str,
                             help='Board name and matching criteria which uses the following '
                                  'syntax: [<name>:<match>;<str2>:<match2>;...] where match is one of'
@@ -197,16 +202,26 @@ class JiraProgramMetrics:
             for t in teams:
                 print(t.title)
 
-        df = self.build_report()
+        if self.cfd_requested:
+            cfd_list = self.build_cfd()
+            writer = pd.ExcelWriter(self.cfd_filename, engine='xlsxwriter')
+            for cfd in cfd_list:
+                df = cfd.report()
+                df.to_excel(writer, sheet_name=f'CFD {cfd.board_name}', index=False)
 
-        # Create a Pandas Excel writer using XlsxWriter as the engine.
-        writer = pd.ExcelWriter('pandas_simple.xlsx', engine='xlsxwriter')
+            writer.save()
 
-        # Convert the dataframe to an XlsxWriter Excel object.
-        df.to_excel(writer, sheet_name='Sprint Report', index=False)
+        else:
+            df = self.build_report()
 
-        # Close the Pandas Excel writer and output the Excel file.
-        writer.save()
+            # Create a Pandas Excel writer using XlsxWriter as the engine.
+            writer = pd.ExcelWriter('pandas_simple.xlsx', engine='xlsxwriter')
+
+            # Convert the dataframe to an XlsxWriter Excel object.
+            df.to_excel(writer, sheet_name='Sprint Report', index=False)
+
+            # Close the Pandas Excel writer and output the Excel file.
+            writer.save()
 
 
 if __name__ == "__main__":
