@@ -6,7 +6,7 @@ from unittest.mock import patch, MagicMock
 import pytest
 from jira.resources import Board
 
-from jamp import JIRA_PASSWORD_ENV
+from auth import JIRA_PASSWORD_ENV
 from metrics import JiraProgramMetrics
 
 
@@ -116,8 +116,16 @@ def test_metrics_args_server_only(program_metrics):
     assert 'required: --user' in err
     assert 2 == info.value.code
 
-
-def test_metrics_args_required_args_no_password(program_metrics):
+@patch('metrics.JIRA')
+@patch('metrics.JIRAReports')
+@patch('metrics.JIRATeams')
+@patch('metrics.JiraFieldMapper')
+def test_metrics_args_required_args_no_password(mock_jira_field_mapper,
+                                                mock_jira_teams,
+                                                mock_jira_reports,
+                                                mock_jira,
+                                                program_metrics):
+    del os.environ[JIRA_PASSWORD_ENV]
     info, out, err = program_metrics(["metrics.py",
                                       '--user', 'steve',
                                       '--server', 'https://dog.atlassian'

@@ -6,11 +6,13 @@ import pprint
 import argparse
 import os
 
-import jamp
+import auth
+from auth import Credential
 from jamp import JiraFieldMapper, NAN, _parse_server
 from jamp.client import JIRAReports, JIRATeams
 from jamp.resources import CfdReport
 
+from jamp.confluence import JampConfluence
 
 class JiraProgramMetrics:
 
@@ -18,32 +20,31 @@ class JiraProgramMetrics:
         self._args = self.parse_args()
         self._server = _parse_server(self._args)
 
-        if jamp.JIRA_PASSWORD_ENV not in os.environ:
-            raise KeyError(f"The environment variable '{jamp.JIRA_PASSWORD_ENV}'"
-                           f" is required to authenticate with the Jira Server.")
-
-        credential = os.environ[jamp.JIRA_PASSWORD_ENV]
+        cred = Credential(self._args.user)
 
         # JIRA for all normal Jira activity (Boards, Sprints, Issues, etc.)
         self.jira_client = JIRA(server=self._server,
-                                basic_auth=(self._args.user, credential),
+                                basic_auth=(cred.username, cred.password),
                                 options={
                           'agile_rest_path': 'agile'
                       })
 
         # JIRA_Reports used only for reporting, not for general Jira access
         self.reports_client = JIRAReports(server=self._server,
-                                          basic_auth=(self._args.user, credential))
+                                          basic_auth=(cred.username, cred.password))
 
         if self.use_teams:
             # JIRA for all normal Jira activity (Boards, Sprints, Issues, etc.)
             self.teams_client = JIRATeams(server=self._server,
-                                          basic_auth=(self._args.user, credential),
+                                          basic_auth=(cred.username, cred.password),
                                           options={
                                        'agile_rest_path': 'teams-api'
                                    })
 
         self._map = JiraFieldMapper(self.jira_client._options, self.jira_client._session)
+
+        if self._args.page:
+            self._confluence = JampConfluence(self._server, cred)
 
     def jira_key(self, field_key):
         return self._map.jira_key(field_key)
@@ -179,6 +180,10 @@ class JiraProgramMetrics:
                             help='Jira server address (e.g. https://ale-dev.atlassian.net).'
                                  'Typically only the server name is required, and no additional'
                                  'path elements are needed in the URL.')
+        parser.add_argument('--space', type=str,
+                            help='Confluence space to write the report')
+        parser.add_argument('--page', type=str,
+                            help='Confluence page to write the report')
         parser.add_argument('--force_full_url', action='store_true',
                             help='Force server parameter to use the full path. Typically the server '
                                  'name is truncated to include only protocol server name and remove any '
@@ -224,6 +229,10 @@ class JiraProgramMetrics:
 
             # Close the Pandas Excel writer and output the Excel file.
             writer.save()
+
+        if self._args.page:
+            self._confluence.read(self._args.space, self._args.page)
+            self._confluence.attach(self._args.space, self._args.page, "pandas_simple.xlsx")
 
 
 if __name__ == "__main__":

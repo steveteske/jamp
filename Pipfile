@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+atlassian-python-api = "*"
 pandas = "==1.1.5"
 xlsxwriter = "*"
 jira = "==2.0.0"
