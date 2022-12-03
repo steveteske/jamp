@@ -4,15 +4,13 @@ import pandas as pd
 from jira import JIRA, JIRAError
 import pprint
 import argparse
-import os
 
-import auth
 from auth import Credential
 from jamp import JiraFieldMapper, NAN, _parse_server
 from jamp.client import JIRAReports, JIRATeams
 from jamp.resources import CfdReport
-
 from jamp.confluence import JampConfluence
+from jamp.plot import MetricPlot
 
 class JiraProgramMetrics:
 
@@ -45,7 +43,7 @@ class JiraProgramMetrics:
 
         if self._args.page:
             self._confluence = JampConfluence(self._server, cred)
-
+            self._plotter = MetricPlot(self._args.image)
     def jira_key(self, field_key):
         return self._map.jira_key(field_key)
 
@@ -60,6 +58,37 @@ class JiraProgramMetrics:
     @property
     def use_teams(self):
         return self._args.teams
+
+    def parse_args(self):
+        parser = argparse.ArgumentParser(description='Build Program in Jira')
+        # group = parser.add_mutually_exclusive_group()
+        parser.add_argument('--user', required=True, type=str, help='User name')
+        parser.add_argument('--server', required=True, type=str,
+                            help='Jira server address (e.g. https://ale-dev.atlassian.net).'
+                                 'Typically only the server name is required, and no additional'
+                                 'path elements are needed in the URL.')
+        parser.add_argument('--space', type=str,
+                            help='Confluence space to write the report')
+        parser.add_argument('--page', type=str,
+                            help='Confluence page to write the report')
+        parser.add_argument('--force_full_url', action='store_true',
+                            help='Force server parameter to use the full path. Typically the server '
+                                 'name is truncated to include only protocol server name and remove any '
+                                 'extra path elements.')
+        parser.add_argument('--cfd', type=str,
+                            help='Create a Cumulative Flow Diagram output file with the specified file name')
+        parser.add_argument('--board', type=str,
+                            help='Board name and matching criteria which uses the following '
+                                 'syntax: [<name>:<match>;<str2>:<match2>;...] where match is one of'
+                                 ' MATCH_EXACT | MATCH_STARTS_WITH.  (e.g. --board JAMP:MATCH_EXACT)')
+        parser.add_argument('--teams', action='store_true',
+                            help='Test/utilize the teams API (if provisioned on the jira instance)')
+        parser.add_argument('--file', type=str, required=True,
+                            help='file name for excel output file with suffix ".xlsx"')
+        parser.add_argument('--image', type=str, required=True,
+                            help='file name for image file')
+
+        return parser.parse_args()
 
     def board_list(self):
         boards = []
@@ -107,7 +136,7 @@ class JiraProgramMetrics:
                    "Sprint",
                    "State",
                    "Story Points Committed",
-                   "Story Ponts Committed VC",
+                   "Story Points Committed VC",
                    "Story Points Added",
                    "Story Points Removed",
                    "Story Points Not Completed",
@@ -172,67 +201,49 @@ class JiraProgramMetrics:
         df = pd.DataFrame.from_records(data, columns=HEADERS)
         return df
 
-    def parse_args(self):
-        parser = argparse.ArgumentParser(description='Build Program in Jira')
-        # group = parser.add_mutually_exclusive_group()
-        parser.add_argument('--user', required=True, type=str, help='User name')
-        parser.add_argument('--server', required=True, type=str,
-                            help='Jira server address (e.g. https://ale-dev.atlassian.net).'
-                                 'Typically only the server name is required, and no additional'
-                                 'path elements are needed in the URL.')
-        parser.add_argument('--space', type=str,
-                            help='Confluence space to write the report')
-        parser.add_argument('--page', type=str,
-                            help='Confluence page to write the report')
-        parser.add_argument('--force_full_url', action='store_true',
-                            help='Force server parameter to use the full path. Typically the server '
-                                 'name is truncated to include only protocol server name and remove any '
-                                 'extra path elements.')
-        parser.add_argument('--cfd', type=str,
-                            help='Create a Cumulative Flow Diagram output file with the specified file name')
-        parser.add_argument('--board', type=str,
-                            help='Board name and matching criteria which uses the following '
-                                 'syntax: [<name>:<match>;<str2>:<match2>;...] where match is one of'
-                                 ' MATCH_EXACT | MATCH_STARTS_WITH.  (e.g. --board JAMP:MATCH_EXACT)')
-        parser.add_argument('--teams', action='store_true',
-                            help='Test/utilize the teams API (if provisioned on the jira instance)')
 
-        return parser.parse_args()
 
     def run(self):
 
         if self.use_teams:
-            teams = self.teams_client.teams()
-            pprint.pprint(teams)
-            for t in teams:
-                print(t.title)
+            self.extract_teams()
 
         if self.cfd_requested:
-            cfd_list = self.build_cfd()
-            writer = pd.ExcelWriter(self.cfd_filename, engine='xlsxwriter')
-            MAX_TAB_NAME_LENGTH = 30
-            board_name_max = MAX_TAB_NAME_LENGTH - len('CFD ')
-            for cfd in cfd_list:
-                df = cfd.report()
-                df.to_excel(writer, sheet_name=f'CFD {cfd.board_name[:board_name_max]}', index=False)
+            self.build_cfd_report()
 
-            writer.save()
 
         else:
             df = self.build_report()
+            self.build_sprint_report(df)
 
-            # Create a Pandas Excel writer using XlsxWriter as the engine.
-            writer = pd.ExcelWriter('pandas_simple.xlsx', engine='xlsxwriter')
+            if self._args.page:
+                self._plotter.plot(df)
+                self._confluence.read(self._args.space, self._args.page)
+                self._confluence.attach(self._args.space, self._args.page, self._args.file)
+                self._confluence.attach(self._args.space, self._args.page, self._args.image)
+    def build_sprint_report(self, df: pd.DataFrame):
+        # Create a Pandas Excel writer using XlsxWriter as the engine.
+        writer = pd.ExcelWriter(self._args.file, engine='xlsxwriter')
+        # Convert the dataframe to an XlsxWriter Excel object.
+        df.to_excel(writer, sheet_name='Sprint Report', index=False)
+        # Close the Pandas Excel writer and output the Excel file.
+        writer.save()
 
-            # Convert the dataframe to an XlsxWriter Excel object.
-            df.to_excel(writer, sheet_name='Sprint Report', index=False)
+    def build_cfd_report(self):
+        cfd_list = self.build_cfd()
+        writer = pd.ExcelWriter(self.cfd_filename, engine='xlsxwriter')
+        MAX_TAB_NAME_LENGTH = 30
+        board_name_max = MAX_TAB_NAME_LENGTH - len('CFD ')
+        for cfd in cfd_list:
+            df = cfd.report()
+            df.to_excel(writer, sheet_name=f'CFD {cfd.board_name[:board_name_max]}', index=False)
+        writer.save()
 
-            # Close the Pandas Excel writer and output the Excel file.
-            writer.save()
-
-        if self._args.page:
-            self._confluence.read(self._args.space, self._args.page)
-            self._confluence.attach(self._args.space, self._args.page, "pandas_simple.xlsx")
+    def extract_teams(self):
+        teams = self.teams_client.teams()
+        pprint.pprint(teams)
+        for t in teams:
+            print(t.title)
 
 
 if __name__ == "__main__":

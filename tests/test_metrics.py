@@ -128,7 +128,9 @@ def test_metrics_args_required_args_no_password(mock_jira_field_mapper,
     del os.environ[JIRA_PASSWORD_ENV]
     info, out, err = program_metrics(["metrics.py",
                                       '--user', 'steve',
-                                      '--server', 'https://dog.atlassian'
+                                      '--server', 'https://dog.atlassian',
+                                      '--file', 'dummy_file.xlsx',
+                                      '--image', 'dummy_image.png'
                                       ],
                                      exception=KeyError)
 
@@ -160,7 +162,9 @@ def test_metrics_required_args_good_password(mock_jira_field_mapper,
     # Test
     pm = program_metrics(["metrics.py",
                           '--user', mock_user,
-                          '--server', mock_server
+                          '--server', mock_server,
+                          '--file', 'dummy_file.xlsx',
+                          '--image', 'dummy_image.png'
                           ],
                          password=mock_password)
     pm.build_report()
@@ -205,7 +209,9 @@ def test_metrics_args_board(mock_jira_field_mapper,
     pm = program_metrics(["metrics.py",
                           '--user', mock_user,
                           '--server', mock_server,
-                          '--board', 'IDAP board:MATCH_EXACT'
+                          '--board', 'IDAP board:MATCH_EXACT',
+                          '--file', 'dummy_file.xlsx',
+                          '--image', 'dummy_image.png'
                           ],
                          password=mock_password)
 
@@ -250,7 +256,9 @@ def test_metrics_args_board_no_command(mock_jira_field_mapper,
     pm = program_metrics(["metrics.py",
                           '--user', mock_user,
                           '--server', mock_server,
-                          '--board', 'IDAP'
+                          '--board', 'IDAP',
+                          '--file', 'dummy_file.xlsx',
+                          '--image', 'dummy_image.png'
                           ],
                          password=mock_password)
 

@@ -7,8 +7,6 @@ from jamp.reports import SprintMetrics
 from jamp.resources import SprintReport, VelocityReport
 
 
-
-
 @pytest.fixture
 def sprint_metrics(sprint_report, mock_velocity_report_with_id, mock_options):
     vr = VelocityReport(options=mock_options, session=None, raw=mock_velocity_report_with_id)

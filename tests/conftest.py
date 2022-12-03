@@ -1,5 +1,7 @@
 import json
 import os
+import pandas as pd
+
 from unittest.mock import patch, MagicMock
 
 import pytest
@@ -9,6 +11,10 @@ from jamp.resources import SprintReport
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
+@pytest.fixture
+def mock_metrics_df():
+    df = pd.read_csv(os.path.join(dir_path, "test_data/mock_agile_metrics.csv"))
+    return df
 
 @pytest.fixture
 def mock_av_boards():
@@ -122,6 +128,7 @@ def sprint_1_report(mock_jira_key, mock_field_mapper, mock_field_mapper_build_ma
     mock_jira_key.return_value = 'customfield_10111'
     sr = SprintReport(options=mock_options, session=None, raw=mock_sprint_1_report_json)
     return sr
+
 
 
 @pytest.fixture
